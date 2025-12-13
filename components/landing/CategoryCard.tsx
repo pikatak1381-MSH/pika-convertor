@@ -1,6 +1,7 @@
 import type { Category } from "@/app/[locale]/_data/categories"
 import { useTranslations } from "next-intl"
 import Image from "next/image"
+import { Link } from "@/i18n/navigation"
 
 interface CategoryCardProps {
     category: Category
@@ -18,10 +19,10 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
         >
             {/* Title */}
             <div
-                className="flex gap-2 mb-2"
+                className="flex items-center gap-2 mb-2"
             >
                 <div className="w-7 h-7 rounded overflow-hidden">
-                    <Image 
+                    <Image
                         src={category.icon}
                         alt={category.i18nKey}
                         width={28}
@@ -37,20 +38,24 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
                 {category.subCategories.slice(0, 5).map((cat) => (
                     <li
                         key={cat.id}
-                        className="p-2 text-sm flex items-center gap-1"
                     >
-                        <div className="w-4.5 h-4.5 rounded overflow-hidden">
-                            <Image 
-                                src={cat.icon}
-                                alt={cat.i18nKey}
-                                width={18}
-                                height={18}
-                                className="size-full object-contain"
-                            />
-                        </div>
-                        <span className="text-pretty">
-                            {t(cat.i18nKey)}
-                        </span>
+                        <Link
+                            href="/"
+                            className="p-2 text-sm font-semibold flex items-center gap-1"
+                        >
+                            <div className="w-4.5 h-4.5 rounded overflow-hidden">
+                                <Image 
+                                    src={cat.icon}
+                                    alt={cat.i18nKey}
+                                    width={18}
+                                    height={18}
+                                    className="size-full object-contain"
+                                />
+                            </div>
+                            <span className="text-pretty">
+                                {t(cat.i18nKey)}
+                            </span>
+                        </Link>
                     </li>
                 ))}
             </ul>
