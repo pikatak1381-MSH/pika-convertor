@@ -1,0 +1,150 @@
+{
+  "Header": {
+    "convertors": "ابزارها",
+    "contact": "تماس با ما",
+    "api": "API"
+  },
+
+  "HeroSection": {
+    "title": "سریع‌ترین و کامل‌ترین پلتفرم تبدیل آنلاین.",
+    "desc": "هر نوع تبدیل‌—‌از فایل و تصویر تا واحد های مهندسی و نقشه‌—‌در چند ثانیه انجام می‌شود.",
+    "desc2": "برای شروع، ابزار مورد نیاز خود را جستجو کنید",
+    "searchPlaceholder": "ابزار مورد نظر خود را جستجو کنید",
+    "searchExample": "مثال: تبدیل متر به فوت، PDF به JPG، مختصات GPS…"
+  },
+
+  "CategoriesSection": {
+    "title": "“ همه ابزارها “",
+    "moreInfoBtn": "مشاهده بیشتر",
+    "categories": {
+      "engineering": "مهندسی",
+      "math": "ریاضی",
+      "technology": "تکنولوژی",
+      "files": "فایل",
+      "time": "زمان",
+      "finance": "مالی",
+      "location": "نقشه و مکان",
+      "legal": "حقوقی",
+      "health": "سلامتی",
+      "numbers": "اعداد"
+    },
+
+    "sub": {
+      "engineering": {
+        "physicsUnits": "تبدیل واحد های فیزیکی",
+        "currents": "تبدیل جریان‌ها",
+        "electricity": "تبدیل های الکتریسیته",
+        "thermal": "تبدیل های حرارتی",
+        "optical": "تبدیل های نوری",
+        "magnetic": "تبدیل های مغناطیسی",
+        "radiology": "تبدیل های رادیولوژی"
+      },
+
+      "math": {
+        "percentage": "محاسبه درصد",
+        "powerRoot": "توان و ریشه",
+        "logarithm": "لگاریتم",
+        "equationSolver": "حل معادله",
+        "primeCheck": "تشخیص عدد اول",
+        "perimeterArea": "محیط و مساحت",
+        "fibonacci": "محاسبه سری فیبوناچی",
+        "baseConverter": "تبدیل مبنا",
+        "factorial": "فاکتوریل",
+        "statistics": "میانگین، میانه، مد",
+        "plotting": "رسم نمودار",
+        "probability": "آمار و احتمال",
+        "matrixVector": "ماتریس و بردار",
+        "decimalToFraction": "تبدیل اعشار به کسر",
+        "slopeCalculator": "محاسبه گر تمایل به شیب",
+        "percentageIncrease": "محاسبه گر افزایش فیصدی",
+        "trigonometry": "محاسبه گر مثلثی"
+      },
+
+      "technology": {
+        "passwordGenerator": "ساخت پسورد تصادفی",
+        "myIp": "Ip من چیست",
+        "gpaConverter": "تبدیل معدل به GPA",
+        "barcodeGenerator": "ساخت بارکد",
+        "whatsappLink": "ساخت لینک واتساپ",
+        "utmLink": "ساخت لینک UTM",
+        "qrCode": "ساخت QR کد",
+        "domainChecker": "بررسی دامنه",
+        "hashGenerator": "ساخت کد هش",
+        "textToBinary": "تبدیل متن به باینری",
+        "schemaBuilder": "اسکیما ساز",
+        "schemaFinder": "اسکیما یاب",
+        "metaFinder": "متا یاب"
+      },
+
+      "files": {
+        "textVoice": "تبدیل متن به ویس و بالعکس",
+        "imageToText": "تبدیل عکس به متن",
+        "fileConverter": "مبدل فایل",
+        "pdfMerge": "ادغام فایل های PDF"
+      },
+
+      "time": {
+        "dateConversion": "تبدیل تاریخ‌ها",
+        "dateDifference": "محاسبه اختلاف 2 تاریخ",
+        "minutesToHours": "تبدیل دقیقه به ساعت",
+        "stopwatch": "کرنومتر",
+        "prayerTimes": "اوقات شرعی",
+        "ageCalculator": "محاسبه سن",
+        "persianNewYear": "لحظه ی تحویل سال"
+      },
+
+      "finance": {
+        "currencyUnits": "تبدیل واحد های پولی",
+        "loanCalculator": "محاسبه سود و قسط و وام",
+        "bankInterest": "محاسبه سود سپرده بانکی",
+        "goldPrice": "محاسبه گر قیمت طلا",
+        "invoice": "فاکتور فروش",
+        "transferCost": "محاسبه هزینه انتقال سند",
+        "realEstateCommission": "محاسبه کمیسیون ملک",
+        "savings": "محاسبه پس انداز",
+        "bonus": "محاسبه عیدی",
+        "rentCalculator": "محاسبه رهن و اجاره",
+        "exchangeRates": "نرخ ارز",
+        "checkMaturity": "محاسبه راس چک",
+        "vatTax": "محاسبه مالیات ارزش افزوده",
+        "profitMargin": "محاسبه حاشیه سود"
+      },
+
+      "location": {
+        "cityDistance": "فاصله شهر‌ها",
+        "areaLength": "مساحت و طول",
+        "coordinates": "مختصات و ارتفاع"
+      },
+
+      "legal": {
+        "governmentFee": "محاسبه نیم عشر دولتی",
+        "notaryCost": "محاسبه هزینه دفتر خانه",
+        "insuranceRights": "محاسبه حقوق بیمه کاری",
+        "mahrCalculator": "محاسبه مهریه به نرخ روز",
+        "arbitrationFee": "محاسبه حق الزحمه داوری",
+        "lawsuitCost": "محاسبه هزینه دادرسی",
+        "latePenalty": "محاسبه خسارت تاخیر تادیه",
+        "expertFee": "هزینه کارشناسی قانون ت.ت"
+      },
+
+      "health": {
+        "bmi": "شاخص توده بدنی (BMI)",
+        "idealWeight": "محاسبه وزن ایده ال",
+        "calorie": "کالری سنجی",
+        "pregnancy": "زمان بارداری و تاریخ زایمان",
+        "stepsToKm": "تبدیل قدم به کیلومتر و بالعکس",
+        "bmr": "سوخت ساز پایه",
+        "bodyWater": "محاسبه حجم آب بدن",
+        "protein": "محاسبه گر پروتئین"
+      },
+
+      "numbers": {
+        "faToEn": "تبدیل اعداد فارسی به انگلیسی",
+        "enToFa": "تبدیل اعداد انگلیسی به فارسی",
+        "randomNumber": "ساخت عدد تصادفی",
+        "faToCn": "تبدیل اعداد فارسی به چینی",
+        "faToAr": "تبدیل اعداد فارسی به عربی"
+      }
+    }
+  }
+}
