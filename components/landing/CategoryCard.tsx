@@ -30,7 +30,9 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
                         className="w-5 h-5 object-contain"
                     />
                 </div>
-<h3 className="text-base font-semibold">{t(category.i18nKey)}</h3>
+                <h3 className="text-base font-semibold">
+                    {t(category.i18nKey)}
+                </h3>
             </div>
 
             {/* Convertor list */}
