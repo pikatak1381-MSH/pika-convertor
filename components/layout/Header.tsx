@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { useState } from "react"
 import { routing } from "@/i18n/routing"
+import MegaMenu from "./MegaMenu"
 
 type AppPathnames = keyof typeof routing.pathnames
 
@@ -29,7 +30,7 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`bg-header-background text-header-foreground fixed top-0 right-0 left-0 z-50 transition-all duration-500`}
+      className="bg-header-background text-header-foreground fixed top-0 right-0 left-0 z-50 transition-all duration-500"
     >
       <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-27.5 items-center justify-between">
@@ -50,29 +51,32 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden items-center md:flex">
-              <Link
-                href="/convertors"
-                onMouseEnter={() => setActiveLink("convertors")}
-                onMouseLeave={() => setActiveLink("")}
-                className={`text-md group relative flex items-center gap-2 px-2 py-2 font-medium transition-colors duration-300`}
-              >
-                <Image
-                  src="/icons/categories.svg"
-                  alt=""
-                  width={20}
-                  height={20}
-                  className="size-full object-contain"
-                />
-                {t("convertors")}
-                <motion.span
-                  className="bg-primary absolute right-0 bottom-0 left-0 h-0.5 rounded-full"
-                  initial={{ scaleX: 0 }}
-                  animate={{
-                    scaleX: activeLink === "convertors" ? 1 : 0,
-                  }}
-                  transition={{ duration: 0.3 }}
-                />
-              </Link>
+              <div className="relative group">
+                <button
+                  onMouseEnter={() => setActiveLink("convertors")}
+                  onMouseLeave={() => setActiveLink("")}
+                  className="text-md relative flex items-center gap-2 p-2 font-medium transition-colors duration-300"
+                >
+                  <Image
+                    src="/icons/categories.svg"
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="size-full object-contain"
+                  />
+                  {t("convertors")}
+                  <motion.span
+                    className="bg-primary absolute right-0 bottom-0 left-0 h-0.5 rounded-full"
+                    initial={{ scaleX: 0 }}
+                    animate={{
+                      scaleX: activeLink === "convertors" ? 1 : 0,
+                    }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </button>
+
+                <MegaMenu />
+              </div>
 
               <div className="mx-5 h-4 w-px bg-white/60" />
 
@@ -109,7 +113,7 @@ const Header = () => {
 
           {/* Desktop Actions */}
           <div className="flex items-center gap-4">
-            <button className="hover:bg-hover h-6 w-6 cursor-pointer rounded-xl transition-colors">
+            <button className="hover:bg-[#d1d5db]/50 h-6 w-6 cursor-pointer rounded-xl transition-colors">
               <Image
                 src="/icons/theme-switch.svg"
                 alt=""
