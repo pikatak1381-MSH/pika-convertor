@@ -22,12 +22,13 @@ const Footer = () => {
 
                 <nav>
                     <ul
-                        className="flex items-center gap-8 text-footer-foreground"
+                        className="flex items-center justify-center gap-8 text-footer-foreground"
                     >
                         {FOOTER_LINKS.map((link) => (
                             <li key={link.id}>
                                 <Link
                                     href="/"
+                                    className="hover:text-secondary-foreground transition-colors text-sm"
                                 >
                                     {t(link.i18nKey)}
                                 </Link>
