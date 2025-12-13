@@ -17,7 +17,7 @@ export const categories: Category[] = [
   {
     id: "engineering",
     i18nKey: "categories.engineering",
-    icon: "/icons/categories/engineering-yellow.svg",
+    icon: "/icons/categories/engineering.svg",
     subCategories: [
       { id: "physics-units", i18nKey: "sub.engineering.physicsUnits", icon: "/icons/categories/physics.svg" },
       { id: "currents", i18nKey: "sub.engineering.currents", icon: "/icons/categories/flow.svg" },
@@ -32,7 +32,7 @@ export const categories: Category[] = [
   {
     id: "math",
     i18nKey: "categories.math",
-    icon: "/icons/categories/math-yellow.svg",
+    icon: "/icons/categories/math.svg",
     subCategories: [
       { id: "percentage", i18nKey: "sub.math.percentage", icon: "/icons/categories/percentage.svg" },
       { id: "power-root", i18nKey: "sub.math.powerRoot", icon: "/icons/categories/root.svg" },
@@ -57,7 +57,7 @@ export const categories: Category[] = [
   {
     id: "technology",
     i18nKey: "categories.technology",
-    icon: "/icons/categories/technology-yellow.svg",
+    icon: "/icons/categories/technology.svg",
     subCategories: [
       { id: "password-generator", i18nKey: "sub.technology.passwordGenerator", icon: "/icons/categories/password.svg" },
       { id: "my-ip", i18nKey: "sub.technology.myIp", icon: "/icons/categories/ip-address.svg" },
@@ -78,7 +78,7 @@ export const categories: Category[] = [
   {
     id: "files",
     i18nKey: "categories.files",
-    icon: "/icons/categories/file-yellow.svg",
+    icon: "/icons/categories/file.svg",
     subCategories: [
       { id: "text-voice", i18nKey: "sub.files.textVoice", icon: "/icons/categories/voice.svg" },
       { id: "image-to-text", i18nKey: "sub.files.imageToText", icon: "/icons/categories/png-to-text.svg" },
@@ -90,7 +90,7 @@ export const categories: Category[] = [
   {
     id: "time",
     i18nKey: "categories.time",
-    icon: "/icons/categories/time-yellow.svg",
+    icon: "/icons/categories/time.svg",
     subCategories: [
       { id: "date-conversion", i18nKey: "sub.time.dateConversion", icon: "/icons/categories/data-swap.svg" },
       { id: "date-difference", i18nKey: "sub.time.dateDifference", icon: "/icons/categories/duration.svg" },
@@ -105,7 +105,7 @@ export const categories: Category[] = [
   {
     id: "finance",
     i18nKey: "categories.finance",
-    icon: "/icons/categories/financial-yellow.svg",
+    icon: "/icons/categories/financial.svg",
     subCategories: [
       { id: "currency-units", i18nKey: "sub.finance.currencyUnits", icon: "/icons/categories/currency.svg" },
       { id: "loan-calculator", i18nKey: "sub.finance.loanCalculator", icon: "/icons/categories/loan.svg" },
@@ -127,7 +127,7 @@ export const categories: Category[] = [
   {
     id: "location",
     i18nKey: "categories.location",
-    icon: "/icons/categories/map-yellow.svg",
+    icon: "/icons/categories/map.svg",
     subCategories: [
       { id: "city-distance", i18nKey: "sub.location.cityDistance", icon: "/icons/categories/distance.svg" },
       { id: "area-length", i18nKey: "sub.location.areaLength", icon: "/icons/categories/ruler.svg" },
@@ -138,7 +138,7 @@ export const categories: Category[] = [
   {
     id: "legal",
     i18nKey: "categories.legal",
-    icon: "/icons/categories/law-yellow.svg",
+    icon: "/icons/categories/law.svg",
     subCategories: [
       { id: "government-fee", i18nKey: "sub.legal.governmentFee", icon: "/icons/categories/government-fee.svg" },
       { id: "notary-cost", i18nKey: "sub.legal.notaryCost", icon: "/icons/categories/notary.svg" },
@@ -154,7 +154,7 @@ export const categories: Category[] = [
   {
     id: "health",
     i18nKey: "categories.health",
-    icon: "/icons/categories/health-yellow.svg",
+    icon: "/icons/categories/health.svg",
     subCategories: [
       { id: "bmi", i18nKey: "sub.health.bmi", icon: "/icons/categories/bmi.svg" },
       { id: "ideal-weight", i18nKey: "sub.health.idealWeight", icon: "/icons/categories/weight.svg" },
@@ -170,7 +170,7 @@ export const categories: Category[] = [
   {
     id: "numbers",
     i18nKey: "categories.numbers",
-    icon: "/icons/categories/number-yellow.svg",
+    icon: "/icons/categories/number.svg",
     subCategories: [
       { id: "fa-to-en", i18nKey: "sub.numbers.faToEn", icon: "/icons/categories/convert.svg" },
       { id: "en-to-fa", i18nKey: "sub.numbers.enToFa", icon: "/icons/categories/convert.svg" },

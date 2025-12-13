@@ -41,7 +41,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
                     >
                         <Link
                             href="/"
-                            className="p-2 text-sm font-semibold flex items-center gap-1"
+                            className="p-2 text-sm font-semibold flex items-center gap-1 rounded-[20px] hover:shadow-md transition-shadow duration-300 border border-transparent hover:border-border"
                         >
                             <div className="w-4.5 h-4.5 rounded overflow-hidden">
                                 <Image 
@@ -62,7 +62,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
 
             {/* More Info Button */}
             <button
-                className="text-sm font-semibold self-end text-secondary-foreground"
+                className="text-sm font-semibold self-end text-secondary-foreground hover:bg-hover hover:text-hover-secondary rounded-[20px] px-2 py-1 transition-colors"
             >
                 {t("moreInfoBtn")}
             </button>

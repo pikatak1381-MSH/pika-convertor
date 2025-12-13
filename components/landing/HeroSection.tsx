@@ -31,7 +31,7 @@ const HeroSection = () => {
             className="placeholder:text-input-placeholder w-full rounded-xl p-1 placeholder:text-sm"
           />
         </div>
-        <p className="mt-2 text-start">{t("searchExample")}</p>
+        <p className="mt-2 text-start text-sm">{t("searchExample")}</p>
       </div>
     </section>
   )
