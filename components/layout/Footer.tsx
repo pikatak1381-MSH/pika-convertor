@@ -1,27 +1,47 @@
+import { Link } from "@/i18n/navigation"
+import { useTranslations } from "next-intl"
+
+const FOOTER_LINKS = [
+      { id: "privacy-policy", i18nKey: "links.privacyPolicy", href: "/" },
+      { id: "terms-of-use", i18nKey: "links.termsOfUse", href: "/" },
+      { id: "contact-us", i18nKey: "links.contactUs", href: "/" },
+      { id: "support-us", i18nKey: "links.supportUs", href: "/" }
+]
 
 const Footer = () => {
+    const t = useTranslations("Footer")
   return (
-    <footer className="container flex flex-col justify-center mx-auto w-full max-w-7xl bg-footer-background min-h-[167px] rounded-[80px] mt-20 mb-5">
+    <footer className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div
-            className="w-full max-w-md mx-auto pt-6"
+            className="container mx-auto flex flex-col justify-center bg-footer-background min-h-[167px] rounded-[80px] mt-20 mb-5"
         >
-            <p className="text-black font-bold text-sm">سریع‌ترین پلتفرم تبدیل آنلاین — تبدیل واحد، فایل، تاریخ و ابزارهای کاربردی
-            </p>
+            <div className="w-full max-w-md mx-auto pt-6">
+                <p className="text-black font-bold text-sm pb-5">
+                    {t("title")}
+                </p>
 
-            <nav>
-                <ul
-                    className="flex items-center gap-8 text-footer-foreground"
-                >
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </nav>
+                <nav>
+                    <ul
+                        className="flex items-center gap-8 text-footer-foreground"
+                    >
+                        {FOOTER_LINKS.map((link) => (
+                            <li key={link.id}>
+                                <Link
+                                    href="/"
+                                >
+                                    {t(link.i18nKey)}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
 
-            <hr className="border-[#39414D]" />
+                <hr className="border-[#39414D] my-4" />
 
-            <p className="text-foreground text-center">© 2025 پیکا تبدیل</p>
+                <p className="text-foreground text-center">
+                    {t("pikaConvertor")}
+                </p>
+            </div>
         </div>
     </footer>
   )
