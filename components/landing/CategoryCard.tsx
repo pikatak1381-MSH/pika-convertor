@@ -21,16 +21,16 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
             <div
                 className="flex items-center gap-2 mb-2"
             >
-                <div className="w-7 h-7 rounded overflow-hidden">
+                <div className=" p-1 rounded bg-primary overflow-hidden">
                     <Image
                         src={category.icon}
                         alt={category.i18nKey}
-                        width={28}
-                        height={28}
-                        className="size-full object-contain"
+                        width={20}
+                        height={20}
+                        className="w-5 h-5 object-contain"
                     />
                 </div>
-                <h3 className="text-base font-semibold">{t(category.i18nKey)}</h3>
+<h3 className="text-base font-semibold">{t(category.i18nKey)}</h3>
             </div>
 
             {/* Convertor list */}
