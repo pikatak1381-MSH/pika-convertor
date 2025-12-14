@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { useState } from "react"
 import { routing } from "@/i18n/routing"
-import MegaMenu from "./MegaMenu"
+import MegaMenu from "../megaMenu/MegaMenu"
 
 type AppPathnames = keyof typeof routing.pathnames
 

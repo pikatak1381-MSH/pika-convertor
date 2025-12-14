@@ -30,7 +30,10 @@
 
   "CategoriesSection": {
     "title": "“ همه ابزارها “",
+    "categoriesTitle": "دسته بندی‌ها",
+    "subCategoryTitle": "ابزارها",
     "moreInfoBtn": "مشاهده بیشتر",
+    "isNewBadge": "جدید",
     "categories": {
       "engineering": "مهندسی",
       "math": "ریاضی",
