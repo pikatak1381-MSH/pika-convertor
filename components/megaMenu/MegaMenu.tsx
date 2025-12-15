@@ -103,7 +103,7 @@ const MegaMenu = () => {
             >
                 <div className="container mx-auto h-full p-8">
                     <div className="w-full h-full flex flex-col">
-                        <div className="w-full h-full flex gap-0">
+                        <div className="w-full h-full flex gap-4">
 
                             {/* Categories Right Column */}
                             <div className="w-full h-full max-w-[387px]">

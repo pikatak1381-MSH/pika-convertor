@@ -63,11 +63,15 @@ const CategoryCard: React.FC<CategoryCardProps> = ({
             </ul>
 
             {/* More Info Button */}
-            <button
+            <Link
                 className="text-sm font-semibold self-end text-secondary-foreground hover:bg-hover hover:text-hover-secondary rounded-[20px] px-2 py-1 transition-colors"
+                href={{
+                    pathname: "/[category]",
+                    params: { category: category.id }
+                }}
             >
-                {t("moreInfoBtn")}
-            </button>
+                {t("seeMoreBtn")}
+            </Link>
         </div>
   )
 }

@@ -6,8 +6,7 @@ export const routing = defineRouting({
   localeDetection: false,
   pathnames: {
     "/": "/",
-    "/convertor": "/convertor",
-    "/convertors": "/convertors",
+    "/[category]": "/[category]",
     "/contact": "/contact",
     "/api": "/api",
   },
