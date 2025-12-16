@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     other: [
       {
         rel: "manifest",
-        url: "/site.webmanifest"
+        url: "/site.webmanifest",
       },
     ],
   },
@@ -78,15 +78,11 @@ export default async function RootLayout({
       <body className="min-h-screen">
         <NextIntlClientProvider>
           <Providers>
-              <Header />
-                <main 
-                  className="flex flex-col relative mx-auto w-full max-w-7xl min-h-[calc(100vh-110px)] px-4 pt-27.5 sm:px-6 lg:px-8"
-                >
-                  <div className="flex-1">
-                    {children}
-                  </div>
-                </main>
-              <Footer />
+            <Header />
+            <main className="relative mx-auto flex min-h-[calc(100vh-110px)] w-full max-w-7xl flex-col px-4 pt-27.5 sm:px-6 lg:px-8">
+              <div className="flex-1">{children}</div>
+            </main>
+            <Footer />
           </Providers>
         </NextIntlClientProvider>
       </body>

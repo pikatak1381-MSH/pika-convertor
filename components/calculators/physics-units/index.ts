@@ -9,5 +9,5 @@ export const physicsUnits = {
   seo: {
     titleKey: "seo.physicsUnits.title",
     descriptionKey: "seo.physicsUnits.description",
-  }
+  },
 }

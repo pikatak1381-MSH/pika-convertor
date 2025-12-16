@@ -7,15 +7,11 @@ const CategoriesSection = () => {
 
   return (
     <section className="container mx-auto mt-13">
-      <h2 className="text-center text-2xl font-bold mb-3">{t("title")}</h2>
+      <h2 className="mb-3 text-center text-2xl font-bold">{t("title")}</h2>
 
-      <div className="grid grid-cols-3 xl:grid-cols-4 gap-5">
+      <div className="grid grid-cols-3 gap-5 xl:grid-cols-4">
         {categories.map((cat) => (
-            <CategoryCard
-                key={cat.id}
-                subCount={cat.subCategories.length}
-                category={cat}
-            />
+          <CategoryCard key={cat.id} subCount={cat.subCategories.length} category={cat} />
         ))}
       </div>
     </section>

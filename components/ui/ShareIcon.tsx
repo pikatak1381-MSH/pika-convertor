@@ -15,6 +15,6 @@ const ShareIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
       strokeLinejoin="round"
     />
   </svg>
-);
+)
 
-export default ShareIcon;
+export default ShareIcon

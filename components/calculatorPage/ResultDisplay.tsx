@@ -9,30 +9,22 @@ interface ResultDisplayProps {
 const ResultDisplay: React.FC<ResultDisplayProps> = ({ result }) => {
   const t = useTranslations("CategoriesSection")
   return (
-      <div className="flex flex-col gap-4 w-full max-w-[577px] mt-8">
-        <p className="text-start font-bold">
-          {t("result")}
-        </p>
+    <div className="mt-8 flex w-full max-w-[577px] flex-col gap-4">
+      <p className="text-start font-bold">{t("result")}</p>
 
-        <div className="flex items-center gap-4">
-          <div className="w-full border rounded-full bg-background p-2">
-            <p className="text-foreground font-semibold">
-              {result}
-            </p>
-          </div>
-          {/* Share and Copy */}
-          <button 
-            className="group flex items-center justify-center p-2 bg-secondary-background rounded-full  hover:bg-[#39414d] hover:text-white transition-colors"
-          >
-            <ShareIcon className="w-6 h-6" />
-          </button>
-          <button 
-            className="flex items-center justify-center p-2 bg-secondary-background rounded-full w-10 h-10 hover:bg-[#39414d] hover:text-white transition-colors"
-          >
-            <CopyIcon className="w-6 h-6" />
-          </button>
+      <div className="flex items-center gap-4">
+        <div className="bg-background w-full rounded-full border p-2">
+          <p className="text-foreground font-semibold">{result}</p>
         </div>
-      </div>  
+        {/* Share and Copy */}
+        <button className="group bg-secondary-background flex items-center justify-center rounded-full p-2 transition-colors hover:bg-[#39414d] hover:text-white">
+          <ShareIcon className="h-6 w-6" />
+        </button>
+        <button className="bg-secondary-background flex h-10 w-10 items-center justify-center rounded-full p-2 transition-colors hover:bg-[#39414d] hover:text-white">
+          <CopyIcon className="h-6 w-6" />
+        </button>
+      </div>
+    </div>
   )
 }
 

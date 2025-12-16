@@ -1,4 +1,3 @@
-
 interface CalculatorShellProps {
   title: string
   children: React.ReactNode
@@ -6,13 +5,9 @@ interface CalculatorShellProps {
 
 const CalculatorShell: React.FC<CalculatorShellProps> = ({ title, children }) => {
   return (
-    <div
-      className="mx-auto w-full max-w-[794px] rounded-[20px] bg-white border shadow-md p-6 mt-13"
-    >
+    <div className="mx-auto mt-13 w-full max-w-[794px] rounded-[20px] border bg-white p-6 shadow-md">
       {/* Mini Title */}
-      <h3 className="text-start font-bold">
-        {title}
-      </h3>
+      <h3 className="text-start font-bold">{title}</h3>
 
       {/* Calculator Inputs */}
       {children}

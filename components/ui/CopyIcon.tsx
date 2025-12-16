@@ -1,4 +1,3 @@
-
 const CopyIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
     width="24"

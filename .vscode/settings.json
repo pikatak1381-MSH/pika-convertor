@@ -4,6 +4,5 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
-  "prettier.semi": false,
-  "prettier.singleQuote": false
+  "prettier.requireConfig": true
 }

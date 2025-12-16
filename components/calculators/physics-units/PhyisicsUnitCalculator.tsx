@@ -22,9 +22,7 @@ const PhyisicsUnitCalculator = () => {
   const [toUnit, setToUnit] = useState(physicsUnitTypes[0].units[1].id)
   const [value, setValue] = useState(1)
 
-  const converter = useMemo(
-    () => physicsUnitTypes.find(unit => unit.id === typeId)!,
-    [typeId])
+  const converter = useMemo(() => physicsUnitTypes.find((unit) => unit.id === typeId)!, [typeId])
 
   const result = useMemo(
     () => convertValue(value, fromUnit, toUnit, converter),
@@ -38,22 +36,22 @@ const PhyisicsUnitCalculator = () => {
   }
 
   return (
-    <div className="flex flex-col mt-4">
+    <div className="mt-4 flex flex-col">
       {/* Converter Type */}
       <Select
         value={typeId}
         onValueChange={(newTypeId) => {
-          const nextConverter = physicsUnitTypes.find(unit => unit.id === newTypeId)!
+          const nextConverter = physicsUnitTypes.find((unit) => unit.id === newTypeId)!
           setTypeId(newTypeId)
           setFromUnit(nextConverter.units[0].id)
           setToUnit(nextConverter.units[1].id)
         }}
       >
-        <SelectTrigger className="w-full rounded-full bg-background border border-input px-3 py-2 truncate flex-1 min-w-0 text-sm font-bold text-secondary-foreground">
+        <SelectTrigger className="bg-background border-input text-secondary-foreground w-full min-w-0 flex-1 truncate rounded-full border px-3 py-2 text-sm font-bold">
           <SelectValue />
         </SelectTrigger>
-        <SelectContent className="bg-background rounded-2xl text-sm font-semibold text-secondary-foreground">
-          {physicsUnitTypes.map(unit => (
+        <SelectContent className="bg-background text-secondary-foreground rounded-2xl text-sm font-semibold">
+          {physicsUnitTypes.map((unit) => (
             <SelectItem key={unit.id} value={unit.id}>
               {t(unit.labelKey)}
             </SelectItem>
@@ -62,25 +60,22 @@ const PhyisicsUnitCalculator = () => {
       </Select>
 
       {/* Inputs */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+      <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         <input
           type="number"
           value={value}
-          onChange={e => setValue(Number(e.target.value))}
-          className="rounded-full bg-background border border-input px-3 py-2"
+          onChange={(e) => setValue(Number(e.target.value))}
+          className="bg-background border-input rounded-full border px-3 py-2"
         />
-        
-        <div className="flex items-center col-span-2 gap-1">
+
+        <div className="col-span-2 flex items-center gap-1">
           {/* From Unit */}
-          <Select
-            value={fromUnit}
-            onValueChange={setFromUnit}
-          >
-            <SelectTrigger className="w-full rounded-full bg-background border border-input px-3 py-2 truncate flex-1 min-w-0 text-sm font-bold text-secondary-foreground">
+          <Select value={fromUnit} onValueChange={setFromUnit}>
+            <SelectTrigger className="bg-background border-input text-secondary-foreground w-full min-w-0 flex-1 truncate rounded-full border px-3 py-2 text-sm font-bold">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent className="bg-background rounded-2xl text-sm font-semibold text-secondary-foreground">
-              {converter.units.map(u => (
+            <SelectContent className="bg-background text-secondary-foreground rounded-2xl text-sm font-semibold">
+              {converter.units.map((u) => (
                 <SelectItem key={u.id} value={u.id}>
                   {t(u.labelKey)}
                 </SelectItem>
@@ -90,21 +85,18 @@ const PhyisicsUnitCalculator = () => {
 
           <button
             onClick={handleSwap}
-            className="flex items-center justify-center w-8 h-8 rounded-full text-[#efc900] hover:bg-primary/50 shrink-0"
+            className="hover:bg-primary/50 flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-[#efc900]"
           >
             <SwapIcon className="" />
           </button>
 
           {/* To Unit */}
-          <Select
-            value={toUnit}
-            onValueChange={setToUnit}
-          >
-            <SelectTrigger className="w-full rounded-full bg-background border border-input px-3 py-2 truncate flex-1 min-w-0 text-sm font-bold text-secondary-foreground">
+          <Select value={toUnit} onValueChange={setToUnit}>
+            <SelectTrigger className="bg-background border-input text-secondary-foreground w-full min-w-0 flex-1 truncate rounded-full border px-3 py-2 text-sm font-bold">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent className="bg-background rounded-2xl text-sm font-semibold text-secondary-foreground">
-              {converter.units.map(u => (
+            <SelectContent className="bg-background text-secondary-foreground rounded-2xl text-sm font-semibold">
+              {converter.units.map((u) => (
                 <SelectItem key={u.id} value={u.id}>
                   {t(u.labelKey)}
                 </SelectItem>
@@ -114,13 +106,9 @@ const PhyisicsUnitCalculator = () => {
         </div>
       </div>
 
-      <ResultDisplay 
-        result={String(result)}
-      />
+      <ResultDisplay result={String(result)} />
 
-      <Formula 
-        formula="2 + 2 = 4"
-      />
+      <Formula formula="2 + 2 = 4" />
     </div>
   )
 }

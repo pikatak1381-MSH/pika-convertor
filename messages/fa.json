@@ -1,5 +1,4 @@
 {
-
   "Header": {
     "convertors": "ابزارها",
     "contact": "تماس با ما",
@@ -98,27 +97,45 @@
       },
 
       "math": {
-        "percentage": { "title": "محاسبه درصد", "description": "محاسبه درصد، تغییرات درصدی و نسبت‌ها." },
+        "percentage": {
+          "title": "محاسبه درصد",
+          "description": "محاسبه درصد، تغییرات درصدی و نسبت‌ها."
+        },
         "powerRoot": { "title": "توان و ریشه", "description": "محاسبه توان و ریشه اعداد." },
         "logarithm": { "title": "لگاریتم", "description": "محاسبه لگاریتم در پایه‌های مختلف." },
         "equationSolver": { "title": "حل معادله", "description": "حل انواع معادلات ریاضی." },
         "primeCheck": { "title": "تشخیص عدد اول", "description": "بررسی اول بودن یا نبودن اعداد." },
-        "perimeterArea": { "title": "محیط و مساحت", "description": "محاسبه محیط و مساحت اشکال هندسی." },
-        "fibonacci": { "title": "محاسبه سری فیبوناچی", "description": "تولید و بررسی دنباله فیبوناچی." },
+        "perimeterArea": {
+          "title": "محیط و مساحت",
+          "description": "محاسبه محیط و مساحت اشکال هندسی."
+        },
+        "fibonacci": {
+          "title": "محاسبه سری فیبوناچی",
+          "description": "تولید و بررسی دنباله فیبوناچی."
+        },
         "baseConverter": { "title": "تبدیل مبنا", "description": "تبدیل اعداد بین مبناهای مختلف." },
         "factorial": { "title": "فاکتوریل", "description": "محاسبه فاکتوریل اعداد." },
         "statistics": { "title": "میانگین، میانه، مد", "description": "محاسبات آماری پایه." },
         "plotting": { "title": "رسم نمودار", "description": "نمایش داده‌ها به‌صورت نمودار." },
         "probability": { "title": "آمار و احتمال", "description": "محاسبات احتمال و آمار." },
         "matrixVector": { "title": "ماتریس و بردار", "description": "محاسبات ماتریسی و برداری." },
-        "decimalToFraction": { "title": "تبدیل اعشار به کسر", "description": "تبدیل اعداد اعشاری به کسر." },
+        "decimalToFraction": {
+          "title": "تبدیل اعشار به کسر",
+          "description": "تبدیل اعداد اعشاری به کسر."
+        },
         "slopeCalculator": { "title": "محاسبه گر تمایل به شیب", "description": "محاسبه شیب خطوط." },
-        "percentageIncrease": { "title": "محاسبه گر افزایش فیصدی", "description": "محاسبه افزایش یا کاهش درصدی." },
+        "percentageIncrease": {
+          "title": "محاسبه گر افزایش فیصدی",
+          "description": "محاسبه افزایش یا کاهش درصدی."
+        },
         "trigonometry": { "title": "محاسبه گر مثلثی", "description": "محاسبات توابع مثلثاتی." }
       },
 
       "technology": {
-        "passwordGenerator": { "title": "ساخت پسورد تصادفی", "description": "تولید رمز عبور امن و تصادفی." },
+        "passwordGenerator": {
+          "title": "ساخت پسورد تصادفی",
+          "description": "تولید رمز عبور امن و تصادفی."
+        },
         "myIp": { "title": "IP من چیست", "description": "نمایش آدرس IP شما." },
         "gpaConverter": { "title": "تبدیل معدل به GPA", "description": "تبدیل معدل به سیستم GPA." },
         "barcodeGenerator": { "title": "ساخت بارکد", "description": "تولید بارکد‌های مختلف." },
@@ -127,23 +144,41 @@
         "qrCode": { "title": "ساخت QR کد", "description": "تولید QR کد برای متن و لینک." },
         "domainChecker": { "title": "بررسی دامنه", "description": "بررسی وضعیت و اطلاعات دامنه." },
         "hashGenerator": { "title": "ساخت کد هش", "description": "تولید هش از متن ورودی." },
-        "textToBinary": { "title": "تبدیل متن به باینری", "description": "تبدیل متن به کد باینری." },
+        "textToBinary": {
+          "title": "تبدیل متن به باینری",
+          "description": "تبدیل متن به کد باینری."
+        },
         "schemaBuilder": { "title": "اسکیما ساز", "description": "ساخت اسکیما برای سئو." },
         "schemaFinder": { "title": "اسکیما یاب", "description": "استخراج اسکیما از صفحات." },
         "metaFinder": { "title": "متا یاب", "description": "بررسی متا تگ‌های صفحات." }
       },
 
       "files": {
-        "textVoice": { "title": "تبدیل متن به ویس و بالعکس", "description": "تبدیل متن به صدا و صدا به متن." },
+        "textVoice": {
+          "title": "تبدیل متن به ویس و بالعکس",
+          "description": "تبدیل متن به صدا و صدا به متن."
+        },
         "imageToText": { "title": "تبدیل عکس به متن", "description": "استخراج متن از تصاویر." },
         "fileConverter": { "title": "مبدل فایل", "description": "تبدیل فرمت فایل‌ها." },
-        "pdfMerge": { "title": "ادغام فایل های PDF", "description": "ترکیب چند فایل PDF در یک فایل." }
+        "pdfMerge": {
+          "title": "ادغام فایل های PDF",
+          "description": "ترکیب چند فایل PDF در یک فایل."
+        }
       },
 
       "time": {
-        "dateConversion": { "title": "تبدیل تاریخ‌ها", "description": "تبدیل بین تقویم‌های مختلف." },
-        "dateDifference": { "title": "محاسبه اختلاف 2 تاریخ", "description": "محاسبه فاصله زمانی بین دو تاریخ." },
-        "minutesToHours": { "title": "تبدیل دقیقه به ساعت", "description": "تبدیل واحد دقیقه به ساعت." },
+        "dateConversion": {
+          "title": "تبدیل تاریخ‌ها",
+          "description": "تبدیل بین تقویم‌های مختلف."
+        },
+        "dateDifference": {
+          "title": "محاسبه اختلاف 2 تاریخ",
+          "description": "محاسبه فاصله زمانی بین دو تاریخ."
+        },
+        "minutesToHours": {
+          "title": "تبدیل دقیقه به ساعت",
+          "description": "تبدیل واحد دقیقه به ساعت."
+        },
         "stopwatch": { "title": "کرنومتر", "description": "اندازه‌گیری زمان." },
         "prayerTimes": { "title": "اوقات شرعی", "description": "نمایش اوقات شرعی شهرها." },
         "ageCalculator": { "title": "محاسبه سن", "description": "محاسبه سن دقیق." },
@@ -332,7 +367,7 @@
           "title": "تبدیل اعداد انگلیسی به فارسی",
           "description": "تبدیل اعداد انگلیسی به فارسی."
         },
-        
+
         "randomNumber": {
           "title": "ساخت عدد تصادفی",
           "description": "تولید عدد تصادفی."
@@ -342,7 +377,7 @@
           "title": "تبدیل اعداد فارسی به چینی",
           "description": "تبدیل اعداد فارسی به چینی."
         },
-        
+
         "faToAr": {
           "title": "تبدیل اعداد فارسی به عربی",
           "description": "تبدیل اعداد فارسی به عربی."

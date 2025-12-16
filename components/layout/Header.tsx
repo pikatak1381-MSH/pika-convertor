@@ -51,7 +51,7 @@ const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden items-center md:flex">
-              <div className="relative group">
+              <div className="group relative">
                 <button
                   onMouseEnter={() => setActiveLink("convertors")}
                   onMouseLeave={() => setActiveLink("")}
@@ -113,7 +113,7 @@ const Header = () => {
 
           {/* Desktop Actions */}
           <div className="flex items-center gap-4">
-            <button className="hover:bg-[#d1d5db]/50 h-6 w-6 cursor-pointer rounded-xl transition-colors">
+            <button className="h-6 w-6 cursor-pointer rounded-xl transition-colors hover:bg-[#d1d5db]/50">
               <Image
                 src="/icons/theme-switch.svg"
                 alt=""
