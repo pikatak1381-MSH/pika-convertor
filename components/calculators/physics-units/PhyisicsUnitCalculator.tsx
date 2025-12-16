@@ -14,8 +14,11 @@ import ResultDisplay from "@/components/calculatorPage/ResultDisplay"
 import Formula from "@/components/calculatorPage/Formula"
 import SwapIcon from "@/components/ui/SwapIcon"
 import { useTranslations } from "next-intl"
+import { useLocale } from "next-intl"
 
 const PhyisicsUnitCalculator = () => {
+  const locale = useLocale()
+  const dir = locale === "fa" ? "rtl" : "ltr"
   const t = useTranslations("Calculators")
   const [typeId, setTypeId] = useState(physicsUnitTypes[0].id)
   const [fromUnit, setFromUnit] = useState(physicsUnitTypes[0].units[0].id)
@@ -39,6 +42,7 @@ const PhyisicsUnitCalculator = () => {
     <div className="mt-4 flex flex-col">
       {/* Converter Type */}
       <Select
+        dir={dir}
         value={typeId}
         onValueChange={(newTypeId) => {
           const nextConverter = physicsUnitTypes.find((unit) => unit.id === newTypeId)!
@@ -70,7 +74,7 @@ const PhyisicsUnitCalculator = () => {
 
         <div className="col-span-2 flex items-center gap-1">
           {/* From Unit */}
-          <Select value={fromUnit} onValueChange={setFromUnit}>
+          <Select dir={dir} value={fromUnit} onValueChange={setFromUnit}>
             <SelectTrigger className="bg-background border-input text-secondary-foreground w-full min-w-0 flex-1 truncate rounded-full border px-3 py-2 text-sm font-bold">
               <SelectValue />
             </SelectTrigger>
@@ -85,13 +89,13 @@ const PhyisicsUnitCalculator = () => {
 
           <button
             onClick={handleSwap}
-            className="hover:bg-primary/50 flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-[#efc900]"
+            className="hover:border-secondary-foreground bg-primary text-secondary-foreground flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-transparent transition-all"
           >
-            <SwapIcon className="" />
+            <SwapIcon />
           </button>
 
           {/* To Unit */}
-          <Select value={toUnit} onValueChange={setToUnit}>
+          <Select dir={dir} value={toUnit} onValueChange={setToUnit}>
             <SelectTrigger className="bg-background border-input text-secondary-foreground w-full min-w-0 flex-1 truncate rounded-full border px-3 py-2 text-sm font-bold">
               <SelectValue />
             </SelectTrigger>
