@@ -19,7 +19,7 @@ const CategoryHeroSection: React.FC<CategoryHeroSectionProps> = ({
   return (
     <section className="container mx-auto mt-12 text-center">
       <div className="flex items-center justify-center gap-2">
-        <div className="bg-primary h-9 w-9 rounded p-1">
+        <div className="bg-primary flex h-9 w-9 items-center justify-center rounded p-1">
           <Image
             src={categoryIcon}
             alt={categoryTitle}
