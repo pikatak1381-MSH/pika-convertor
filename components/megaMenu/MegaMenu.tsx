@@ -129,7 +129,7 @@ const MegaMenu = () => {
                           animate={isActive ? "active" : "inactive"}
                           className={`relative flex w-full cursor-pointer items-center rounded-lg px-3 py-1 text-base font-semibold text-nowrap transition-all ${
                             isActive
-                              ? "border-border border bg-white shadow-xs"
+                              ? "border-border z-30 border bg-white shadow-xs"
                               : "hover:bg-secondary-background border border-transparent"
                           }`}
                         >
@@ -154,16 +154,13 @@ const MegaMenu = () => {
                           </button>
                         </motion.div>
 
-                        {/* Active category highlight background */}
                         {isActive && (
                           <motion.div
-                            layoutId="active-category-bg"
-                            className="from-primary/5 absolute inset-0 -z-10 rounded-lg bg-linear-to-l to-transparent"
-                            transition={{
-                              type: "spring",
-                              stiffness: 350,
-                              damping: 30,
-                            }}
+                            layoutId="active-connector"
+                            className="from-primary absolute top-1/2 -left-4 h-1 w-6 -translate-y-1/2 bg-linear-to-r to-transparent"
+                            initial={{ scaleX: 0 }}
+                            animate={{ scaleX: 1 }}
+                            transition={{ duration: 0.3 }}
                           />
                         )}
                       </motion.li>
@@ -177,7 +174,7 @@ const MegaMenu = () => {
                 initial={{ opacity: 0, scale: 0.98 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.2 }}
-                className="relative h-full flex-1 overflow-y-auto rounded-xl border bg-white p-6"
+                className="relative z-10 h-full flex-1 overflow-y-auto rounded-xl border bg-white p-6"
               >
                 <AnimatePresence mode="wait">
                   {activeCategory && (
