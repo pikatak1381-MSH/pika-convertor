@@ -30,7 +30,7 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="bg-header-background text-header-foreground fixed top-0 right-0 left-0 z-50 transition-all duration-500"
+      className="bg-header-background text-header-foreground sticky top-0 right-0 left-0 z-50 mx-auto w-full px-2 transition-all duration-500"
     >
       <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-27.5 items-center justify-between">

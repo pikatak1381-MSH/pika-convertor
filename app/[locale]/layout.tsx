@@ -6,7 +6,6 @@ import { NextIntlClientProvider, hasLocale } from "next-intl"
 import { locales, localeDirections } from "@/i18n/config"
 import { routing } from "@/i18n/routing"
 import { notFound } from "next/navigation"
-import Providers from "./Providers"
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 
@@ -75,15 +74,11 @@ export default async function RootLayout({
       }
       suppressHydrationWarning
     >
-      <body className="min-h-screen">
+      <body className="flex min-h-screen flex-col">
         <NextIntlClientProvider>
-          <Providers>
-            <Header />
-            <main className="relative mx-auto flex min-h-[calc(100vh-110px)] w-full max-w-7xl flex-col px-4 pt-27.5 sm:px-6 lg:px-8">
-              <div className="flex-1">{children}</div>
-            </main>
-            <Footer />
-          </Providers>
+          <Header />
+          <main className="mx-auto w-full max-w-7xl flex-1 px-4 sm:px-6 lg:px-8">{children}</main>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
