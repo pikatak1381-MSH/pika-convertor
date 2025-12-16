@@ -90,7 +90,7 @@ const Header = () => {
                     className="flex items-center"
                   >
                     <Link
-                      href={link.href}
+                      href="/"
                       onMouseEnter={() => setActiveLink(link.key)}
                       onMouseLeave={() => setActiveLink("")}
                       className={`text-md group relative flex items-center px-2 py-2 font-medium transition-colors duration-300`}

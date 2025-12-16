@@ -33,6 +33,20 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   title: "Pika Convertor",
   description: "Pikatak's Convertor Web Application",
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png" },
+    ],
+    apple: "/apple-touch-icon.png",
+    other: [
+      {
+        rel: "manifest",
+        url: "/site.webmanifest"
+      },
+    ],
+  },
 }
 
 export default async function RootLayout({
@@ -61,12 +75,18 @@ export default async function RootLayout({
       }
       suppressHydrationWarning
     >
-      <body>
+      <body className="min-h-screen">
         <NextIntlClientProvider>
           <Providers>
-            <Header />
-            {children}
-            <Footer />
+              <Header />
+                <main 
+                  className="flex flex-col relative mx-auto w-full max-w-7xl min-h-[calc(100vh-110px)] px-4 pt-27.5 sm:px-6 lg:px-8"
+                >
+                  <div className="flex-1">
+                    {children}
+                  </div>
+                </main>
+              <Footer />
           </Providers>
         </NextIntlClientProvider>
       </body>

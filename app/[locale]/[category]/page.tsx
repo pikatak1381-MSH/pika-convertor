@@ -1,8 +1,10 @@
+import CategoryHeroSection from "@/components/categoryPage/CategoryHeroSection"
 import { categories } from "../_data/categories"
 import { getTranslations } from "next-intl/server"
 import { notFound } from "next/navigation"
+import CategoryGrid from "@/components/categoryPage/CategoryGrid"
 
-type CategoryPageProps = {
+interface CategoryPageProps  {
   params: Promise<{
     category: string
   }>
@@ -10,21 +12,25 @@ type CategoryPageProps = {
 
 const CategoryPage = async ({ params }: CategoryPageProps) => {
   const { category: categoryParam } = await params
-  console.log(params)
-
   const t = await getTranslations("CategoriesSection")
 
   const category = categories.find(c => c.id === categoryParam)
-  console.log(category)
   if (!category) return notFound()
 
   return (
-    <main className="relative mx-auto w-full max-w-7xl px-4 pt-27.5 sm:px-6 lg:px-8">
-      <section>
-        <h1>{t(category.i18nKey)}</h1>
-        <p className="text-black">Hello World Test</p>
-      </section>
-    </main>
+      <>
+        <CategoryHeroSection
+          categoryTitle={t(category.i18nKey)}
+          categoryDescription={t(category.descriptionKey)}
+          categoryIcon={category.icon}
+          categoryItemsLength={category.subCategories.length}
+        />
+
+        <CategoryGrid 
+          subCategories={category.subCategories}
+          categoryId={category.id}
+        />
+      </>
   )
 }
 
