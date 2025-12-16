@@ -15,6 +15,8 @@
   --color-secondary-background: var(--secondary-background);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-tertiary-foreground: var(--tertiary-foreground);
+  --color-results-background: var(--results-background);
+  --color-category-description: var(--category-description);
   --color-header-background: var(--header-background);
   --color-header-foreground: var(--header-foreground);
   --color-megamenu-background: var(--megamenu-background);
@@ -22,6 +24,7 @@
   --color-footer-foreground: var(--footer-foreground);
   --color-input-placeholder: var(--input-placeholder);
   --color-input-background: var(--input-background);
+  --color-input-border: var(--input-border);
   --color-hover: var(--hover);
   --color-hover-secondary: var(--hover-secondary);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -67,6 +70,8 @@
   --secondary-background: oklch(0.8717 0.0093 258.34);
   --secondary-foreground: oklch(0.2795 0.0368 260.03);
   --tertiary-foreground: oklch(0.5486 0 0);
+  --results-background: oklch(0.9494 0.0241 259.82);
+  --category-description: oklch(0.3979 0 0);
   --header-background: oklch(0.2795 0.0368 260.03);
   --header-foreground: oklch(0.9702 0 0);
   --megamenu-background: oklch(1 0 0);
@@ -74,6 +79,7 @@
   --footer-foreground: oklch(0.5486 0 0);
   --input-placeholder: oklch(0.2795 0.0368 260.03);
   --input-background: oklch(0.9189 0 0);
+  --input-border: oklch(0.9189 0 0);
   --hover: oklch(0.8717 0.0093 258.34);
   --hover-secondary: oklch(0.5486 0 0);
   --card: oklch(1 0 0);
@@ -113,6 +119,8 @@
   --secondary-background: oklch(0.8717 0.0093 258.34);
   --secondary-foreground: oklch(0.2795 0.0368 260.03);
   --tertiary-foreground: oklch(0.5486 0 0);
+  --results-background: oklch(0.9494 0.0241 259.82);
+  --category-description: oklch(0.3979 0 0);
   --header-background: oklch(0.2795 0.0368 260.03);
   --megamenu-background: oklch(1 0 0);
   --header-foreground: oklch(0.9702 0 0);
@@ -120,6 +128,7 @@
   --footer-foreground: oklch(0.5486 0 0);
   --input-placeholder: oklch(0.2795 0.0368 260.03);
   --input-background: oklch(0.9189 0 0);
+  --input-border: oklch(0.9189 0 0);
   --hover: oklch(0.8717 0.0093 258.34);
   --hover-secondary: oklch(0.5486 0 0);
   --card: oklch(0.205 0 0);

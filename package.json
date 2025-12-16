@@ -11,9 +11,11 @@
     "format:check": "prettier . --check"
   },
   "dependencies": {
+    "@radix-ui/react-select": "^2.2.6",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.25",
+    "katex": "^0.16.27",
     "lucide-react": "^0.556.0",
     "next": "16.0.8",
     "next-intl": "^4.5.8",
@@ -23,6 +25,7 @@
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
