@@ -718,6 +718,56 @@
             "gauss": "گوس"
           }
         }
+      },
+
+      "optics": {
+        "luminance": {
+          "title": "درخشندگی",
+          "units": {
+            "cdPerM2": "کاندلا بر متر مربع",
+            "nit": "نیت",
+            "stilb": "استیلب"
+          }
+        },
+
+        "illuminance": {
+          "title": "روشنایی",
+          "units": {
+            "lux": "لوکس",
+            "kilolux": "کیلو‌لوکس",
+            "footCandle": "فوت‌کندل"
+          }
+        },
+
+        "luminousIntensity": {
+          "title": "شدت نور",
+          "units": {
+            "candela": "کاندلا",
+            "millicandela": "میلی‌کاندلا",
+            "kilocandela": "کیلوکاندلا"
+          }
+        },
+
+        "digitalImageResolution": {
+          "title": "تفکیک‌پذیری تصویر دیجیتال",
+          "units": {
+            "dpi": "نقطه بر اینچ (DPI)",
+            "dpcm": "نقطه بر سانتی‌متر",
+            "ppmm": "پیکسل بر میلی‌متر"
+          }
+        },
+
+        "frequencyWavelength": {
+          "title": "فرکانس ↔ طول موج",
+          "units": {
+            "hz": "هرتز",
+            "khz": "کیلوهرتز",
+            "mhz": "مگاهرتز",
+            "thz": "تراهرتز",
+            "meter": "متر",
+            "nanometer": "نانومتر"
+          }
+        }
       }
     }
   }

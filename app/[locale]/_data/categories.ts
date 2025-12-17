@@ -47,7 +47,7 @@ export const categories: Category[] = [
         icon: "/icons/categories/magnet.svg",
       },
       {
-        id: "optical",
+        id: "optical-units",
         i18nKey: "sub.engineering.optical.title",
         descriptionKey: "sub.engineering.optical.description",
         icon: "/icons/categories/light.svg",
