@@ -380,12 +380,6 @@ export const categories: Category[] = [
         icon: "/icons/categories/gold.svg",
       },
       {
-        id: "invoice",
-        i18nKey: "sub.finance.invoice.title",
-        descriptionKey: "sub.finance.invoice.description",
-        icon: "/icons/categories/invoice.svg",
-      },
-      {
         id: "transfer-cost",
         i18nKey: "sub.finance.transferCost.title",
         descriptionKey: "sub.finance.transferCost.description",

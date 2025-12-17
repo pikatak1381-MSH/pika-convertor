@@ -5,6 +5,10 @@
     "api": "API"
   },
 
+  "BreadCrumbs": {
+    "home": "خانه"
+  },
+
   "MegaMenu": {
     "title": "دسته بندی"
   },
@@ -204,11 +208,6 @@
         "goldPrice": {
           "title": "محاسبه گر قیمت طلا",
           "description": "محاسبه قیمت روز طلا."
-        },
-
-        "invoice": {
-          "title": "فاکتور فروش",
-          "description": "صدور و محاسبه فاکتور فروش."
         },
 
         "transferCost": {
