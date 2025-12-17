@@ -29,21 +29,21 @@ export const categories: Category[] = [
         icon: "/icons/categories/physics.svg",
       },
       {
-        id: "currents",
-        i18nKey: "sub.engineering.currents.title",
-        descriptionKey: "sub.engineering.currents.description",
+        id: "fluids-units",
+        i18nKey: "sub.engineering.fluids.title",
+        descriptionKey: "sub.engineering.fluids.description",
         icon: "/icons/categories/flow.svg",
       },
       {
-        id: "electricity",
+        id: "electricity-units",
         i18nKey: "sub.engineering.electricity.title",
         descriptionKey: "sub.engineering.electricity.description",
         icon: "/icons/categories/electric.svg",
       },
       {
-        id: "magnetic",
-        i18nKey: "sub.engineering.magnetic.title",
-        descriptionKey: "sub.engineering.magnetic.description",
+        id: "magnetism-units",
+        i18nKey: "sub.engineering.magnetism.title",
+        descriptionKey: "sub.engineering.magnetism.description",
         icon: "/icons/categories/magnet.svg",
       },
       {

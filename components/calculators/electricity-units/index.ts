@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic"
 
 export const electricityUnits = {
-  id: "electricity",
+  id: "electricity-units",
   component: dynamic(() => import("./ElectricityCalculator"), {
     loading: () => "Loading calculator",
   }),

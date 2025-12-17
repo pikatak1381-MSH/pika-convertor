@@ -16,7 +16,7 @@ import SwapIcon from "@/components/ui/SwapIcon"
 import { useTranslations } from "next-intl"
 import { useLocale } from "next-intl"
 
-const CurrentsCalculator = () => {
+const ElectricityCalculator = () => {
   const locale = useLocale()
   const dir = locale === "fa" ? "rtl" : "ltr"
   const t = useTranslations("Calculators")
@@ -120,4 +120,4 @@ const CurrentsCalculator = () => {
   )
 }
 
-export default CurrentsCalculator
+export default ElectricityCalculator

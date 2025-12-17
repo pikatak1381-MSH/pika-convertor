@@ -74,7 +74,7 @@
           "title": "تبدیل واحد های فیزیکی",
           "description": "ابزاری جامع برای تبدیل انواع واحدهای فیزیکی"
         },
-        "currents": {
+        "fluids": {
           "title": "تبدیل جریان‌ها",
           "description": "تبدیل واحدهای مختلف جریان الکتریکی."
         },
@@ -90,7 +90,7 @@
           "title": "تبدیل های نوری",
           "description": "محاسبات و تبدیل‌های مرتبط با نور و اپتیک."
         },
-        "magnetic": {
+        "magnetism": {
           "title": "تبدیل های مغناطیسی",
           "description": "تبدیل واحدها و مقادیر میدان‌های مغناطیسی."
         },
@@ -677,6 +677,45 @@
           "title": "چگالی سطحی جریان الکتریکی",
           "units": {
             "aPerM2": "آمپر بر متر مربع"
+          }
+        }
+      },
+
+      "magnetism": {
+        "magnetomotiveForce": {
+          "title": "نیروی مغناطیس‌بران",
+          "units": {
+            "ampereTurn": "آمپر‌دور",
+            "kiloampereTurn": "کیلوآمپر‌دور"
+          }
+        },
+
+        "magneticFlux": {
+          "title": "شار مغناطیسی",
+          "units": {
+            "weber": "وبر",
+            "milliweber": "میلی‌وبر",
+            "microweber": "میکرووبر",
+            "maxwell": "ماکسول"
+          }
+        },
+
+        "magneticFieldStrength": {
+          "title": "شدت میدان مغناطیسی",
+          "units": {
+            "aPerM": "آمپر بر متر",
+            "atPerM": "آمپر‌دور بر متر",
+            "oersted": "اورستد"
+          }
+        },
+
+        "magneticFluxDensity": {
+          "title": "چگالی شار مغناطیسی",
+          "units": {
+            "tesla": "تسلا",
+            "millitesla": "میلی‌تسلا",
+            "microtesla": "میکروتسلا",
+            "gauss": "گوس"
           }
         }
       }
