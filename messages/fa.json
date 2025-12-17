@@ -768,6 +768,90 @@
             "nanometer": "نانومتر"
           }
         }
+      },
+
+      "thermal": {
+        "temperatureInterval": {
+          "title": "بازه دما",
+          "units": {
+            "kelvin": "کلوین",
+            "celsius": "درجه سلسیوس",
+            "fahrenheit": "درجه فارنهایت"
+          }
+        },
+
+        "thermalResistance": {
+          "title": "مقاومت حرارتی",
+          "units": {
+            "kPerW": "کلوین بر وات",
+            "cPerW": "درجه سلسیوس بر وات"
+          }
+        },
+
+        "specificHeatCapacity": {
+          "title": "ظرفیت گرمایی ویژه",
+          "units": {
+            "jPerKgK": "ژول بر کیلوگرم کلوین",
+            "kjPerKgK": "کیلوژول بر کیلوگرم کلوین",
+            "calPerGC": "کالری بر گرم درجه سلسیوس"
+          }
+        },
+
+        "heatFluxDensity": {
+          "title": "چگالی شار حرارتی",
+          "units": {
+            "wPerM2": "وات بر متر مربع",
+            "kwPerM2": "کیلووات بر متر مربع"
+          }
+        },
+
+        "thermalExpansion": {
+          "title": "انبساط حرارتی",
+          "units": {
+            "perK": "بر کلوین",
+            "perC": "بر درجه سلسیوس"
+          }
+        },
+
+        "thermalConductivity": {
+          "title": "رسانایی حرارتی",
+          "units": {
+            "wPerMK": "وات بر متر کلوین",
+            "wPerMC": "وات بر متر درجه سلسیوس"
+          }
+        },
+
+        "heatDensity": {
+          "title": "چگالی انرژی حرارتی",
+          "units": {
+            "jPerM3": "ژول بر متر مکعب",
+            "kjPerM3": "کیلوژول بر متر مکعب"
+          }
+        },
+
+        "heatTransferCoefficient": {
+          "title": "ضریب انتقال حرارت",
+          "units": {
+            "wPerM2K": "وات بر متر مربع کلوین",
+            "wPerM2C": "وات بر متر مربع درجه سلسیوس"
+          }
+        },
+
+        "fuelEfficiencyMass": {
+          "title": "بازده سوخت (جرمی)",
+          "units": {
+            "kgPerJ": "کیلوگرم بر ژول",
+            "kgPerMJ": "کیلوگرم بر مگاژول"
+          }
+        },
+
+        "fuelEfficiencyVolume": {
+          "title": "بازده سوخت (حجمی)",
+          "units": {
+            "m3PerJ": "متر مکعب بر ژول",
+            "lPerMJ": "لیتر بر مگاژول"
+          }
+        }
       }
     }
   }

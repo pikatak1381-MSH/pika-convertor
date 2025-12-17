@@ -53,7 +53,7 @@ export const categories: Category[] = [
         icon: "/icons/categories/light.svg",
       },
       {
-        id: "thermal",
+        id: "thermal-units",
         i18nKey: "sub.engineering.thermal.title",
         descriptionKey: "sub.engineering.thermal.description",
         icon: "/icons/categories/physics.svg",

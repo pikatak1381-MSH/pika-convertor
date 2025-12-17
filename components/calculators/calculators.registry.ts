@@ -3,6 +3,7 @@ import { fluidsUnits } from "./fluid-units"
 import { electricityUnits } from "./electricity-units"
 import { magnetismUnits } from "./magnetism-units"
 import { opticalUnits } from "./optical-units"
+import { thermalUnits } from "./thermal-units"
 
 export const calculatorRegistry = {
   [physicsUnits.id]: physicsUnits,
@@ -10,6 +11,7 @@ export const calculatorRegistry = {
   [electricityUnits.id]: electricityUnits,
   [magnetismUnits.id]: magnetismUnits,
   [opticalUnits.id]: opticalUnits,
+  [thermalUnits.id]: thermalUnits,
 } as const
 
 export type CalculatorId = keyof typeof calculatorRegistry
