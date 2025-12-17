@@ -32,7 +32,13 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ category }) => {
         {category.subCategories.slice(0, 5).map((cat) => (
           <li key={cat.id}>
             <Link
-              href="/"
+              href={{
+                pathname: "/[category]/[calculator]",
+                params: {
+                  category: category.id,
+                  calculator: cat.id,
+                },
+              }}
               className="hover:border-border flex items-center gap-1 rounded-[20px] border border-transparent p-2 text-sm font-semibold transition-shadow duration-300 hover:shadow-md"
             >
               <div className="h-4.5 w-4.5 overflow-hidden rounded">

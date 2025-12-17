@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl"
 import { categories } from "@/app/[locale]/_data/categories"
 import { useState } from "react"
 import Image from "next/image"
-import Link from "next/link"
+import { Link } from "@/i18n/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 
 const MegaMenu = () => {
@@ -200,7 +200,13 @@ const MegaMenu = () => {
                         {activeCategory.subCategories.map((subCategory) => (
                           <motion.div key={subCategory.id} variants={subCategoryItemVariants}>
                             <Link
-                              href={``}
+                              href={{
+                                pathname: "/[category]/[calculator]",
+                                params: {
+                                  category: activeCategoryId,
+                                  calculator: subCategory.id,
+                                },
+                              }}
                               className="group/item flex w-fit items-center gap-1 rounded-full border border-transparent p-2 transition-all hover:border-gray-300 hover:shadow-xs"
                             >
                               <motion.div
