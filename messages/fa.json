@@ -551,6 +551,134 @@
             "millidarcy": "میلی‌دارسی"
           }
         }
+      },
+
+      "electricity": {
+        "charge": {
+          "title": "بار الکتریکی",
+          "units": {
+            "coulomb": "کولن",
+            "millicoulomb": "میلی‌کولن",
+            "microcoulomb": "میکروکولن",
+            "ampereHour": "آمپر‌ساعت"
+          }
+        },
+
+        "current": {
+          "title": "جریان الکتریکی",
+          "units": {
+            "ampere": "آمپر",
+            "milliampere": "میلی‌آمپر",
+            "microampere": "میکروآمپر"
+          }
+        },
+
+        "electricPotential": {
+          "title": "پتانسیل الکتریکی",
+          "units": {
+            "volt": "ولت",
+            "millivolt": "میلی‌ولت",
+            "kilovolt": "کیلوولت"
+          }
+        },
+
+        "electricFieldStrength": {
+          "title": "شدت میدان الکتریکی",
+          "units": {
+            "vPerM": "ولت بر متر",
+            "kvPerM": "کیلوولت بر متر"
+          }
+        },
+
+        "electricResistance": {
+          "title": "مقاومت الکتریکی",
+          "units": {
+            "ohm": "اهم",
+            "milliohm": "میلی‌اهم",
+            "kiloohm": "کیلو‌اهم",
+            "megaohm": "مگااهم"
+          }
+        },
+
+        "electricConductance": {
+          "title": "هدایت الکتریکی",
+          "units": {
+            "siemens": "زیمنس",
+            "millisiemens": "میلی‌زیمنس",
+            "microsiemens": "میکروزیمنس"
+          }
+        },
+
+        "electricResistivity": {
+          "title": "مقاومت ویژه الکتریکی",
+          "units": {
+            "ohmMeter": "اهم‌متر",
+            "ohmCm": "اهم‌سانتی‌متر"
+          }
+        },
+
+        "electricConductivity": {
+          "title": "رسانایی الکتریکی",
+          "units": {
+            "sPerM": "زیمنس بر متر",
+            "sPerCm": "زیمنس بر سانتی‌متر"
+          }
+        },
+
+        "capacitance": {
+          "title": "ظرفیت خازنی",
+          "units": {
+            "farad": "فاراد",
+            "millifarad": "میلی‌فاراد",
+            "microfarad": "میکروفاراد",
+            "nanofarad": "نانو‌فاراد",
+            "picofarad": "پیکوفاراد"
+          }
+        },
+
+        "inductance": {
+          "title": "اندوکتانس",
+          "units": {
+            "henry": "هانری",
+            "millihenry": "میلی‌هانری",
+            "microhenry": "میکروهانری"
+          }
+        },
+
+        "linearChargeDensity": {
+          "title": "چگالی خطی بار الکتریکی",
+          "units": {
+            "cPerM": "کولن بر متر"
+          }
+        },
+
+        "surfaceChargeDensity": {
+          "title": "چگالی سطحی بار الکتریکی",
+          "units": {
+            "cPerM2": "کولن بر متر مربع"
+          }
+        },
+
+        "volumeChargeDensity": {
+          "title": "چگالی حجمی بار الکتریکی",
+          "units": {
+            "cPerM3": "کولن بر متر مکعب"
+          }
+        },
+
+        "linearCurrentDensity": {
+          "title": "چگالی خطی جریان الکتریکی",
+          "units": {
+            "aPerM": "آمپر بر متر"
+          }
+        },
+
+        "surfaceCurrentDensity": {
+          "title": "چگالی سطحی جریان الکتریکی",
+          "units": {
+            "aPerM2": "آمپر بر متر مربع"
+          }
+        }
       }
     }
   }

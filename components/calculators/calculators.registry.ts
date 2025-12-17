@@ -1,9 +1,11 @@
 import { physicsUnits } from "./physics-units"
-import { currentUnits } from "./fluid-units"
+import { fluidsUnits } from "./fluid-units"
+import { electricityUnits } from "./electricity-units"
 
 export const calculatorRegistry = {
   [physicsUnits.id]: physicsUnits,
-  [currentUnits.id]: currentUnits,
+  [fluidsUnits.id]: fluidsUnits,
+  [electricityUnits.id]: electricityUnits,
 } as const
 
 export type CalculatorId = keyof typeof calculatorRegistry

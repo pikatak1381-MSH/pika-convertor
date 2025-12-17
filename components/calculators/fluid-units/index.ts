@@ -1,13 +1,13 @@
 import dynamic from "next/dynamic"
 
-export const currentUnits = {
-  id: "currents",
+export const fluidsUnits = {
+  id: "fluids-units",
   component: dynamic(() => import("./FluidsCalculator"), {
     loading: () => "Loading calculator",
   }),
-  formulaKey: "formulas.physicsUnits",
+  formulaKey: "formulas.fluidsUnits",
   seo: {
-    titleKey: "seo.physicsUnits.title",
-    descriptionKey: "seo.physicsUnits.description",
+    titleKey: "seo.fluidsUnits.title",
+    descriptionKey: "seo.fluidsUnits.description",
   },
 }
