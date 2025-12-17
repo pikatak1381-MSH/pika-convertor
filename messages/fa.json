@@ -386,33 +386,170 @@
   },
 
   "Calculators": {
-    "physics": {
-      "angularAcceleration": {
-        "title": "شتاب زاویه‌ای",
-        "units": {
-          "radPerS2": "رادیان بر مجذور ثانیه",
-          "degPerS2": "درجه بر مجذور ثانیه",
-          "revPerS2": "دور بر مجذور ثانیه",
-          "revPerMin2": "دور بر مجذور دقیقه",
-          "rpmPerS": "دور بر دقیقه بر ثانیه",
-          "rpmPerMin": "دور بر مجذور دقیقه"
+    "engineering": {
+      "physics": {
+        "angularAcceleration": {
+          "title": "شتاب زاویه‌ای",
+          "units": {
+            "radPerS2": "رادیان بر مجذور ثانیه",
+            "degPerS2": "درجه بر مجذور ثانیه",
+            "revPerS2": "دور بر مجذور ثانیه",
+            "revPerMin2": "دور بر مجذور دقیقه",
+            "rpmPerS": "دور بر دقیقه بر ثانیه",
+            "rpmPerMin": "دور بر مجذور دقیقه"
+          }
+        },
+
+        "torque": {
+          "title": "گشتاور نیرو",
+          "units": {
+            "nm": "نیوتون متر",
+            "kgfm": "کیلوگرم-نیرو متر",
+            "lbft": "پوند فوت",
+            "lbin": "پوند اینچ"
+          }
+        },
+
+        "density": {
+          "title": "چگالی",
+          "units": {
+            "kgPerM3": "کیلوگرم بر متر‌ مکعب",
+            "gPerCm3": "گرم بر سانتی‌متر مکعب",
+            "gPerMl": "گرم بر میلی‌لیتر",
+            "lbPerFt3": "پوند بر فوت مکعب"
+          }
+        },
+
+        "dataStorage": {
+          "title": "واحد‌های داده",
+          "units": {
+            "bit": "بیت",
+            "byte": "گرم بر سانتی‌متر مکعب",
+            "kb": "گرم بر میلی‌لیتر",
+            "mb": "پوند بر فوت مکعب",
+            "gb": "پوند بر فوت مکعب"
+          }
+        },
+
+        "speed": {
+          "title": "سرعت",
+          "units": {
+            "mps": "متر بر ثانیه",
+            "kmph": "کیلومتر بر ساعت",
+            "mph": "مایل بر ساعت",
+            "ftps": "فوت بر ثانیه",
+            "knot": "گره"
+          }
+        },
+
+        "force": {
+          "title": "نیرو",
+          "units": {
+            "newton": "نیوتون",
+            "kgf": "کیلوگرم-نیرو",
+            "lbf": "پوند-نیرو"
+          }
+        },
+
+        "temperature": {
+          "title": "دما",
+          "units": {
+            "kelvin": "K",
+            "celsius": "°C",
+            "fahrenheit": "°F"
+          }
+        },
+
+        "fuelConsumption": {
+          "title": "مصرف سوخت",
+          "units": {
+            "lPer100km": "L/100km",
+            "MPG": "MPG (US)"
+          }
         }
       },
 
-      "temperature": {
-        "title": "دما",
-        "units": {
-          "kelvin": "K",
-          "celsius": "°C",
-          "fahrenheit": "°F"
-        }
-      },
+      "fluids": {
+        "flow": {
+          "title": "دبی حجمی",
+          "units": {
+            "m3PerS": "متر مکعب بر ثانیه",
+            "m3PerH": "متر مکعب بر ساعت",
+            "lPerS": "لیتر بر ثانیه",
+            "lPerMin": "لیتر بر دقیقه",
+            "gpmUS": "گالن بر دقیقه (آمریکا)"
+          }
+        },
 
-      "fuelConsumption": {
-        "title": "مصرف سوخت",
-        "units": {
-          "lPer100km": "L/100km",
-          "MPG": "MPG (US)"
+        "massFlow": {
+          "title": "دبی جرمی",
+          "units": {
+            "kgPerS": "کیلوگرم بر ثانیه",
+            "kgPerH": "کیلوگرم بر ساعت",
+            "gPerS": "گرم بر ثانیه",
+            "lbPerH": "پوند بر ساعت"
+          }
+        },
+
+        "molarFlow": {
+          "title": "دبی مولی",
+          "units": {
+            "molPerS": "مول بر ثانیه",
+            "molPerH": "مول بر ساعت",
+            "kmolPerH": "کیلومول بر ساعت"
+          }
+        },
+
+        "molarConcentration": {
+          "title": "غلظت مولی",
+          "units": {
+            "molPerM3": "مول بر متر مکعب",
+            "molPerL": "مول بر لیتر",
+            "kmolPerM3": "کیلومول بر متر مکعب"
+          }
+        },
+
+        "dynamicViscosity": {
+          "title": "گرانروی دینامیکی",
+          "units": {
+            "paS": "پاسکال‌ثانیه",
+            "poise": "پواز",
+            "centipoise": "سانتی‌پواز"
+          }
+        },
+
+        "kinematicViscosity": {
+          "title": "گرانروی سینماتیکی",
+          "units": {
+            "m2PerS": "متر مربع بر ثانیه",
+            "stokes": "استوکس",
+            "centistokes": "سانتی‌استوکس"
+          }
+        },
+
+        "surfaceTension": {
+          "title": "کشش سطحی",
+          "units": {
+            "nPerM": "نیوتن بر متر",
+            "dynPerCm": "داین بر سانتی‌متر"
+          }
+        },
+
+        "massFluxDensity": {
+          "title": "چگالی شار جرمی",
+          "units": {
+            "kgPerM2S": "کیلوگرم بر متر مربع بر ثانیه",
+            "kgPerM2H": "کیلوگرم بر متر مربع بر ساعت"
+          }
+        },
+
+        "permeability": {
+          "title": "تراوایی",
+          "units": {
+            "m2": "متر مربع",
+            "darcy": "دارسی",
+            "millidarcy": "میلی‌دارسی"
+          }
         }
       }
     }
