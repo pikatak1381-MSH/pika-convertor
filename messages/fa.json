@@ -852,6 +852,49 @@
             "lPerMJ": "لیتر بر مگاژول"
           }
         }
+      },
+
+      "radiology": {
+        "radiation": {
+          "title": "دوز معادل پرتو",
+          "units": {
+            "sievert": "سیورت",
+            "millisievert": "میلی‌سیورت",
+            "microsievert": "میکروسیورت",
+            "rem": "رم",
+            "millirem": "میلی‌رم"
+          }
+        },
+
+        "radiationExposure": {
+          "title": "پرتودهی",
+          "units": {
+            "cPerKg": "کولن بر کیلوگرم",
+            "roentgen": "رونتگن"
+          }
+        },
+
+        "radiationActivity": {
+          "title": "فعالیت پرتوزا",
+          "units": {
+            "becquerel": "بکرل",
+            "kilobecquerel": "کیلوبکرل",
+            "megabecquerel": "مگابکرل",
+            "gigabecquerel": "گیگابکرل",
+            "curie": "کوری",
+            "millicurie": "میلی‌کوری"
+          }
+        },
+
+        "radiationAbsorbedDose": {
+          "title": "دوز جذب‌شده",
+          "units": {
+            "gray": "گری",
+            "milligray": "میلی‌گری",
+            "microgray": "میکروگری",
+            "rad": "راد"
+          }
+        }
       }
     }
   }

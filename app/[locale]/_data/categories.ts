@@ -59,7 +59,7 @@ export const categories: Category[] = [
         icon: "/icons/categories/physics.svg",
       },
       {
-        id: "radiology",
+        id: "radiology-units",
         i18nKey: "sub.engineering.radiology.title",
         descriptionKey: "sub.engineering.radiology.description",
         icon: "/icons/categories/light.svg",
