@@ -1,4 +1,4 @@
-import { CalculatorDefinition } from "@/components/calculators/physics-units/physics.types"
+import { CalculatorDefinition } from "@/components/calculators/physics/physics-units/physics.types"
 
 export const convertValue = (
   value: number,

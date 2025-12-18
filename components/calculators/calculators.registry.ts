@@ -1,10 +1,10 @@
-import { physicsUnits } from "./physics-units"
-import { fluidsUnits } from "./fluid-units"
-import { electricityUnits } from "./electricity-units"
-import { magnetismUnits } from "./magnetism-units"
-import { opticalUnits } from "./optical-units"
-import { thermalUnits } from "./thermal-units"
-import { radiologyUnits } from "./radiology-units"
+import { physicsUnits } from "./physics/physics-units"
+import { fluidsUnits } from "./physics/fluid-units"
+import { electricityUnits } from "./physics/electricity-units"
+import { magnetismUnits } from "./physics/magnetism-units"
+import { opticalUnits } from "./physics/optical-units"
+import { thermalUnits } from "./physics/thermal-units"
+import { radiologyUnits } from "./physics/radiology-units"
 
 export const calculatorRegistry = {
   [physicsUnits.id]: physicsUnits,
