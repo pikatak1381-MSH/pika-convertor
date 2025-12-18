@@ -10,7 +10,7 @@ const CalculatorShell: React.FC<CalculatorShellProps> = ({ title, children }) =>
       <h3 className="text-start font-bold">{title}</h3>
 
       {/* Calculator Inputs */}
-      {children}
+      <div data-calculator-title={title}>{children}</div>
       <hr className="my-6" />
     </div>
   )

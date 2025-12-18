@@ -41,6 +41,14 @@
     "convertor": "مبدل",
     "result": "نتیجه",
     "formula": "فرمول",
+    "copiedToClipboard": "در کلیپ‌بورد کپی شد!",
+    "copyFailed": "کپی کردن ناموفق بود",
+    "sharedSuccessfully": "با موفقیت به اشتراک گذاشته شد!",
+    "linkCopiedToClipboard": "لینک در کلیپ‌بورد کپی شد!",
+    "shareFailed": "اشتراک‌گذاری ناموفق بود",
+    "shareResult": "نتیجه اشتراک‌گذاری",
+    "copyResult": "نتیجه کپی",
+    "calculatorResult": "نتیجه محاسبه",
 
     "categories": {
       "engineering": "مهندسی",
