@@ -40,7 +40,6 @@ const ResultDisplay: React.FC<ResultDisplayProps> = ({ result }) => {
       text: `${t("result")}: ${result}`,
       url: url,
     }
-    console.log(shareData)
 
     if (canShare) {
       const shared = await share(shareData)
@@ -62,7 +61,7 @@ const ResultDisplay: React.FC<ResultDisplayProps> = ({ result }) => {
         <p className="text-start font-bold">{t("result")}</p>
 
         <div className="flex items-center gap-4">
-          <div className="bg-background w-full rounded-full border p-2">
+          <div className="bg-background h-11 w-full rounded-full border p-2">
             <p className="text-foreground font-semibold">{result}</p>
           </div>
           {/* Share Button */}
