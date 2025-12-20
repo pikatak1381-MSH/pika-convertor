@@ -350,6 +350,129 @@ export const categories: Category[] = [
   },
 
   {
+    id: "health",
+    i18nKey: "categories.health",
+    descriptionKey: "categoriesDescriptions.health",
+    icon: "/icons/categories/health.svg",
+    subCategories: [
+      {
+        id: "bmi",
+        i18nKey: "sub.health.bmi.title",
+        descriptionKey: "sub.health.bmi.description",
+        icon: "/icons/categories/bmi.svg",
+      },
+      {
+        id: "ideal-weight",
+        i18nKey: "sub.health.idealWeight.title",
+        descriptionKey: "sub.health.idealWeight.description",
+        icon: "/icons/categories/duration.svg",
+      },
+      {
+        id: "calorie",
+        i18nKey: "sub.health.calorie.title",
+        descriptionKey: "sub.health.calorie.description",
+        icon: "/icons/categories/hour.svg",
+      },
+      {
+        id: "pregnancy",
+        i18nKey: "sub.health.pregnancy.title",
+        descriptionKey: "sub.health.pregnancy.description",
+        icon: "/icons/categories/baby.svg",
+      },
+      {
+        id: "steps-to-km",
+        i18nKey: "sub.health.stepsToKm.title",
+        descriptionKey: "sub.health.stepsToKm.description",
+        icon: "/icons/categories/step.svg",
+      },
+      {
+        id: "bmr",
+        i18nKey: "sub.health.bmr.title",
+        descriptionKey: "sub.health.bmr.description",
+        icon: "/icons/categories/physics.svg",
+      },
+      {
+        id: "bodyWater",
+        i18nKey: "sub.health.bodyWater.title",
+        descriptionKey: "sub.time.bodyWater.description",
+        icon: "/icons/categories/physics.svg",
+      },
+      {
+        id: "protein",
+        i18nKey: "sub.health.protein.title",
+        descriptionKey: "sub.time.protein.description",
+        icon: "/icons/categories/physics.svg",
+      },
+    ],
+  },
+
+  {
+    id: "location",
+    i18nKey: "categories.location",
+    descriptionKey: "categoriesDescriptions.location",
+    icon: "/icons/categories/map.svg",
+    subCategories: [
+      {
+        id: "city-distance",
+        i18nKey: "sub.location.cityDistance.title",
+        descriptionKey: "sub.location.cityDistance.description",
+        icon: "/icons/categories/distance.svg",
+      },
+      {
+        id: "area-length",
+        i18nKey: "sub.location.areaLength.title",
+        descriptionKey: "sub.location.areaLength.description",
+        icon: "/icons/categories/ruler.svg",
+      },
+      {
+        id: "coordinates",
+        i18nKey: "sub.location.coordinates.title",
+        descriptionKey: "sub.location.coordinates.description",
+        icon: "/icons/categories/gps.svg",
+      },
+    ],
+  },
+
+  {
+    id: "numbers",
+    i18nKey: "categories.numbers",
+    descriptionKey: "categoriesDescriptions.numbers",
+    icon: "/icons/categories/number.svg",
+    subCategories: [
+      {
+        id: "fa-to-en",
+        i18nKey: "sub.numbers.faToEn.title",
+        descriptionKey: "sub.numbers.faToEn.description",
+        icon: "/icons/categories/convert.svg",
+      },
+      {
+        id: "en-to-fa",
+        i18nKey: "sub.numbers.enToFa.title",
+        descriptionKey: "sub.numbers.enToFa.description",
+        icon: "/icons/categories/convert.svg",
+      },
+      {
+        id: "random-number",
+        i18nKey: "sub.numbers.randomNumber.title",
+        descriptionKey: "sub.numbers.randomNumber.description",
+        icon: "/icons/categories/shuffle.svg",
+      },
+      {
+        id: "fa-to-cn",
+        i18nKey: "sub.numbers.faToCn.title",
+        descriptionKey: "sub.numbers.faToCn.title",
+        icon: "/icons/categories/chinese.svg",
+      },
+      {
+        id: "fa-to-ar",
+        i18nKey: "sub.numbers.faToAr.title",
+        descriptionKey: "sub.numbers.faToAr.description",
+        icon: "/icons/categories/arabic.svg",
+      },
+    ],
+  },
+
+  {
     id: "finance",
     i18nKey: "categories.finance",
     descriptionKey: "categoriesDescriptions.finance",
@@ -437,33 +560,6 @@ export const categories: Category[] = [
   },
 
   {
-    id: "location",
-    i18nKey: "categories.location",
-    descriptionKey: "categoriesDescriptions.location",
-    icon: "/icons/categories/map.svg",
-    subCategories: [
-      {
-        id: "city-distance",
-        i18nKey: "sub.location.cityDistance.title",
-        descriptionKey: "sub.location.cityDistance.description",
-        icon: "/icons/categories/distance.svg",
-      },
-      {
-        id: "area-length",
-        i18nKey: "sub.location.areaLength.title",
-        descriptionKey: "sub.location.areaLength.description",
-        icon: "/icons/categories/ruler.svg",
-      },
-      {
-        id: "coordinates",
-        i18nKey: "sub.location.coordinates.title",
-        descriptionKey: "sub.location.coordinates.description",
-        icon: "/icons/categories/gps.svg",
-      },
-    ],
-  },
-
-  {
     id: "legal",
     i18nKey: "categories.legal",
     descriptionKey: "categoriesDescriptions.legal",
@@ -516,102 +612,6 @@ export const categories: Category[] = [
         i18nKey: "sub.legal.expertFee.title",
         descriptionKey: "sub.legal.expertFee.description",
         icon: "/icons/categories/arbitration.svg",
-      },
-    ],
-  },
-
-  {
-    id: "health",
-    i18nKey: "categories.health",
-    descriptionKey: "categoriesDescriptions.health",
-    icon: "/icons/categories/health.svg",
-    subCategories: [
-      {
-        id: "bmi",
-        i18nKey: "sub.health.bmi.title",
-        descriptionKey: "sub.health.bmi.description",
-        icon: "/icons/categories/bmi.svg",
-      },
-      {
-        id: "ideal-weight",
-        i18nKey: "sub.health.idealWeight.title",
-        descriptionKey: "sub.health.idealWeight.description",
-        icon: "/icons/categories/duration.svg",
-      },
-      {
-        id: "calorie",
-        i18nKey: "sub.health.calorie.title",
-        descriptionKey: "sub.health.calorie.description",
-        icon: "/icons/categories/hour.svg",
-      },
-      {
-        id: "pregnancy",
-        i18nKey: "sub.health.pregnancy.title",
-        descriptionKey: "sub.health.pregnancy.description",
-        icon: "/icons/categories/baby.svg",
-      },
-      {
-        id: "steps-to-km",
-        i18nKey: "sub.health.stepsToKm.title",
-        descriptionKey: "sub.health.stepsToKm.description",
-        icon: "/icons/categories/step.svg",
-      },
-      {
-        id: "bmr",
-        i18nKey: "sub.health.bmr.title",
-        descriptionKey: "sub.health.bmr.description",
-        icon: "/icons/categories/physics.svg",
-      },
-      {
-        id: "bodyWater",
-        i18nKey: "sub.health.bodyWater.title",
-        descriptionKey: "sub.time.bodyWater.description",
-        icon: "/icons/categories/physics.svg",
-      },
-      {
-        id: "protein",
-        i18nKey: "sub.health.protein.title",
-        descriptionKey: "sub.time.protein.description",
-        icon: "/icons/categories/physics.svg",
-      },
-    ],
-  },
-
-  {
-    id: "numbers",
-    i18nKey: "categories.numbers",
-    descriptionKey: "categoriesDescriptions.numbers",
-    icon: "/icons/categories/number.svg",
-    subCategories: [
-      {
-        id: "fa-to-en",
-        i18nKey: "sub.numbers.faToEn.title",
-        descriptionKey: "sub.numbers.faToEn.description",
-        icon: "/icons/categories/convert.svg",
-      },
-      {
-        id: "en-to-fa",
-        i18nKey: "sub.numbers.enToFa.title",
-        descriptionKey: "sub.numbers.enToFa.description",
-        icon: "/icons/categories/convert.svg",
-      },
-      {
-        id: "random-number",
-        i18nKey: "sub.numbers.randomNumber.title",
-        descriptionKey: "sub.numbers.randomNumber.description",
-        icon: "/icons/categories/shuffle.svg",
-      },
-      {
-        id: "fa-to-cn",
-        i18nKey: "sub.numbers.faToCn.title",
-        descriptionKey: "sub.numbers.faToCn.title",
-        icon: "/icons/categories/chinese.svg",
-      },
-      {
-        id: "fa-to-ar",
-        i18nKey: "sub.numbers.faToAr.title",
-        descriptionKey: "sub.numbers.faToAr.description",
-        icon: "/icons/categories/arabic.svg",
       },
     ],
   },
