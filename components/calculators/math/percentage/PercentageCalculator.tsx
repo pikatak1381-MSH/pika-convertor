@@ -8,20 +8,15 @@ import Formula from "@/components/calculatorPage/Formula"
 import { useTranslations, useLocale } from "next-intl"
 
 const tabVariants = {
-  initial: (dir: "rtl" | "ltr") => ({
-    opacity: 0,
-    x: dir === "rtl" ? 40 : -40,
-  }),
+  initial: { opacity: 0 },
   animate: {
     opacity: 1,
-    x: 0,
     transition: { duration: 0.25, ease: easeOut },
   },
-  exit: (dir: "rtl" | "ltr") => ({
+  exit: {
     opacity: 0,
-    x: dir === "rtl" ? -40 : 40,
     transition: { duration: 0.2, ease: easeIn },
-  }),
+  },
 }
 
 const PercentageCalculator = () => {
