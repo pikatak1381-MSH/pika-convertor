@@ -98,7 +98,7 @@ const MegaMenu = () => {
       >
         <div className="container mx-auto h-full p-8">
           <div className="flex h-full w-full flex-col">
-            <div className="flex h-full w-full gap-4">
+            <div className="flex h-full w-full items-center gap-4">
               {/* Categories Right Column */}
               <div className="h-full w-full max-w-[387px]">
                 <ul className="flex h-full flex-col gap-2">
@@ -122,16 +122,11 @@ const MegaMenu = () => {
                           delay: 0.15 + index * 0.03,
                           ease: [0.25, 0.46, 0.45, 0.94] as const,
                         }}
-                        className="relative"
                       >
                         <motion.div
                           variants={categoryItemVariants}
                           animate={isActive ? "active" : "inactive"}
-                          className={`relative flex w-full cursor-pointer items-center rounded-lg px-3 py-1 text-base font-semibold text-nowrap transition-all ${
-                            isActive
-                              ? "border-border z-30 border bg-white shadow-xs"
-                              : "hover:bg-secondary-background border border-transparent"
-                          }`}
+                          className={`navbar-item ${isActive ? "active" : "inactive"}`}
                         >
                           <button
                             className="flex w-full items-center gap-3"
@@ -153,16 +148,6 @@ const MegaMenu = () => {
                             {t(category.i18nKey)}
                           </button>
                         </motion.div>
-
-                        {isActive && (
-                          <motion.div
-                            layoutId="active-connector"
-                            className="from-primary absolute top-1/2 -left-4 h-1 w-6 -translate-y-1/2 bg-linear-to-r to-transparent"
-                            initial={{ scaleX: 0 }}
-                            animate={{ scaleX: 1 }}
-                            transition={{ duration: 0.3 }}
-                          />
-                        )}
                       </motion.li>
                     )
                   })}
@@ -174,7 +159,7 @@ const MegaMenu = () => {
                 initial={{ opacity: 0, scale: 0.98 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: 0.2 }}
-                className="relative z-10 h-full flex-1 overflow-y-auto rounded-xl border bg-white p-6"
+                className="relative z-10 h-full flex-1 overflow-y-auto rounded-xl bg-white p-6"
               >
                 <AnimatePresence mode="wait">
                   {activeCategory && (

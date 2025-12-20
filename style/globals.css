@@ -61,9 +61,11 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --radius-custom: var(--radius-custom);
 }
 
 :root {
+  --radius-custom: 1rem;
   --radius: 0.625rem;
   --background: oklch(0.9702 0 0);
   --foreground: oklch(0.145 0 0);
@@ -189,4 +191,55 @@
       background-color 0.3s ease,
       color 0.3s ease;
   }
+}
+
+/* Mega Menu Custom Styles */
+.navbar-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  border-radius: var(--radius-custom);
+  padding: 0.25rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: -4px 0 0 2 var(--background);
+}
+
+.navbar-item.active {
+  z-index: -1;
+  border-radius: 100vw 0 0 100vw;
+  background-color: white;
+  display: block;
+  position: relative;
+}
+
+.navbar-item.active::before,
+.navbar-item.active::after {
+  --border-radius-custom: 1rem;
+
+  content: "";
+  position: absolute;
+  width: var(--border-radius-custom);
+  height: var(--border-radius-custom);
+  left: 0;
+  background: var(--background);
+}
+
+.navbar-item.active::before {
+  border-radius: 0 0 0 var(--border-radius-custom);
+  top: calc(var(--border-radius-custom) * -1);
+  box-shadow: -5px 5px 0 5px #fff;
+}
+
+.navbar-item.active::after {
+  border-radius: var(--border-radius-custom) 0 0 0;
+  bottom: calc(var(--border-radius-custom) * -1);
+  box-shadow: -5px -5px 0 5px #fff;
+}
+
+.navbar-item.inactive:hover {
+  background: var(--secondary-background);
 }
