@@ -7,6 +7,8 @@ import { thermalUnits } from "./physics/thermal-units"
 import { radiologyUnits } from "./physics/radiology-units"
 import { percentageCalculators } from "./math/percentage"
 import { powerRootCalculators } from "./math/power-root"
+import { logCalculators } from "./math/logarithm"
+import { equationSolverCalculators } from "./math/equation-solver"
 
 export const calculatorRegistry = {
   [physicsUnits.id]: physicsUnits,
@@ -18,6 +20,8 @@ export const calculatorRegistry = {
   [radiologyUnits.id]: radiologyUnits,
   [percentageCalculators.id]: percentageCalculators,
   [powerRootCalculators.id]: powerRootCalculators,
+  [logCalculators.id]: logCalculators,
+  [equationSolverCalculators.id]: equationSolverCalculators,
 } as const
 
 export type CalculatorId = keyof typeof calculatorRegistry

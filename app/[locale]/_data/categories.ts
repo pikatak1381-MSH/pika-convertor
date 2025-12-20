@@ -86,7 +86,7 @@ export const categories: Category[] = [
         icon: "/icons/categories/root.svg",
       },
       {
-        id: "logarithm",
+        id: "log",
         i18nKey: "sub.math.logarithm.title",
         descriptionKey: "sub.math.logarithm.description",
         icon: "/icons/categories/log.svg",
