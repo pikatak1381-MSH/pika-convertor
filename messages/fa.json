@@ -25,8 +25,8 @@
   },
 
   "HeroSection": {
-    "title": "سریع‌ترین و کامل‌ترین پلتفرم تبدیل آنلاین.",
-    "desc": "هر نوع تبدیل‌—‌از فایل و تصویر تا واحد های مهندسی و نقشه‌—‌در چند ثانیه انجام می‌شود.",
+    "title": "سریع‌ترین و کامل‌ترین پلتفرم تبدیل آنلاین",
+    "desc": "هر نوع تبدیل‌—‌از فایل و تصویر تا واحد های مهندسی و نقشه‌—‌در چند ثانیه انجام می‌شود",
     "desc2": "برای شروع، ابزار مورد نیاز خود را جستجو کنید",
     "searchPlaceholder": "ابزار مورد نظر خود را جستجو کنید",
     "searchExample": "مثال: تبدیل متر به فوت، PDF به JPG، مختصات GPS…"
@@ -64,16 +64,16 @@
     },
 
     "categoriesDescriptions": {
-      "engineering": "ابزارهای سریع و دقیق برای تبدیل واحدهای فیزیکی مثل طول، جرم، دما، فشار، سرعت و انرژی. مناسب برای دانش‌آموزان، مهندسان و استفاده روزمره.",
-      "math": "ماشین‌حساب‌ها و ابزارهای پیشرفته ریاضی برای حل مسائل عددی و تحلیلی.",
-      "technology": "ابزارهای کاربردی تکنولوژی برای توسعه‌دهندگان، وب و کارهای دیجیتال.",
-      "files": "تبدیل، پردازش و مدیریت انواع فایل‌ها به‌صورت آنلاین.",
-      "time": "محاسبه، تبدیل و مدیریت زمان، تاریخ و رویدادها.",
-      "finance": "محاسبات مالی، بانکی، و اقتصادی برای تصمیم‌گیری بهتر.",
-      "location": "ابزارهای مربوط به نقشه، فاصله، مختصات و موقعیت جغرافیایی.",
-      "legal": "محاسبات حقوقی و هزینه‌های قانونی مطابق قوانین ایران.",
-      "health": "ابزارهای سلامت، تناسب اندام و محاسبات بدن.",
-      "numbers": "تبدیل و پردازش انواع اعداد در زبان‌ها و فرمت‌های مختلف."
+      "engineering": "ابزارهای سریع و دقیق برای تبدیل واحدهای فیزیکی مثل طول، جرم، دما، فشار، سرعت و انرژی مناسب برای دانش‌آموزان، مهندسان و استفاده روزمره",
+      "math": "ماشین‌حساب‌ها و ابزارهای پیشرفته ریاضی برای حل مسائل عددی و تحلیلی",
+      "technology": "ابزارهای کاربردی تکنولوژی برای توسعه‌دهندگان، وب و کارهای دیجیتال",
+      "files": "تبدیل، پردازش و مدیریت انواع فایل‌ها به‌صورت آنلاین",
+      "time": "محاسبه، تبدیل و مدیریت زمان، تاریخ و رویدادها",
+      "finance": "محاسبات مالی، بانکی، و اقتصادی برای تصمیم‌گیری بهتر",
+      "location": "ابزارهای مربوط به نقشه، فاصله، مختصات و موقعیت جغرافیایی",
+      "legal": "محاسبات حقوقی و هزینه‌های قانونی مطابق قوانین ایران",
+      "health": "ابزارهای سلامت، تناسب اندام و محاسبات بدن",
+      "numbers": "تبدیل و پردازش انواع اعداد در زبان‌ها و فرمت‌های مختلف"
     },
 
     "sub": {
@@ -84,310 +84,310 @@
         },
         "fluids": {
           "title": "تبدیل جریان‌ها",
-          "description": "تبدیل واحدهای مختلف جریان الکتریکی."
+          "description": "تبدیل واحدهای مختلف جریان الکتریکی"
         },
         "electricity": {
           "title": "تبدیل های الکتریسیته",
-          "description": "محاسبه و تبدیل واحدهای الکتریکی مانند ولتاژ، توان و مقاومت."
+          "description": "محاسبه و تبدیل واحدهای الکتریکی مانند ولتاژ، توان و مقاومت"
         },
         "thermal": {
           "title": "تبدیل های حرارتی",
-          "description": "تبدیل واحدهای دما و محاسبات مربوط به گرما."
+          "description": "تبدیل واحدهای دما و محاسبات مربوط به گرما"
         },
         "optical": {
           "title": "تبدیل های نوری",
-          "description": "محاسبات و تبدیل‌های مرتبط با نور و اپتیک."
+          "description": "محاسبات و تبدیل‌های مرتبط با نور و اپتیک"
         },
         "magnetism": {
           "title": "تبدیل های مغناطیسی",
-          "description": "تبدیل واحدها و مقادیر میدان‌های مغناطیسی."
+          "description": "تبدیل واحدها و مقادیر میدان‌های مغناطیسی"
         },
         "radiology": {
           "title": "تبدیل های رادیولوژی",
-          "description": "تبدیل واحدهای دوز و مفاهیم مرتبط با پرتوها."
+          "description": "تبدیل واحدهای دوز و مفاهیم مرتبط با پرتوها"
         }
       },
 
       "math": {
         "percentage": {
           "title": "محاسبه درصد",
-          "description": "محاسبه درصد، تغییرات درصدی و نسبت‌ها."
+          "description": "محاسبه درصد، تغییرات درصدی و نسبت‌ها"
         },
-        "powerRoot": { "title": "توان و ریشه", "description": "محاسبه توان و ریشه اعداد." },
-        "logarithm": { "title": "لگاریتم", "description": "محاسبه لگاریتم در پایه‌های مختلف." },
-        "equationSolver": { "title": "حل معادله", "description": "حل انواع معادلات ریاضی." },
-        "primeCheck": { "title": "تشخیص عدد اول", "description": "بررسی اول بودن یا نبودن اعداد." },
+        "powerRoot": { "title": "توان و ریشه", "description": "محاسبه توان و ریشه اعداد" },
+        "logarithm": { "title": "لگاریتم", "description": "محاسبه لگاریتم در پایه‌های مختلف" },
+        "equationSolver": { "title": "حل معادله", "description": "حل انواع معادلات ریاضی" },
+        "primeCheck": { "title": "تشخیص عدد اول", "description": "بررسی اول بودن یا نبودن اعداد" },
         "perimeterArea": {
           "title": "محیط و مساحت",
-          "description": "محاسبه محیط و مساحت اشکال هندسی."
+          "description": "محاسبه محیط و مساحت اشکال هندسی"
         },
         "fibonacci": {
           "title": "محاسبه سری فیبوناچی",
-          "description": "تولید و بررسی دنباله فیبوناچی."
+          "description": "تولید و بررسی دنباله فیبوناچی"
         },
-        "baseConverter": { "title": "تبدیل مبنا", "description": "تبدیل اعداد بین مبناهای مختلف." },
-        "factorial": { "title": "فاکتوریل", "description": "محاسبه فاکتوریل اعداد." },
-        "statistics": { "title": "میانگین، میانه، مد", "description": "محاسبات آماری پایه." },
-        "plotting": { "title": "رسم نمودار", "description": "نمایش داده‌ها به‌صورت نمودار." },
-        "probability": { "title": "آمار و احتمال", "description": "محاسبات احتمال و آمار." },
-        "matrixVector": { "title": "ماتریس و بردار", "description": "محاسبات ماتریسی و برداری." },
+        "baseConverter": { "title": "تبدیل مبنا", "description": "تبدیل اعداد بین مبناهای مختلف" },
+        "factorial": { "title": "فاکتوریل", "description": "محاسبه فاکتوریل اعداد" },
+        "statistics": { "title": "میانگین، میانه، مد", "description": "محاسبات آماری پایه" },
+        "plotting": { "title": "رسم نمودار", "description": "نمایش داده‌ها به‌صورت نمودار" },
+        "probability": { "title": "آمار و احتمال", "description": "محاسبات احتمال و آمار" },
+        "matrixVector": { "title": "ماتریس و بردار", "description": "محاسبات ماتریسی و برداری" },
         "decimalToFraction": {
           "title": "تبدیل اعشار به کسر",
-          "description": "تبدیل اعداد اعشاری به کسر."
+          "description": "تبدیل اعداد اعشاری به کسر"
         },
-        "slopeCalculator": { "title": "محاسبه گر تمایل به شیب", "description": "محاسبه شیب خطوط." },
+        "slopeCalculator": { "title": "محاسبه گر تمایل به شیب", "description": "محاسبه شیب خطوط" },
         "percentageIncrease": {
           "title": "محاسبه گر افزایش فیصدی",
-          "description": "محاسبه افزایش یا کاهش درصدی."
+          "description": "محاسبه افزایش یا کاهش درصدی"
         },
-        "trigonometry": { "title": "محاسبه گر مثلثی", "description": "محاسبات توابع مثلثاتی." }
+        "trigonometry": { "title": "محاسبه گر مثلثی", "description": "محاسبات توابع مثلثاتی" }
       },
 
       "technology": {
         "passwordGenerator": {
           "title": "ساخت پسورد تصادفی",
-          "description": "تولید رمز عبور امن و تصادفی."
+          "description": "تولید رمز عبور امن و تصادفی"
         },
-        "myIp": { "title": "IP من چیست", "description": "نمایش آدرس IP شما." },
-        "gpaConverter": { "title": "تبدیل معدل به GPA", "description": "تبدیل معدل به سیستم GPA." },
-        "barcodeGenerator": { "title": "ساخت بارکد", "description": "تولید بارکد‌های مختلف." },
-        "whatsappLink": { "title": "ساخت لینک واتساپ", "description": "ایجاد لینک مستقیم واتساپ." },
-        "utmLink": { "title": "ساخت لینک UTM", "description": "ساخت لینک‌های رهگیری UTM." },
-        "qrCode": { "title": "ساخت QR کد", "description": "تولید QR کد برای متن و لینک." },
-        "domainChecker": { "title": "بررسی دامنه", "description": "بررسی وضعیت و اطلاعات دامنه." },
-        "hashGenerator": { "title": "ساخت کد هش", "description": "تولید هش از متن ورودی." },
+        "myIp": { "title": "IP من چیست", "description": "نمایش آدرس IP شما" },
+        "gpaConverter": { "title": "تبدیل معدل به GPA", "description": "تبدیل معدل به سیستم GPA" },
+        "barcodeGenerator": { "title": "ساخت بارکد", "description": "تولید بارکد‌های مختلف" },
+        "whatsappLink": { "title": "ساخت لینک واتساپ", "description": "ایجاد لینک مستقیم واتساپ" },
+        "utmLink": { "title": "ساخت لینک UTM", "description": "ساخت لینک‌های رهگیری UTM" },
+        "qrCode": { "title": "ساخت QR کد", "description": "تولید QR کد برای متن و لینک" },
+        "domainChecker": { "title": "بررسی دامنه", "description": "بررسی وضعیت و اطلاعات دامنه" },
+        "hashGenerator": { "title": "ساخت کد هش", "description": "تولید هش از متن ورودی" },
         "textToBinary": {
           "title": "تبدیل متن به باینری",
-          "description": "تبدیل متن به کد باینری."
+          "description": "تبدیل متن به کد باینری"
         },
-        "schemaBuilder": { "title": "اسکیما ساز", "description": "ساخت اسکیما برای سئو." },
-        "schemaFinder": { "title": "اسکیما یاب", "description": "استخراج اسکیما از صفحات." },
-        "metaFinder": { "title": "متا یاب", "description": "بررسی متا تگ‌های صفحات." }
+        "schemaBuilder": { "title": "اسکیما ساز", "description": "ساخت اسکیما برای سئو" },
+        "schemaFinder": { "title": "اسکیما یاب", "description": "استخراج اسکیما از صفحات" },
+        "metaFinder": { "title": "متا یاب", "description": "بررسی متا تگ‌های صفحات" }
       },
 
       "files": {
         "textVoice": {
           "title": "تبدیل متن به ویس و بالعکس",
-          "description": "تبدیل متن به صدا و صدا به متن."
+          "description": "تبدیل متن به صدا و صدا به متن"
         },
-        "imageToText": { "title": "تبدیل عکس به متن", "description": "استخراج متن از تصاویر." },
-        "fileConverter": { "title": "مبدل فایل", "description": "تبدیل فرمت فایل‌ها." },
+        "imageToText": { "title": "تبدیل عکس به متن", "description": "استخراج متن از تصاویر" },
+        "fileConverter": { "title": "مبدل فایل", "description": "تبدیل فرمت فایل‌ها" },
         "pdfMerge": {
           "title": "ادغام فایل های PDF",
-          "description": "ترکیب چند فایل PDF در یک فایل."
+          "description": "ترکیب چند فایل PDF در یک فایل"
         }
       },
 
       "time": {
         "dateConversion": {
           "title": "تبدیل تاریخ‌ها",
-          "description": "تبدیل بین تقویم‌های مختلف."
+          "description": "تبدیل بین تقویم‌های مختلف"
         },
         "dateDifference": {
           "title": "محاسبه اختلاف 2 تاریخ",
-          "description": "محاسبه فاصله زمانی بین دو تاریخ."
+          "description": "محاسبه فاصله زمانی بین دو تاریخ"
         },
         "minutesToHours": {
           "title": "تبدیل دقیقه به ساعت",
-          "description": "تبدیل واحد دقیقه به ساعت."
+          "description": "تبدیل واحد دقیقه به ساعت"
         },
-        "stopwatch": { "title": "کرنومتر", "description": "اندازه‌گیری زمان." },
-        "prayerTimes": { "title": "اوقات شرعی", "description": "نمایش اوقات شرعی شهرها." },
-        "ageCalculator": { "title": "محاسبه سن", "description": "محاسبه سن دقیق." },
-        "persianNewYear": { "title": "لحظه ی تحویل سال", "description": "نمایش زمان تحویل سال." }
+        "stopwatch": { "title": "کرنومتر", "description": "اندازه‌گیری زمان" },
+        "prayerTimes": { "title": "اوقات شرعی", "description": "نمایش اوقات شرعی شهرها" },
+        "ageCalculator": { "title": "محاسبه سن", "description": "محاسبه سن دقیق" },
+        "persianNewYear": { "title": "لحظه ی تحویل سال", "description": "نمایش زمان تحویل سال" }
       },
 
       "finance": {
         "currencyUnits": {
           "title": "تبدیل واحد های پولی",
-          "description": "تبدیل ارزها و واحدهای پولی مختلف."
+          "description": "تبدیل ارزها و واحدهای پولی مختلف"
         },
 
         "loanCalculator": {
           "title": "محاسبه سود و قسط و وام",
-          "description": "محاسبه اقساط و سود انواع وام."
+          "description": "محاسبه اقساط و سود انواع وام"
         },
 
         "bankInterest": {
           "title": "محاسبه سود سپرده بانکی",
-          "description": "محاسبه سود حساب‌های بانکی."
+          "description": "محاسبه سود حساب‌های بانکی"
         },
 
         "goldPrice": {
           "title": "محاسبه گر قیمت طلا",
-          "description": "محاسبه قیمت روز طلا."
+          "description": "محاسبه قیمت روز طلا"
         },
 
         "transferCost": {
           "title": "محاسبه هزینه انتقال سند",
-          "description": "محاسبه هزینه‌های انتقال سند."
+          "description": "محاسبه هزینه‌های انتقال سند"
         },
 
         "realEstateCommission": {
           "title": "محاسبه کمیسیون ملک",
-          "description": "محاسبه کمیسیون معاملات ملکی."
+          "description": "محاسبه کمیسیون معاملات ملکی"
         },
 
         "savings": {
           "title": "محاسبه پس انداز",
-          "description": "برنامه‌ریزی و محاسبه میزان پس‌انداز."
+          "description": "برنامه‌ریزی و محاسبه میزان پس‌انداز"
         },
 
         "bonus": {
           "title": "محاسبه عیدی",
-          "description": "محاسبه مبلغ عیدی."
+          "description": "محاسبه مبلغ عیدی"
         },
 
         "rentCalculator": {
           "title": "محاسبه رهن و اجاره",
-          "description": "تبدیل رهن و اجاره به یکدیگر."
+          "description": "تبدیل رهن و اجاره به یکدیگر"
         },
 
         "exchangeRates": {
           "title": "نرخ ارز",
-          "description": "نمایش نرخ ارزهای روز."
+          "description": "نمایش نرخ ارزهای روز"
         },
 
         "checkMaturity": {
           "title": "محاسبه راس چک",
-          "description": "محاسبه تاریخ سررسید چک."
+          "description": "محاسبه تاریخ سررسید چک"
         },
 
         "vatTax": {
           "title": "محاسبه مالیات ارزش افزوده",
-          "description": "محاسبه مالیات بر ارزش افزوده."
+          "description": "محاسبه مالیات بر ارزش افزوده"
         },
 
         "profitMargin": {
           "title": "محاسبه حاشیه سود",
-          "description": "محاسبه سود و حاشیه سود فروش."
+          "description": "محاسبه سود و حاشیه سود فروش"
         }
       },
 
       "location": {
         "cityDistance": {
           "title": "فاصله شهر‌ها",
-          "description": "محاسبه فاصله بین شهرها."
+          "description": "محاسبه فاصله بین شهرها"
         },
 
         "areaLength": {
           "title": "مساحت و طول",
-          "description": "محاسبه طول و مساحت مناطق."
+          "description": "محاسبه طول و مساحت مناطق"
         },
 
         "coordinates": {
           "title": "مختصات و ارتفاع",
-          "description": "نمایش مختصات جغرافیایی."
+          "description": "نمایش مختصات جغرافیایی"
         }
       },
 
       "legal": {
         "governmentFee": {
           "title": "محاسبه نیم عشر دولتی",
-          "description": "محاسبه هزینه نیم‌عشر دولتی."
+          "description": "محاسبه هزینه نیم‌عشر دولتی"
         },
 
         "notaryCost": {
           "title": "محاسبه هزینه دفتر خانه",
-          "description": "محاسبه هزینه‌های دفتر اسناد رسمی."
+          "description": "محاسبه هزینه‌های دفتر اسناد رسمی"
         },
 
         "insuranceRights": {
           "title": "محاسبه حقوق بیمه کاری",
-          "description": "محاسبه حق بیمه و مزایا."
+          "description": "محاسبه حق بیمه و مزایا"
         },
 
         "mahrCalculator": {
           "title": "محاسبه مهریه به نرخ روز",
-          "description": "محاسبه مهریه بر اساس قیمت روز."
+          "description": "محاسبه مهریه بر اساس قیمت روز"
         },
 
         "arbitrationFee": {
           "title": "محاسبه حق الزحمه داوری",
-          "description": "محاسبه هزینه داوری."
+          "description": "محاسبه هزینه داوری"
         },
 
         "lawsuitCost": {
           "title": "محاسبه هزینه دادرسی",
-          "description": "محاسبه هزینه طرح دعوی."
+          "description": "محاسبه هزینه طرح دعوی"
         },
 
         "latePenalty": {
           "title": "محاسبه خسارت تاخیر تادیه",
-          "description": "محاسبه جریمه دیرکرد پرداخت."
+          "description": "محاسبه جریمه دیرکرد پرداخت"
         },
 
         "expertFee": {
-          "title": "هزینه کارشناسی قانون ت.ت",
-          "description": "محاسبه هزینه کارشناسی رسمی."
+          "title": "هزینه کارشناسی قانون تت",
+          "description": "محاسبه هزینه کارشناسی رسمی"
         }
       },
 
       "health": {
         "bmi": {
           "title": "شاخص توده بدنی (BMI)",
-          "description": "محاسبه شاخص توده بدنی."
+          "description": "محاسبه شاخص توده بدنی"
         },
         "idealWeight": {
           "title": "محاسبه وزن ایده ال",
-          "description": "محاسبه وزن مناسب بدن."
+          "description": "محاسبه وزن مناسب بدن"
         },
 
         "calorie": {
           "title": "کالری سنجی",
-          "description": "محاسبه کالری مصرفی."
+          "description": "محاسبه کالری مصرفی"
         },
 
         "pregnancy": {
           "title": "زمان بارداری و تاریخ زایمان",
-          "description": "محاسبه زمان بارداری."
+          "description": "محاسبه زمان بارداری"
         },
 
         "stepsToKm": {
           "title": "تبدیل قدم به کیلومتر و بالعکس",
-          "description": "تبدیل تعداد قدم به مسافت."
+          "description": "تبدیل تعداد قدم به مسافت"
         },
 
         "bmr": {
           "title": "سوخت ساز پایه",
-          "description": "محاسبه متابولیسم پایه بدن."
+          "description": "محاسبه متابولیسم پایه بدن"
         },
 
         "bodyWater": {
           "title": "محاسبه حجم آب بدن",
-          "description": "محاسبه میزان آب بدن."
+          "description": "محاسبه میزان آب بدن"
         },
 
         "protein": {
           "title": "محاسبه‌گر پروتئین",
-          "description": "محاسبه نیاز روزانه پروتئین."
+          "description": "محاسبه نیاز روزانه پروتئین"
         }
       },
 
       "numbers": {
         "faToEn": {
           "title": "تبدیل اعداد فارسی به انگلیسی",
-          "description": "تبدیل اعداد فارسی به انگلیسی."
+          "description": "تبدیل اعداد فارسی به انگلیسی"
         },
 
         "enToFa": {
           "title": "تبدیل اعداد انگلیسی به فارسی",
-          "description": "تبدیل اعداد انگلیسی به فارسی."
+          "description": "تبدیل اعداد انگلیسی به فارسی"
         },
 
         "randomNumber": {
           "title": "ساخت عدد تصادفی",
-          "description": "تولید عدد تصادفی."
+          "description": "تولید عدد تصادفی"
         },
 
         "faToCn": {
           "title": "تبدیل اعداد فارسی به چینی",
-          "description": "تبدیل اعداد فارسی به چینی."
+          "description": "تبدیل اعداد فارسی به چینی"
         },
 
         "faToAr": {
           "title": "تبدیل اعداد فارسی به عربی",
-          "description": "تبدیل اعداد فارسی به عربی."
+          "description": "تبدیل اعداد فارسی به عربی"
         }
       }
     }
