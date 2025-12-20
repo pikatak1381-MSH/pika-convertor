@@ -26,7 +26,7 @@ const CalculatorHero: React.FC<CalculatorHeroProps> = ({
           />
         </div>
         <h1 className="text-secondary-foreground text-2xl font-bold">
-          {subCategoryTitle} - {subCategoryTitle}
+          {categoryTitle} - {subCategoryTitle}
         </h1>
       </div>
 

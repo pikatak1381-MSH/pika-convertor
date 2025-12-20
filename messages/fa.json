@@ -921,6 +921,16 @@
           "part": "بخش",
           "whole": "کل"
         }
+      },
+      "powerRoot": {
+        "power": "توان",
+        "root": "رادیکال",
+        "inputs": {
+          "base": "پایه",
+          "exponent": "توان",
+          "radicand": "رادیکان",
+          "degree": "درجه"
+        }
       }
     }
   }
