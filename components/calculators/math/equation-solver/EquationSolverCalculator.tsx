@@ -1,5 +1,6 @@
 "use client"
 
+import CalculatorInput from "@/components/ui/CalculatorInput"
 import { motion, AnimatePresence, easeIn, easeOut } from "framer-motion"
 import { useState, useMemo } from "react"
 import { equationSolvers } from "./equationSolver.data"
@@ -44,22 +45,26 @@ const EquationSolverCalculator = () => {
   type EquationId = (typeof equationSolvers)[number]["id"]
 
   const [activeId, setActiveId] = useState<EquationId>(equationSolvers[0].id)
-  const [values, setValues] = useState<number[]>([])
+  const [values, setValues] = useState<Record<number, number>>({})
 
   const calculator = useMemo(() => equationSolvers.find((c) => c.id === activeId)!, [activeId])
 
+  // Convert record to array for calculation
+  const valuesArray = useMemo(() => {
+    return Array.from({ length: calculator.inputs.length }, (_, i) => values[i] ?? NaN)
+  }, [values, calculator.inputs.length])
+
   const result = useMemo(() => {
-    if (values.length !== calculator.inputs.length) return null
-    if (values.some((v) => isNaN(v))) return null
-    return calculator.calculate(values)
-  }, [values, calculator])
+    // Check if all values are filled
+    if (valuesArray.some((v) => isNaN(v))) return null
+    return calculator.calculate(valuesArray)
+  }, [valuesArray, calculator])
 
   const updateValue = (index: number, value: number) => {
-    setValues((prev) => {
-      const next = [...prev]
-      next[index] = value
-      return next
-    })
+    setValues((prev) => ({
+      ...prev,
+      [index]: value,
+    }))
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -67,9 +72,24 @@ const EquationSolverCalculator = () => {
     if (res === null) return ""
     if (typeof res === "number") return res.toFixed(4)
     if (Array.isArray(res)) {
-      return `x₁ = ${res[0].toFixed(4)}, x₂ = ${res[1].toFixed(4)}`
+      // Filter out NaN values and format
+      const validRoots = res.filter((r) => !isNaN(r))
+      if (validRoots.length === 0) return t("math.equationSolver.noRealSolutions")
+
+      if (validRoots.length === 1) {
+        return `x = ${validRoots[0].toFixed(4)}`
+      }
+      if (validRoots.length === 2) {
+        return `x₁ = ${validRoots[0].toFixed(4)}, x₂ = ${validRoots[1].toFixed(4)}`
+      }
+      if (validRoots.length === 3) {
+        return `x₁ = ${validRoots[0].toFixed(4)}, x₂ = ${validRoots[1].toFixed(4)}, x₃ = ${validRoots[2].toFixed(4)}`
+      }
     }
     if (typeof res === "object" && "x" in res && "y" in res) {
+      if (isNaN(res.x) || isNaN(res.y)) {
+        return t("math.equationSolver.noSolution")
+      }
       return `x = ${res.x.toFixed(4)}, y = ${res.y.toFixed(4)}`
     }
     return String(res)
@@ -144,6 +164,60 @@ const EquationSolverCalculator = () => {
         )
       }
     }
+
+    if (calculator.id === "cubic") {
+      if (index === 0) {
+        return (
+          <motion.span
+            variants={operatorVariants}
+            initial="initial"
+            animate="animate"
+            className="px-1 text-4xl font-bold"
+          >
+            x³ +
+          </motion.span>
+        )
+      }
+
+      if (index === 1) {
+        return (
+          <motion.span
+            variants={operatorVariants}
+            initial="initial"
+            animate="animate"
+            className="px-1 text-4xl font-bold"
+          >
+            x² +
+          </motion.span>
+        )
+      }
+
+      if (index === 2) {
+        return (
+          <motion.span
+            variants={operatorVariants}
+            initial="initial"
+            animate="animate"
+            className="px-1 text-4xl font-bold"
+          >
+            x +
+          </motion.span>
+        )
+      }
+
+      if (index === 3) {
+        return (
+          <motion.span
+            variants={operatorVariants}
+            initial="initial"
+            animate="animate"
+            className="px-1 text-4xl font-bold"
+          >
+            = 0
+          </motion.span>
+        )
+      }
+    }
   }
 
   const renderLinearTwoSeparator = (offset: number) => {
@@ -183,13 +257,7 @@ const EquationSolverCalculator = () => {
 
         return (
           <div key={index} className="flex items-center">
-            <input
-              type="number"
-              value={values[index] ?? ""}
-              inputMode="decimal"
-              onChange={(e) => updateValue(index, Number(e.target.value))}
-              className="bg-input-background border-secondary-foreground h-13 w-13 rounded-[20px] border text-center text-sm font-bold"
-            />
+            <CalculatorInput value={values[index] ?? NaN} onChange={(val) => updateValue(index, val)} />
 
             {renderLinearTwoSeparator(offset)}
           </div>
@@ -205,7 +273,7 @@ const EquationSolverCalculator = () => {
         value={activeId}
         onValueChange={(value: EquationId) => {
           setActiveId(value)
-          setValues([])
+          setValues({})
         }}
       >
         <SelectTrigger className="bg-background border-input text-secondary-foreground w-full min-w-0 flex-1 truncate rounded-full border px-3 py-2 text-sm font-bold">
@@ -241,13 +309,7 @@ const EquationSolverCalculator = () => {
               <div dir="ltr" className="flex items-center justify-center gap-1">
                 {calculator.inputs.map((inputKey, index) => (
                   <div key={inputKey} className="flex items-center">
-                    <input
-                      type="number"
-                      value={values[index] ?? ""}
-                      inputMode="decimal"
-                      onChange={(e) => updateValue(index, Number(e.target.value))}
-                      className="bg-input-background border-secondary-foreground h-13 w-13 rounded-[20px] border text-center text-sm font-bold"
-                    />
+                    <CalculatorInput value={values[index] ?? NaN} onChange={(val) => updateValue(index, val)} />
 
                     {renderSeparator(index)}
                   </div>

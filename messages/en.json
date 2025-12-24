@@ -1,5 +1,17 @@
 {
   "HomePage": {
     "title": "Hello world!"
+  },
+  "Calculators": {
+    "math": {
+      "equationSolver": {
+        "linearOne": "Linear (One Variable)",
+        "linearTwo": "Linear (Two Variables)",
+        "quadratic": "Quadratic Equation",
+        "cubic": "Cubic Equation",
+        "noRealSolutions": "No real solutions",
+        "noSolution": "No solution"
+      }
+    }
   }
 }

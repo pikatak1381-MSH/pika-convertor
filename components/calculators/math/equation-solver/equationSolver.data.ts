@@ -36,4 +36,42 @@ export const equationSolvers: EquationSolverDefinition[] = [
     },
     formula: "ax² + bx + c = 0",
   },
+
+  {
+    id: "cubic",
+    labelKey: "math.equationSolver.cubic",
+    inputs: ["a", "b", "c", "d"],
+    calculate: ([a, b, c, d]) => {
+      // Normalize to form: x³ + px + q = 0
+      const p = (3 * a * c - b * b) / (3 * a * a)
+      const q = (2 * b * b * b - 9 * a * b * c + 27 * a * a * d) / (27 * a * a * a)
+
+      const discriminant = (q * q) / 4 + (p * p * p) / 27
+
+      if (discriminant > 0) {
+        // One real root, two complex conjugates
+        const u = Math.cbrt(-q / 2 + Math.sqrt(discriminant))
+        const v = Math.cbrt(-q / 2 - Math.sqrt(discriminant))
+        const x1 = u + v - b / (3 * a)
+        return [x1, NaN, NaN]
+      } else if (discriminant === 0) {
+        // Multiple real roots
+        const u = Math.cbrt(-q / 2)
+        const x1 = 2 * u - b / (3 * a)
+        const x2 = -u - b / (3 * a)
+        return [x1, x2, x2]
+      } else {
+        // Three distinct real roots
+        const r = Math.sqrt(-(p * p * p) / 27)
+        const theta = Math.acos(-q / (2 * r))
+        const rCbrt = Math.cbrt(r)
+
+        const x1 = 2 * rCbrt * Math.cos(theta / 3) - b / (3 * a)
+        const x2 = 2 * rCbrt * Math.cos((theta + 2 * Math.PI) / 3) - b / (3 * a)
+        const x3 = 2 * rCbrt * Math.cos((theta + 4 * Math.PI) / 3) - b / (3 * a)
+        return [x1, x2, x3]
+      }
+    },
+    formula: "ax³ + bx² + cx + d = 0",
+  },
 ]
