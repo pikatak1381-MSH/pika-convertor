@@ -27,6 +27,15 @@ const tabVariants = {
   },
 }
 
+const operatorVariants = {
+  initial: { opacity: 0, scale: 0.8 },
+  animate: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.2, ease: easeOut },
+  },
+}
+
 const EquationSolverCalculator = () => {
   const t = useTranslations("Calculators")
   const locale = useLocale()
@@ -66,6 +75,129 @@ const EquationSolverCalculator = () => {
     return String(res)
   }
 
+  const renderSeparator = (index: number) => {
+    if (calculator.id === "linear-one") {
+      if (index === 0) {
+        return (
+          <motion.span
+            variants={operatorVariants}
+            initial="initial"
+            animate="animate"
+            className="flex items-center gap-1 px-1 text-4xl font-bold whitespace-nowrap"
+          >
+            <MathXIcon className="h-4.5 w-7.5" />+
+          </motion.span>
+        )
+      }
+
+      if (index === 1) {
+        return (
+          <motion.span
+            variants={operatorVariants}
+            initial="initial"
+            animate="animate"
+            className="px-1 text-4xl font-bold whitespace-nowrap"
+          >
+            =
+          </motion.span>
+        )
+      }
+    }
+
+    if (calculator.id === "quadratic") {
+      if (index === 0) {
+        return (
+          <motion.span
+            variants={operatorVariants}
+            initial="initial"
+            animate="animate"
+            className="px-1 text-4xl font-bold"
+          >
+            x²
+          </motion.span>
+        )
+      }
+
+      if (index === 1) {
+        return (
+          <motion.span
+            variants={operatorVariants}
+            initial="initial"
+            animate="animate"
+            className="px-1 text-4xl font-bold"
+          >
+            x +
+          </motion.span>
+        )
+      }
+
+      if (index === 2) {
+        return (
+          <motion.span
+            variants={operatorVariants}
+            initial="initial"
+            animate="animate"
+            className="px-1 text-4xl font-bold"
+          >
+            = 0
+          </motion.span>
+        )
+      }
+    }
+  }
+
+  const renderLinearTwoSeparator = (offset: number) => {
+    if (offset === 0) {
+      return (
+        <motion.span
+          variants={operatorVariants}
+          initial="initial"
+          animate="animate"
+          className="flex items-center gap-1 px-1 text-4xl font-bold"
+        >
+          <MathXIcon className="h-4.5 w-7.5" />+
+        </motion.span>
+      )
+    }
+
+    if (offset === 1) {
+      return (
+        <motion.span
+          variants={operatorVariants}
+          initial="initial"
+          animate="animate"
+          className="px-1 text-4xl font-bold"
+        >
+          =
+        </motion.span>
+      )
+    }
+
+    return null
+  }
+
+  const renderLinearRow = (startIndex: number, rowKey: string) => (
+    <div key={rowKey} dir="ltr" className="flex items-center justify-center gap-1">
+      {[0, 1, 2].map((offset) => {
+        const index = startIndex + offset
+
+        return (
+          <div key={index} className="flex items-center">
+            <input
+              type="number"
+              value={values[index] ?? ""}
+              inputMode="decimal"
+              onChange={(e) => updateValue(index, Number(e.target.value))}
+              className="bg-input-background border-secondary-foreground h-13 w-13 rounded-[20px] border text-center text-sm font-bold"
+            />
+
+            {renderLinearTwoSeparator(offset)}
+          </div>
+        )
+      })}
+    </div>
+  )
+
   return (
     <div className="mt-4">
       <Select
@@ -99,19 +231,29 @@ const EquationSolverCalculator = () => {
           className="mt-4 flex flex-col gap-4"
         >
           {/* Inputs */}
-          <div className="bg-background mx-auto flex w-full items-center justify-center gap-1 rounded-[20px] border py-4.5">
-            {calculator.inputs.map((inputKey, index) => (
+          <div className="bg-background mx-auto flex w-full flex-col gap-2 rounded-[20px] border py-4.5">
+            {calculator.id === "linear-two" ? (
               <>
-                <input
-                  key={inputKey}
-                  type="number"
-                  value={values[index] ?? ""}
-                  onChange={(e) => updateValue(index, Number(e.target.value))}
-                  className="bg-input-background border-secondary-foreground placeholder:text-input-secondary-placeholder h-13 w-13 rounded-[20px] border placeholder:text-sm placeholder:font-bold"
-                />
-                {index > 0 && index < 2 && <MathXIcon className="h-6 w-6" />}
+                {renderLinearRow(0, "row-1")}
+                {renderLinearRow(3, "row-2")}
               </>
-            ))}
+            ) : (
+              <div dir="ltr" className="flex items-center justify-center gap-1">
+                {calculator.inputs.map((inputKey, index) => (
+                  <div key={inputKey} className="flex items-center">
+                    <input
+                      type="number"
+                      value={values[index] ?? ""}
+                      inputMode="decimal"
+                      onChange={(e) => updateValue(index, Number(e.target.value))}
+                      className="bg-input-background border-secondary-foreground h-13 w-13 rounded-[20px] border text-center text-sm font-bold"
+                    />
+
+                    {renderSeparator(index)}
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Result */}

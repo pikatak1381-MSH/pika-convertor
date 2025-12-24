@@ -203,7 +203,7 @@
   align-items: center;
   width: 100%;
   cursor: pointer;
-  border-radius: var(--radius-custom);
+  border-radius: 2rem;
   padding: 0.25rem 0.75rem;
   font-size: 1rem;
   font-weight: 600;
@@ -245,4 +245,5 @@
 
 .navbar-item.inactive:hover {
   background: var(--secondary-background);
+  max-width: 95%;
 }

@@ -4,9 +4,9 @@ export const equationSolvers: EquationSolverDefinition[] = [
   {
     id: "linear-one",
     labelKey: "math.equationSolver.linearOne",
-    inputs: ["a", "b"],
-    calculate: ([a, b]) => -b / a,
-    formula: "ax + b = 0 → x = -b/a",
+    inputs: ["a", "b", "c"],
+    calculate: ([a, b, c]) => (c - b) / a,
+    formula: "ax + b = c → x = (c - b)/a",
   },
 
   {
