@@ -1002,6 +1002,23 @@
         }
       },
 
+      "fibonacci": {
+        "sequence": "دنباله",
+        "nthNumber": "جمله nام",
+        "checkFibonacci": "بررسی",
+        "inputs": {
+          "count": "تعداد جملات (حداکثر ۵۰)",
+          "position": "موقعیت (از ۰، حداکثر ۷۰)",
+          "number": "یک عدد وارد کنید"
+        },
+        "nthResult": "F({position}) = {value}",
+        "isFibonacci": "{number} یک عدد فیبوناچی در موقعیت {position} است",
+        "isNotFibonacci": "{number} یک عدد فیبوناچی نیست",
+        "invalidCount": "لطفاً عددی بین ۱ تا ۵۰ وارد کنید",
+        "invalidPosition": "لطفاً موقعیتی بین ۰ تا ۷۰ وارد کنید",
+        "invalidNumber": "لطفاً یک عدد مثبت وارد کنید"
+      },
+
       "baseConverter": {
         "base2": "مبنای ۲ (Binary)",
         "base3": "مبنای ۳",

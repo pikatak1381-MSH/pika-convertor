@@ -44,6 +44,22 @@
           "semiMajor": "Semi-major axis (a)",
           "semiMinor": "Semi-minor axis (b)"
         }
+      },
+      "fibonacci": {
+        "sequence": "Sequence",
+        "nthNumber": "Nth Number",
+        "checkFibonacci": "Check",
+        "inputs": {
+          "count": "Number of terms (max 50)",
+          "position": "Position (0-indexed, max 70)",
+          "number": "Enter a number"
+        },
+        "nthResult": "F({position}) = {value}",
+        "isFibonacci": "{number} is a Fibonacci number at position {position}",
+        "isNotFibonacci": "{number} is not a Fibonacci number",
+        "invalidCount": "Please enter a number between 1 and 50",
+        "invalidPosition": "Please enter a position between 0 and 70",
+        "invalidNumber": "Please enter a positive number"
       }
     }
   }

@@ -12,6 +12,7 @@ import { equationSolverCalculators } from "./math/equation-solver"
 import { baseConverterCalculator } from "./math/base-converter"
 import { primeCheckCalculator } from "./math/prime-check"
 import { perimeterAreaCalculator } from "./math/perimeter-area"
+import { fibonacciCalculator } from "./math/fibonacci-sequence"
 
 export const calculatorRegistry = {
   [physicsUnits.id]: physicsUnits,
@@ -28,6 +29,7 @@ export const calculatorRegistry = {
   [baseConverterCalculator.id]: baseConverterCalculator,
   [primeCheckCalculator.id]: primeCheckCalculator,
   [perimeterAreaCalculator.id]: perimeterAreaCalculator,
+  [fibonacciCalculator.id]: fibonacciCalculator,
 } as const
 
 export type CalculatorId = keyof typeof calculatorRegistry
