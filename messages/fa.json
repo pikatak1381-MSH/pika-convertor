@@ -131,7 +131,7 @@
         "baseConverter": { "title": "تبدیل مبنا", "description": "تبدیل اعداد بین مبناهای مختلف" },
         "factorial": { "title": "فاکتوریل", "description": "محاسبه فاکتوریل اعداد" },
         "average": { "title": "میانگین، میانه، مد", "description": "محاسبات آماری پایه" },
-        "plotting": { "title": "رسم نمودار", "description": "نمایش داده‌ها به‌صورت نمودار" },
+        "diagramMaker": { "title": "رسم نمودار", "description": "نمایش داده‌ها به‌صورت نمودار" },
         "probability": { "title": "آمار و احتمال", "description": "محاسبات احتمال و آمار" },
         "matrixVector": { "title": "ماتریس و بردار", "description": "محاسبات ماتریسی و برداری" },
         "decimalToFraction": {
@@ -1040,6 +1040,24 @@
         "placeholder": "اعداد را وارد کنید (مثلاً ۱، ۲، ۳، ۴، ۵)",
         "count": "{count} عدد",
         "noMode": "مد ندارد (همه مقادیر یک بار ظاهر شده‌اند)"
+      },
+
+      "diagramMaker": {
+        "polar": "قطبی",
+        "cartesian": "دکارتی",
+        "implicit": "ضمنی",
+        "parametric": "پارامتری",
+        "inputs": {
+          "equation": "معادله",
+          "rEquation": "معادله r",
+          "implicitEquation": "معادله ضمنی",
+          "xEquation": "معادله x(t)",
+          "yEquation": "معادله y(t)"
+        },
+        "create": "رسم نمودار",
+        "example": "مثال",
+        "enterEquation": "معادله را وارد کنید و روی ایجاد کلیک کنید",
+        "invalidEquation": "معادله نامعتبر است. لطفاً نحو را بررسی کنید."
       },
 
       "baseConverter": {

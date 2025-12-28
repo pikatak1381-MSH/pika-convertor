@@ -134,9 +134,9 @@ export const categories: Category[] = [
         icon: "/icons/categories/physics.svg",
       },
       {
-        id: "plotting",
-        i18nKey: "sub.math.plotting.title",
-        descriptionKey: "sub.math.plotting.description",
+        id: "diagram-maker",
+        i18nKey: "sub.math.diagramMaker.title",
+        descriptionKey: "sub.math.diagramMaker.description",
         icon: "/icons/categories/physics.svg",
       },
       {

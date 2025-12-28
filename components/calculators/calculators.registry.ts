@@ -15,6 +15,7 @@ import { perimeterAreaCalculator } from "./math/perimeter-area"
 import { fibonacciCalculator } from "./math/fibonacci-sequence"
 import { factorialCalculator } from "./math/factorial"
 import { averageCalculator } from "./math/average"
+import { diagramMakerCalculator } from "./math/diagram-maker"
 
 export const calculatorRegistry = {
   [physicsUnits.id]: physicsUnits,
@@ -34,6 +35,7 @@ export const calculatorRegistry = {
   [fibonacciCalculator.id]: fibonacciCalculator,
   [factorialCalculator.id]: factorialCalculator,
   [averageCalculator.id]: averageCalculator,
+  [diagramMakerCalculator.id]: diagramMakerCalculator,
 } as const
 
 export type CalculatorId = keyof typeof calculatorRegistry

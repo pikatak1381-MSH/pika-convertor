@@ -81,6 +81,23 @@
         "placeholder": "Enter numbers (e.g. 1, 2, 3, 4, 5)",
         "count": "{count} numbers",
         "noMode": "No mode (all values appear once)"
+      },
+      "diagramMaker": {
+        "polar": "Polar",
+        "cartesian": "Cartesian",
+        "implicit": "Implicit",
+        "parametric": "Parametric",
+        "inputs": {
+          "equation": "Equation",
+          "rEquation": "r equation",
+          "implicitEquation": "Implicit equation",
+          "xEquation": "x(t) equation",
+          "yEquation": "y(t) equation"
+        },
+        "create": "Create Graph",
+        "example": "Example",
+        "enterEquation": "Enter an equation and click Create to plot the graph",
+        "invalidEquation": "Invalid equation. Please check the syntax."
       }
     }
   }
