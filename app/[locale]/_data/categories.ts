@@ -128,9 +128,9 @@ export const categories: Category[] = [
         icon: "/icons/categories/physics.svg",
       },
       {
-        id: "statistics",
-        i18nKey: "sub.math.statistics.title",
-        descriptionKey: "sub.math.statistics.description",
+        id: "average",
+        i18nKey: "sub.math.average.title",
+        descriptionKey: "sub.math.average.description",
         icon: "/icons/categories/physics.svg",
       },
       {

@@ -13,6 +13,8 @@ import { baseConverterCalculator } from "./math/base-converter"
 import { primeCheckCalculator } from "./math/prime-check"
 import { perimeterAreaCalculator } from "./math/perimeter-area"
 import { fibonacciCalculator } from "./math/fibonacci-sequence"
+import { factorialCalculator } from "./math/factorial"
+import { averageCalculator } from "./math/average"
 
 export const calculatorRegistry = {
   [physicsUnits.id]: physicsUnits,
@@ -30,6 +32,8 @@ export const calculatorRegistry = {
   [primeCheckCalculator.id]: primeCheckCalculator,
   [perimeterAreaCalculator.id]: perimeterAreaCalculator,
   [fibonacciCalculator.id]: fibonacciCalculator,
+  [factorialCalculator.id]: factorialCalculator,
+  [averageCalculator.id]: averageCalculator,
 } as const
 
 export type CalculatorId = keyof typeof calculatorRegistry

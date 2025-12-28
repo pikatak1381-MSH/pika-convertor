@@ -60,6 +60,27 @@
         "invalidCount": "Please enter a number between 1 and 50",
         "invalidPosition": "Please enter a position between 0 and 70",
         "invalidNumber": "Please enter a positive number"
+      },
+      "factorial": {
+        "factorial": "Factorial",
+        "doubleFactorial": "Double",
+        "permutation": "Permutation",
+        "combination": "Combination",
+        "inputs": {
+          "n": "n (0-170)",
+          "r": "r (0 to n)"
+        },
+        "invalidN": "Please enter n between 0 and 170",
+        "invalidR": "r must be between 0 and n",
+        "overflow": "Result too large to display"
+      },
+      "average": {
+        "mean": "Mean",
+        "median": "Median",
+        "mode": "Mode",
+        "placeholder": "Enter numbers (e.g. 1, 2, 3, 4, 5)",
+        "count": "{count} numbers",
+        "noMode": "No mode (all values appear once)"
       }
     }
   }

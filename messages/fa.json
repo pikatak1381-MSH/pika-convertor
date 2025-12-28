@@ -130,7 +130,7 @@
         },
         "baseConverter": { "title": "تبدیل مبنا", "description": "تبدیل اعداد بین مبناهای مختلف" },
         "factorial": { "title": "فاکتوریل", "description": "محاسبه فاکتوریل اعداد" },
-        "statistics": { "title": "میانگین، میانه، مد", "description": "محاسبات آماری پایه" },
+        "average": { "title": "میانگین، میانه، مد", "description": "محاسبات آماری پایه" },
         "plotting": { "title": "رسم نمودار", "description": "نمایش داده‌ها به‌صورت نمودار" },
         "probability": { "title": "آمار و احتمال", "description": "محاسبات احتمال و آمار" },
         "matrixVector": { "title": "ماتریس و بردار", "description": "محاسبات ماتریسی و برداری" },
@@ -1017,6 +1017,29 @@
         "invalidCount": "لطفاً عددی بین ۱ تا ۵۰ وارد کنید",
         "invalidPosition": "لطفاً موقعیتی بین ۰ تا ۷۰ وارد کنید",
         "invalidNumber": "لطفاً یک عدد مثبت وارد کنید"
+      },
+
+      "factorial": {
+        "factorial": "فاکتوریل",
+        "doubleFactorial": "دوگانه",
+        "permutation": "جایگشت",
+        "combination": "ترکیب",
+        "inputs": {
+          "n": "n (۰-۱۷۰)",
+          "r": "r (۰ تا n)"
+        },
+        "invalidN": "لطفاً n را بین ۰ تا ۱۷۰ وارد کنید",
+        "invalidR": "r باید بین ۰ تا n باشد",
+        "overflow": "نتیجه بیش از حد بزرگ است"
+      },
+
+      "average": {
+        "mean": "میانگین",
+        "median": "میانه",
+        "mode": "مد",
+        "placeholder": "اعداد را وارد کنید (مثلاً ۱، ۲، ۳، ۴، ۵)",
+        "count": "{count} عدد",
+        "noMode": "مد ندارد (همه مقادیر یک بار ظاهر شده‌اند)"
       },
 
       "baseConverter": {
