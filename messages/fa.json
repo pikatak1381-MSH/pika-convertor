@@ -967,6 +967,41 @@
         }
       },
 
+      "primeCheck": {
+        "enterNumber": "یک عدد وارد کنید",
+        "isPrime": "{number} یک عدد اول است",
+        "isNotPrime": "{number} عدد اول نیست. عوامل: {factors}"
+      },
+
+      "perimeterArea": {
+        "perimeter": "محیط",
+        "area": "مساحت",
+        "shapes": {
+          "square": "مربع",
+          "rectangle": "مستطیل",
+          "triangle": "مثلث",
+          "circle": "دایره",
+          "trapezoid": "ذوزنقه",
+          "parallelogram": "متوازی‌الاضلاع",
+          "ellipse": "بیضی"
+        },
+        "inputs": {
+          "side": "ضلع",
+          "length": "طول",
+          "width": "عرض",
+          "sideA": "ضلع A",
+          "sideB": "ضلع B",
+          "sideC": "ضلع C",
+          "height": "ارتفاع",
+          "radius": "شعاع",
+          "baseA": "قاعده A",
+          "baseB": "قاعده B",
+          "base": "قاعده",
+          "semiMajor": "نیم‌محور بزرگ (a)",
+          "semiMinor": "نیم‌محور کوچک (b)"
+        }
+      },
+
       "baseConverter": {
         "base2": "مبنای ۲ (Binary)",
         "base3": "مبنای ۳",

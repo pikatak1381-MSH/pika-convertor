@@ -11,6 +11,39 @@
         "cubic": "Cubic Equation",
         "noRealSolutions": "No real solutions",
         "noSolution": "No solution"
+      },
+      "primeCheck": {
+        "enterNumber": "Enter a number",
+        "isPrime": "{number} is a prime number",
+        "isNotPrime": "{number} is not prime. Factors: {factors}"
+      },
+      "perimeterArea": {
+        "perimeter": "Perimeter",
+        "area": "Area",
+        "shapes": {
+          "square": "Square",
+          "rectangle": "Rectangle",
+          "triangle": "Triangle",
+          "circle": "Circle",
+          "trapezoid": "Trapezoid",
+          "parallelogram": "Parallelogram",
+          "ellipse": "Ellipse"
+        },
+        "inputs": {
+          "side": "Side",
+          "length": "Length",
+          "width": "Width",
+          "sideA": "Side A",
+          "sideB": "Side B",
+          "sideC": "Side C",
+          "height": "Height",
+          "radius": "Radius",
+          "baseA": "Base A",
+          "baseB": "Base B",
+          "base": "Base",
+          "semiMajor": "Semi-major axis (a)",
+          "semiMinor": "Semi-minor axis (b)"
+        }
       }
     }
   }

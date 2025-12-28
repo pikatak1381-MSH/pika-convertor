@@ -99,7 +99,7 @@ const BaseConverterCalculator = () => {
               placeholder={`${t("math.baseConverter.enterValue")}`}
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value.toUpperCase())}
-              className="bg-background border-input placeholder:text-input-secondary-placeholder focus:ring-primary rounded-full border px-4 py-3 placeholder:text-sm placeholder:font-bold focus:ring-2 focus:outline-none"
+              className="bg-background border-input placeholder:text-input-secondary-placeholder focus:ring- rounded-full border px-4 py-3 placeholder:text-sm placeholder:font-bold focus:ring-2 focus:outline-none"
             />
           </div>
 

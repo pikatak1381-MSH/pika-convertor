@@ -10,6 +10,8 @@ import { powerRootCalculators } from "./math/power-root"
 import { logCalculators } from "./math/logarithm"
 import { equationSolverCalculators } from "./math/equation-solver"
 import { baseConverterCalculator } from "./math/base-converter"
+import { primeCheckCalculator } from "./math/prime-check"
+import { perimeterAreaCalculator } from "./math/perimeter-area"
 
 export const calculatorRegistry = {
   [physicsUnits.id]: physicsUnits,
@@ -24,6 +26,8 @@ export const calculatorRegistry = {
   [logCalculators.id]: logCalculators,
   [equationSolverCalculators.id]: equationSolverCalculators,
   [baseConverterCalculator.id]: baseConverterCalculator,
+  [primeCheckCalculator.id]: primeCheckCalculator,
+  [perimeterAreaCalculator.id]: perimeterAreaCalculator,
 } as const
 
 export type CalculatorId = keyof typeof calculatorRegistry
