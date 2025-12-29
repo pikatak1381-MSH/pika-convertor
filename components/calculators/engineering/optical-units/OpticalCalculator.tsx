@@ -68,7 +68,7 @@ const OpticalCalculator = () => {
       <FloatingLabelInput
         type="number"
         value={value}
-        label={t("engineering.optical.placeholder")}
+        label={t("engineering.optics.placeholder")}
         onChange={(e) => setValue(Number(e.target.value))}
         className="mt-4 max-w-[225px]"
       />
