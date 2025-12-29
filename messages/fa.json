@@ -1002,6 +1002,17 @@
         "undefined": "تعریف نشده"
       },
 
+      "fractionConverter": {
+        "fractionToDecimal": "کسر به اعشار",
+        "decimalToFraction": "اعشار به کسر",
+        "divisionByZero": "تقسیم بر صفر ممکن نیست",
+        "inputs": {
+          "numerator": "صورت کسر",
+          "denominator": "مخرج کسر",
+          "decimal": "عدد اعشاری"
+        }
+      },
+
       "primeCheck": {
         "enterNumber": "یک عدد وارد کنید",
         "isPrime": "{number} یک عدد اول است",

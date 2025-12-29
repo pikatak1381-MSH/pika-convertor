@@ -38,6 +38,16 @@
         "arccot": "Arc Cotangent (arccot)",
         "undefined": "Undefined"
       },
+      "fractionConverter": {
+        "fractionToDecimal": "Fraction to Decimal",
+        "decimalToFraction": "Decimal to Fraction",
+        "divisionByZero": "Division by zero is not allowed",
+        "inputs": {
+          "numerator": "Numerator",
+          "denominator": "Denominator",
+          "decimal": "Decimal Number"
+        }
+      },
       "primeCheck": {
         "enterNumber": "Enter a number",
         "isPrime": "{number} is a prime number",

@@ -19,6 +19,7 @@ import { diagramMakerCalculator } from "./math/diagram-maker"
 import { statsAndProbCalculator } from "./math/statistics-probability"
 import { percentageIncreaseCalculator } from "./math/percentage-increase"
 import { trigonometryCalculator } from "./math/trigonometry"
+import { fractionsToDecimalsCalculator } from "./math/fractions-to-decimals"
 
 export const calculatorRegistry = {
   [physicsUnits.id]: physicsUnits,
@@ -42,6 +43,7 @@ export const calculatorRegistry = {
   [statsAndProbCalculator.id]: statsAndProbCalculator,
   [percentageIncreaseCalculator.id]: percentageIncreaseCalculator,
   [trigonometryCalculator.id]: trigonometryCalculator,
+  [fractionsToDecimalsCalculator.id]: fractionsToDecimalsCalculator,
 } as const
 
 export type CalculatorId = keyof typeof calculatorRegistry
