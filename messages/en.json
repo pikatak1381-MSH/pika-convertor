@@ -23,6 +23,21 @@
           "percentage": "Percentage"
         }
       },
+      "trigonometry": {
+        "inputPlaceholder": "Enter angle",
+        "degree": "Degree",
+        "radian": "Radian",
+        "results": "Results",
+        "sin": "Sine (sin)",
+        "cos": "Cosine (cos)",
+        "tan": "Tangent (tan)",
+        "cot": "Cotangent (cot)",
+        "arcsin": "Arc Sine (arcsin)",
+        "arccos": "Arc Cosine (arccos)",
+        "arctan": "Arc Tangent (arctan)",
+        "arccot": "Arc Cotangent (arccot)",
+        "undefined": "Undefined"
+      },
       "primeCheck": {
         "enterNumber": "Enter a number",
         "isPrime": "{number} is a prime number",

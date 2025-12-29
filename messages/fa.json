@@ -979,6 +979,22 @@
         }
       },
 
+      "trigonometry": {
+        "inputPlaceholder": "زاویه را وارد کنید",
+        "degree": "درجه",
+        "radian": "رادیان",
+        "results": "نتایج",
+        "sin": "سینوس (sin)",
+        "cos": "کسینوس (cos)",
+        "tan": "تانژانت (tan)",
+        "cot": "کتانژانت (cot)",
+        "arcsin": "آرک‌سینوس (arcsin)",
+        "arccos": "آرک‌کسینوس (arccos)",
+        "arctan": "آرک‌تانژانت (arctan)",
+        "arccot": "آرک‌کتانژانت (arccot)",
+        "undefined": "تعریف نشده"
+      },
+
       "primeCheck": {
         "enterNumber": "یک عدد وارد کنید",
         "isPrime": "{number} یک عدد اول است",
