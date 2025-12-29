@@ -140,9 +140,9 @@ export const categories: Category[] = [
         icon: "/icons/categories/physics.svg",
       },
       {
-        id: "probability",
-        i18nKey: "sub.math.probability.title",
-        descriptionKey: "sub.math.probability.description",
+        id: "statistics",
+        i18nKey: "sub.math.statistics.title",
+        descriptionKey: "sub.math.statistics.description",
         icon: "/icons/categories/physics.svg",
       },
       {

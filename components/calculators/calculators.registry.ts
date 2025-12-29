@@ -16,6 +16,7 @@ import { fibonacciCalculator } from "./math/fibonacci-sequence"
 import { factorialCalculator } from "./math/factorial"
 import { averageCalculator } from "./math/average"
 import { diagramMakerCalculator } from "./math/diagram-maker"
+import { statsAndProbCalculator } from "./math/statistics-probability"
 
 export const calculatorRegistry = {
   [physicsUnits.id]: physicsUnits,
@@ -36,6 +37,7 @@ export const calculatorRegistry = {
   [factorialCalculator.id]: factorialCalculator,
   [averageCalculator.id]: averageCalculator,
   [diagramMakerCalculator.id]: diagramMakerCalculator,
+  [statsAndProbCalculator.id]: statsAndProbCalculator,
 } as const
 
 export type CalculatorId = keyof typeof calculatorRegistry

@@ -132,7 +132,7 @@
         "factorial": { "title": "فاکتوریل", "description": "محاسبه فاکتوریل اعداد" },
         "average": { "title": "میانگین، میانه، مد", "description": "محاسبات آماری پایه" },
         "diagramMaker": { "title": "رسم نمودار", "description": "نمایش داده‌ها به‌صورت نمودار" },
-        "probability": { "title": "آمار و احتمال", "description": "محاسبات احتمال و آمار" },
+        "statistics": { "title": "آمار و احتمال", "description": "محاسبات احتمال و آمار" },
         "matrixVector": { "title": "ماتریس و بردار", "description": "محاسبات ماتریسی و برداری" },
         "decimalToFraction": {
           "title": "تبدیل اعشار به کسر",
@@ -1058,6 +1058,27 @@
         "example": "مثال",
         "enterEquation": "معادله را وارد کنید و روی ایجاد کلیک کنید",
         "invalidEquation": "معادله نامعتبر است. لطفاً نحو را بررسی کنید."
+      },
+
+      "statistics": {
+        "data": "داده",
+        "weight": "وزن",
+        "population": "جامعه",
+        "sample": "نمونه",
+        "addData": "افزودن داده",
+        "calculate": "محاسبه",
+        "result": "نتیجه",
+        "variance": "واریانس",
+        "standardDeviation": "انحراف معیار",
+        "arithmeticMean": "میانگین حسابی",
+        "geometricMean": "میانگین هندسی",
+        "harmonicMean": "میانگین هارمونیک",
+        "weightedMean": "میانگین وزنی",
+        "range": "برد",
+        "count": "تعداد داده",
+        "sum": "مجموع داده",
+        "min": "کمینه",
+        "max": "بیشینه"
       },
 
       "baseConverter": {

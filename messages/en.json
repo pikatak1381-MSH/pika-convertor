@@ -98,6 +98,26 @@
         "example": "Example",
         "enterEquation": "Enter an equation and click Create to plot the graph",
         "invalidEquation": "Invalid equation. Please check the syntax."
+      },
+      "statistics": {
+        "data": "Data",
+        "weight": "Weight",
+        "population": "Population",
+        "sample": "Sample",
+        "addData": "Add data point",
+        "calculate": "Calculate",
+        "result": "Result",
+        "variance": "Variance",
+        "standardDeviation": "Std Dev",
+        "arithmeticMean": "Arithmetic Mean",
+        "geometricMean": "Geometric Mean",
+        "harmonicMean": "Harmonic Mean",
+        "weightedMean": "Weighted Mean",
+        "range": "Range",
+        "count": "Count",
+        "sum": "Sum",
+        "min": "Min",
+        "max": "Max"
       }
     }
   }
