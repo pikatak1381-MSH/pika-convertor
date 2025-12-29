@@ -12,6 +12,17 @@
         "noRealSolutions": "No real solutions",
         "noSolution": "No solution"
       },
+      "percentageIncrease": {
+        "percentageChange": "Percentage Change",
+        "percentageIncrease": "Percentage Increase",
+        "undefined": "Undefined",
+        "inputs": {
+          "oldValue": "Old Value",
+          "newValue": "New Value",
+          "initialValue": "Initial Value",
+          "percentage": "Percentage"
+        }
+      },
       "primeCheck": {
         "enterNumber": "Enter a number",
         "isPrime": "{number} is a prime number",

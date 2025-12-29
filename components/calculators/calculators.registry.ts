@@ -17,6 +17,7 @@ import { factorialCalculator } from "./math/factorial"
 import { averageCalculator } from "./math/average"
 import { diagramMakerCalculator } from "./math/diagram-maker"
 import { statsAndProbCalculator } from "./math/statistics-probability"
+import { percentageIncreaseCalculator } from "./math/percentage-increase"
 
 export const calculatorRegistry = {
   [physicsUnits.id]: physicsUnits,
@@ -38,6 +39,7 @@ export const calculatorRegistry = {
   [averageCalculator.id]: averageCalculator,
   [diagramMakerCalculator.id]: diagramMakerCalculator,
   [statsAndProbCalculator.id]: statsAndProbCalculator,
+  [percentageIncreaseCalculator.id]: percentageCalculators,
 } as const
 
 export type CalculatorId = keyof typeof calculatorRegistry

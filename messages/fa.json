@@ -967,6 +967,18 @@
         }
       },
 
+      "percentageIncrease": {
+        "percentageChange": "تغییر فیصدی",
+        "percentageIncrease": "افزایش فیصدی",
+        "undefined": "تعریف نشده",
+        "inputs": {
+          "oldValue": "مقدار قبلی",
+          "newValue": "مقدار جدید",
+          "initialValue": "مقدار اولیه",
+          "percentage": "درصد"
+        }
+      },
+
       "primeCheck": {
         "enterNumber": "یک عدد وارد کنید",
         "isPrime": "{number} یک عدد اول است",
