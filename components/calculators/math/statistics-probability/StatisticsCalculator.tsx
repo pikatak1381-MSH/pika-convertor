@@ -7,6 +7,8 @@ import { calculateAllStatistics, formatNumber, varianceFormula } from "./statist
 import Formula from "@/components/calculatorPage/Formula"
 import { useTranslations, useLocale } from "next-intl"
 import { Plus, X } from "lucide-react"
+import RadioGroup from "@/components/ui/RadioGroup"
+import FloatingLabelInput from "@/components/ui/FloatingLabelInput"
 
 const tabVariants = {
   initial: { opacity: 0 },
@@ -26,7 +28,7 @@ const StatisticsCalculator = () => {
   const dir = locale === "fa" ? "rtl" : "ltr"
 
   const [dataValue, setDataValue] = useState<string>("")
-  const [weightValue, setWeightValue] = useState<string>("1")
+  const [weightValue, setWeightValue] = useState<string>("")
   const [dataPoints, setDataPoints] = useState<DataPoint[]>([])
   const [sampleType, setSampleType] = useState<SampleType>("population")
   const [result, setResult] = useState<StatisticsResult | null>(null)
@@ -56,6 +58,8 @@ const StatisticsCalculator = () => {
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
       handleAddDataPoint()
+      setWeightValue("")
+      setDataValue("")
     }
   }
 
@@ -92,22 +96,18 @@ const StatisticsCalculator = () => {
         >
           {/* Input Row */}
           <div className="grid grid-cols-[1fr_1fr_auto] gap-4">
-            <input
+            <FloatingLabelInput
               type="number"
-              placeholder={t("math.statistics.data")}
+              label={t("math.statistics.data")}
               value={dataValue}
               onChange={(e) => setDataValue(e.target.value)}
-              onKeyDown={handleKeyDown}
-              className="bg-background border-input placeholder:text-input-secondary-placeholder min-w-0 flex-1 shrink-0 rounded-full border px-3 py-2 text-sm placeholder:text-sm placeholder:font-bold"
             />
-
-            <input
+            <FloatingLabelInput
               type="number"
-              placeholder={t("math.statistics.weight")}
+              label={t("math.statistics.weight")}
               value={weightValue}
               onChange={(e) => setWeightValue(e.target.value)}
               onKeyDown={handleKeyDown}
-              className="bg-background border-input placeholder:text-input-secondary-placeholder min-w-0 shrink-0 rounded-full border px-3 py-2 text-sm placeholder:text-sm placeholder:font-bold"
             />
             <button
               onClick={handleAddDataPoint}
@@ -119,30 +119,15 @@ const StatisticsCalculator = () => {
           </div>
 
           {/* Sample Type Radio Buttons */}
-          <div className="flex items-center justify-start gap-4">
-            <label className="flex cursor-pointer items-center gap-2">
-              <input
-                type="radio"
-                name="sampleType"
-                value="sample"
-                checked={sampleType === "sample"}
-                onChange={() => setSampleType("sample")}
-                className="accent-primary h-4 w-4"
-              />
-              <span className="text-sm font-medium">{t("math.statistics.sample")}</span>
-            </label>
-            <label className="flex cursor-pointer items-center gap-2">
-              <input
-                type="radio"
-                name="sampleType"
-                value="population"
-                checked={sampleType === "population"}
-                onChange={() => setSampleType("population")}
-                className="accent-primary h-4 w-4"
-              />
-              <span className="text-sm font-medium">{t("math.statistics.population")}</span>
-            </label>
-          </div>
+          <RadioGroup
+            name="sampleType"
+            value={sampleType}
+            onChange={setSampleType}
+            options={[
+              { value: "population", label: t("math.statistics.sample") },
+              { value: "sample", label: t("math.statistics.population") },
+            ]}
+          />
 
           {/* Data Points Chips */}
           {dataPoints.length > 0 && (

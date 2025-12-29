@@ -5,6 +5,8 @@ import { useState, useMemo } from "react"
 import { calculateTrig, trigFormula } from "./trigonometry.data"
 import { AngleUnit } from "./trigonometry.types"
 import Formula from "@/components/calculatorPage/Formula"
+import FloatingLabelInput from "@/components/ui/FloatingLabelInput"
+import RadioGroup from "@/components/ui/RadioGroup"
 import { useTranslations } from "next-intl"
 
 const contentVariants = {
@@ -50,7 +52,7 @@ const TrigonometryCalculator = () => {
   const formatValue = (value: number | string): string => {
     if (value === "undefined") return t("math.trigonometry.undefined")
     if (typeof value === "number") {
-      return value.toLocaleString(undefined, { maximumFractionDigits: 10 })
+      return value.toLocaleString(undefined, { maximumFractionDigits: 5 })
     }
     return String(value)
   }
@@ -58,42 +60,23 @@ const TrigonometryCalculator = () => {
   return (
     <div className="mt-4 flex flex-col gap-4">
       {/* Input */}
-      <input
+      <FloatingLabelInput
         type="number"
-        placeholder={t("math.trigonometry.inputPlaceholder")}
+        label={t("math.trigonometry.inputPlaceholder")}
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
-        className="bg-background border-input placeholder:text-input-secondary-placeholder w-full rounded-full border px-3 py-2 placeholder:text-sm placeholder:font-bold"
       />
 
       {/* Radio Buttons */}
-      <div className="flex gap-6">
-        <label className="flex cursor-pointer items-center gap-2">
-          <input
-            type="radio"
-            name="angleUnit"
-            value="degree"
-            checked={angleUnit === "degree"}
-            onChange={() => setAngleUnit("degree")}
-            className="peer sr-only"
-          />
-          <span className="peer-checked:border-primary peer-focus:ring-primary border-primary relative flex h-4 w-4 items-center justify-center rounded-full border-2 peer-focus:ring-2">
-            <span className="bg-primary h-2 w-2 scale-0 rounded-full transition-transform peer-checked:scale-100"></span>
-          </span>
-          <span className="text-sm font-medium">{t("math.trigonometry.degree")}</span>
-        </label>
-        <label className="flex cursor-pointer items-center gap-2">
-          <input
-            type="radio"
-            name="angleUnit"
-            value="radian"
-            checked={angleUnit === "radian"}
-            onChange={() => setAngleUnit("radian")}
-            className="accent-primary h-4 w-4"
-          />
-          <span className="text-sm font-medium">{t("math.trigonometry.radian")}</span>
-        </label>
-      </div>
+      <RadioGroup
+        name="angleUnit"
+        value={angleUnit}
+        onChange={setAngleUnit}
+        options={[
+          { value: "degree", label: t("math.trigonometry.degree") },
+          { value: "radian", label: t("math.trigonometry.radian") },
+        ]}
+      />
 
       {/* Results Grid */}
       <AnimatePresence mode="wait">
@@ -108,11 +91,16 @@ const TrigonometryCalculator = () => {
             <p className="text-secondary-foreground mb-2 text-start font-bold">
               {t("math.trigonometry.results")}
             </p>
-            <div className="bg-secondary-background/30 rounded-2xl p-4">
-              <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
+            <div className="bg-secondary-background/30 rounded-2xl border p-4">
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
                 {resultItems.map((item) => (
-                  <div key={item.key} className="text-start font-semibold">
-                    <span className="text-foreground">{t(`math.trigonometry.${item.key}`)} = </span>
+                  <div
+                    key={item.key}
+                    className="flex flex-nowrap items-center text-start font-semibold"
+                  >
+                    <span className="text-foreground text-nowrap">
+                      {t(`math.trigonometry.${item.key}`)} ={" "}
+                    </span>
                     <span className="text-results-foreground" dir="ltr">
                       {formatValue(item.value)}
                     </span>

@@ -7,6 +7,7 @@ import { EquationType } from "./diagramMaker.types"
 import GraphRenderer from "./GraphRenderer"
 import MathButtons from "./MathButtons"
 import { useTranslations, useLocale } from "next-intl"
+import FloatingLabelInput from "@/components/ui/FloatingLabelInput"
 
 const tabVariants = {
   initial: { opacity: 0 },
@@ -136,18 +137,17 @@ const DiagramMakerCalculator = () => {
                   <label className="text-secondary-foreground text-start font-bold">
                     {t("math.diagramMaker.inputs.equation")}
                   </label>
-                  <input
+                  <FloatingLabelInput
                     ref={(el) => {
                       inputRefs.current[input.id] = el
                     }}
                     type="text"
-                    placeholder={input.placeholder}
+                    label={input.placeholder}
                     value={inputs[input.id] || ""}
                     onChange={(e) => handleInputChange(input.id, e.target.value)}
                     onFocus={() => {
                       focusedInputRef.current = input.id
                     }}
-                    className="bg-background border-input placeholder:text-input-secondary-placeholder rounded-full border px-4 py-3 font-mono text-sm placeholder:font-sans placeholder:text-sm placeholder:font-bold focus:ring-2 focus:outline-none"
                   />
                 </div>
               ))}

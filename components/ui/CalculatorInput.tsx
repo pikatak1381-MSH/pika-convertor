@@ -3,8 +3,10 @@
 import { cn } from "@/lib/utils"
 import { forwardRef, InputHTMLAttributes } from "react"
 
-interface CalculatorInputProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, "value" | "onChange"> {
+interface CalculatorInputProps extends Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  "value" | "onChange"
+> {
   value: string | number
   onChange: (value: number) => void
   allowNegative?: boolean
@@ -64,9 +66,9 @@ const CalculatorInput = forwardRef<HTMLInputElement, CalculatorInputProps>(
           "bg-input-background border-secondary-foreground text-secondary-foreground placeholder:text-muted-foreground",
           "h-13 w-13 rounded-[20px] border text-center text-sm font-bold",
           "transition-colors outline-none",
-          "focus:border-primary focus:ring-2 focus:ring-primary/20",
+          "focus:border-secondary-foreground focus:ring-secondary-foreground/20 focus:ring-2",
           // Hide spinner arrows
-          "[appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none",
+          "[appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none",
           className
         )}
         {...props}

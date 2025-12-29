@@ -133,7 +133,7 @@ const EquationSolverCalculator = () => {
             animate="animate"
             className="px-1 text-4xl font-bold"
           >
-            x²
+            x² +
           </motion.span>
         )
       }
@@ -257,7 +257,10 @@ const EquationSolverCalculator = () => {
 
         return (
           <div key={index} className="flex items-center">
-            <CalculatorInput value={values[index] ?? NaN} onChange={(val) => updateValue(index, val)} />
+            <CalculatorInput
+              value={values[index] ?? NaN}
+              onChange={(val) => updateValue(index, val)}
+            />
 
             {renderLinearTwoSeparator(offset)}
           </div>
@@ -309,7 +312,10 @@ const EquationSolverCalculator = () => {
               <div dir="ltr" className="flex items-center justify-center gap-1">
                 {calculator.inputs.map((inputKey, index) => (
                   <div key={inputKey} className="flex items-center">
-                    <CalculatorInput value={values[index] ?? NaN} onChange={(val) => updateValue(index, val)} />
+                    <CalculatorInput
+                      value={values[index] ?? NaN}
+                      onChange={(val) => updateValue(index, val)}
+                    />
 
                     {renderSeparator(index)}
                   </div>

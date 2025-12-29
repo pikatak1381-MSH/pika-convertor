@@ -13,6 +13,7 @@ import { FibonacciMode } from "./fibonacci.types"
 import ResultDisplay from "@/components/calculatorPage/ResultDisplay"
 import Formula from "@/components/calculatorPage/Formula"
 import { useTranslations, useLocale } from "next-intl"
+import FloatingLabelInput from "@/components/ui/FloatingLabelInput"
 
 const tabVariants = {
   initial: { opacity: 0 },
@@ -34,10 +35,7 @@ const FibonacciCalculator = () => {
   const [activeId, setActiveId] = useState<FibonacciMode>(fibonacciCalculators[0].id)
   const [inputValue, setInputValue] = useState<string>("")
 
-  const calculator = useMemo(
-    () => fibonacciCalculators.find((c) => c.id === activeId)!,
-    [activeId]
-  )
+  const calculator = useMemo(() => fibonacciCalculators.find((c) => c.id === activeId)!, [activeId])
 
   const result = useMemo(() => {
     const num = parseInt(inputValue, 10)
@@ -99,12 +97,11 @@ const FibonacciCalculator = () => {
           className="mt-4 flex flex-col gap-4"
         >
           {/* Input */}
-          <input
+          <FloatingLabelInput
             type="number"
-            placeholder={t(calculator.inputLabelKey)}
+            label={t(calculator.inputLabelKey)}
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            className="bg-background border-input placeholder:text-input-secondary-placeholder rounded-full border px-3 py-2 placeholder:text-sm placeholder:font-bold"
           />
 
           {/* Result */}

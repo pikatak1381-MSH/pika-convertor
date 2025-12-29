@@ -6,6 +6,7 @@ import { checkPrime } from "./primeCheck.data"
 import ResultDisplay from "@/components/calculatorPage/ResultDisplay"
 import Formula from "@/components/calculatorPage/Formula"
 import { useTranslations, useLocale } from "next-intl"
+import FloatingLabelInput from "@/components/ui/FloatingLabelInput"
 
 const tabVariants = {
   initial: { opacity: 0 },
@@ -57,12 +58,11 @@ const PrimeCheckCalculator = () => {
         >
           {/* Input */}
           <div className="flex flex-col gap-2">
-            <input
+            <FloatingLabelInput
               type="number"
-              placeholder={t("math.primeCheck.enterNumber")}
+              label={t("math.primeCheck.enterNumber")}
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
-              className="bg-background border-input placeholder:text-input-secondary-placeholder rounded-full border px-4 py-3 placeholder:text-sm placeholder:font-bold focus:ring-2 focus:outline-none"
             />
           </div>
 

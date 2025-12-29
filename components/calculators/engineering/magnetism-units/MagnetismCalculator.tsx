@@ -7,7 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { fluidsUnitTypes } from "./fluids.data"
+import { magnetismUnitsTypes } from "./magnetism.data"
 import { useMemo, useState } from "react"
 import { convertValue } from "@/lib/convertValue"
 import ResultDisplay from "@/components/calculatorPage/ResultDisplay"
@@ -15,22 +15,23 @@ import Formula from "@/components/calculatorPage/Formula"
 import SwapIcon from "@/components/ui/SwapIcon"
 import { useTranslations } from "next-intl"
 import { useLocale } from "next-intl"
+import FloatingLabelInput from "@/components/ui/FloatingLabelInput"
 
-const FluidsCalculator = () => {
+const MagnetismCalculator = () => {
   const locale = useLocale()
   const dir = locale === "fa" ? "rtl" : "ltr"
   const t = useTranslations("Calculators")
-  const [typeId, setTypeId] = useState(fluidsUnitTypes[0].id)
-  const [fromUnit, setFromUnit] = useState(fluidsUnitTypes[0].units[0].id)
-  const [toUnit, setToUnit] = useState(fluidsUnitTypes[0].units[1].id)
-  const [value, setValue] = useState(1)
+  const [typeId, setTypeId] = useState(magnetismUnitsTypes[0].id)
+  const [fromUnit, setFromUnit] = useState(magnetismUnitsTypes[0].units[0].id)
+  const [toUnit, setToUnit] = useState(magnetismUnitsTypes[0].units[1].id)
+  const [value, setValue] = useState<number | "">("")
 
-  const converter = useMemo(() => fluidsUnitTypes.find((unit) => unit.id === typeId)!, [typeId])
+  const converter = useMemo(() => magnetismUnitsTypes.find((unit) => unit.id === typeId)!, [typeId])
 
-  const result = useMemo(
-    () => convertValue(value, fromUnit, toUnit, converter),
-    [value, fromUnit, toUnit, converter]
-  )
+  const result = useMemo(() => {
+    if (value === "") return ""
+    return convertValue(value, fromUnit, toUnit, converter)
+  }, [value, fromUnit, toUnit, converter])
 
   // Handle swap button
   const handleSwap = () => {
@@ -45,7 +46,7 @@ const FluidsCalculator = () => {
         dir={dir}
         value={typeId}
         onValueChange={(newTypeId) => {
-          const nextConverter = fluidsUnitTypes.find((unit) => unit.id === newTypeId)!
+          const nextConverter = magnetismUnitsTypes.find((unit) => unit.id === newTypeId)!
           setTypeId(newTypeId)
           setFromUnit(nextConverter.units[0].id)
           setToUnit(nextConverter.units[1].id)
@@ -55,7 +56,7 @@ const FluidsCalculator = () => {
           <SelectValue />
         </SelectTrigger>
         <SelectContent className="bg-background text-secondary-foreground rounded-2xl text-sm font-semibold">
-          {fluidsUnitTypes.map((unit) => (
+          {magnetismUnitsTypes.map((unit) => (
             <SelectItem key={unit.id} value={unit.id}>
               {t(unit.labelKey)}
             </SelectItem>
@@ -64,14 +65,14 @@ const FluidsCalculator = () => {
       </Select>
 
       {/* Inputs */}
-      <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        <input
-          type="number"
-          value={value}
-          onChange={(e) => setValue(Number(e.target.value))}
-          className="bg-background border-input rounded-full border px-3 py-2"
-        />
-
+      <FloatingLabelInput
+        type="number"
+        value={value}
+        label={t("engineering.magnetism.placeholder")}
+        onChange={(e) => setValue(Number(e.target.value))}
+        className="mt-4 max-w-[225px]"
+      />
+      <div className="mt-2 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         <div className="col-span-2 flex items-center gap-1">
           {/* From Unit */}
           <Select dir={dir} value={fromUnit} onValueChange={setFromUnit}>
@@ -117,4 +118,4 @@ const FluidsCalculator = () => {
   )
 }
 
-export default FluidsCalculator
+export default MagnetismCalculator

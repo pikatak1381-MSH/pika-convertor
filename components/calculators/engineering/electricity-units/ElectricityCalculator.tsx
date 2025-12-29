@@ -7,7 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { radiologyUnitTypes } from "./radiology.data"
+import { electricityUnitTypes } from "./electricity.data"
 import { useMemo, useState } from "react"
 import { convertValue } from "@/lib/convertValue"
 import ResultDisplay from "@/components/calculatorPage/ResultDisplay"
@@ -15,22 +15,26 @@ import Formula from "@/components/calculatorPage/Formula"
 import SwapIcon from "@/components/ui/SwapIcon"
 import { useTranslations } from "next-intl"
 import { useLocale } from "next-intl"
+import FloatingLabelInput from "@/components/ui/FloatingLabelInput"
 
-const RadiologyCalculator = () => {
+const ElectricityCalculator = () => {
   const locale = useLocale()
   const dir = locale === "fa" ? "rtl" : "ltr"
   const t = useTranslations("Calculators")
-  const [typeId, setTypeId] = useState(radiologyUnitTypes[0].id)
-  const [fromUnit, setFromUnit] = useState(radiologyUnitTypes[0].units[0].id)
-  const [toUnit, setToUnit] = useState(radiologyUnitTypes[0].units[1].id)
-  const [value, setValue] = useState(1)
+  const [typeId, setTypeId] = useState(electricityUnitTypes[0].id)
+  const [fromUnit, setFromUnit] = useState(electricityUnitTypes[0].units[0].id)
+  const [toUnit, setToUnit] = useState(electricityUnitTypes[0].units[1].id)
+  const [value, setValue] = useState<number | "">("")
 
-  const converter = useMemo(() => radiologyUnitTypes.find((unit) => unit.id === typeId)!, [typeId])
-
-  const result = useMemo(
-    () => convertValue(value, fromUnit, toUnit, converter),
-    [value, fromUnit, toUnit, converter]
+  const converter = useMemo(
+    () => electricityUnitTypes.find((unit) => unit.id === typeId)!,
+    [typeId]
   )
+
+  const result = useMemo(() => {
+    if (value === "") return ""
+    return convertValue(value, fromUnit, toUnit, converter)
+  }, [value, fromUnit, toUnit, converter])
 
   // Handle swap button
   const handleSwap = () => {
@@ -45,7 +49,7 @@ const RadiologyCalculator = () => {
         dir={dir}
         value={typeId}
         onValueChange={(newTypeId) => {
-          const nextConverter = radiologyUnitTypes.find((unit) => unit.id === newTypeId)!
+          const nextConverter = electricityUnitTypes.find((unit) => unit.id === newTypeId)!
           setTypeId(newTypeId)
           setFromUnit(nextConverter.units[0].id)
           setToUnit(nextConverter.units[1].id)
@@ -55,7 +59,7 @@ const RadiologyCalculator = () => {
           <SelectValue />
         </SelectTrigger>
         <SelectContent className="bg-background text-secondary-foreground rounded-2xl text-sm font-semibold">
-          {radiologyUnitTypes.map((unit) => (
+          {electricityUnitTypes.map((unit) => (
             <SelectItem key={unit.id} value={unit.id}>
               {t(unit.labelKey)}
             </SelectItem>
@@ -64,14 +68,14 @@ const RadiologyCalculator = () => {
       </Select>
 
       {/* Inputs */}
-      <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        <input
-          type="number"
-          value={value}
-          onChange={(e) => setValue(Number(e.target.value))}
-          className="bg-background border-input rounded-full border px-3 py-2"
-        />
-
+      <FloatingLabelInput
+        type="number"
+        label={t("engineering.electricity.placeholder")}
+        value={value}
+        onChange={(e) => setValue(Number(e.target.value))}
+        className="mt-4 max-w-[225px]"
+      />
+      <div className="mt-2 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         <div className="col-span-2 flex items-center gap-1">
           {/* From Unit */}
           <Select dir={dir} value={fromUnit} onValueChange={setFromUnit}>
@@ -117,4 +121,4 @@ const RadiologyCalculator = () => {
   )
 }
 
-export default RadiologyCalculator
+export default ElectricityCalculator

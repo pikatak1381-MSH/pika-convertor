@@ -13,6 +13,7 @@ import { AverageMode } from "./average.types"
 import ResultDisplay from "@/components/calculatorPage/ResultDisplay"
 import Formula from "@/components/calculatorPage/Formula"
 import { useTranslations, useLocale } from "next-intl"
+import FloatingLabelInput from "@/components/ui/FloatingLabelInput"
 
 const tabVariants = {
   initial: { opacity: 0 },
@@ -88,12 +89,11 @@ const AverageCalculator = () => {
           className="mt-4 flex flex-col gap-4"
         >
           {/* Input */}
-          <input
+          <FloatingLabelInput
             type="text"
-            placeholder={t("math.average.placeholder")}
+            label={t("math.average.placeholder")}
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            className="bg-background border-input placeholder:text-input-secondary-placeholder rounded-full border px-3 py-2 placeholder:text-sm placeholder:font-bold"
           />
 
           {/* Numbers count */}

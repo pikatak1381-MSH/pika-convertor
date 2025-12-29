@@ -143,7 +143,7 @@
           "title": "محاسبه گر افزایش فیصدی",
           "description": "محاسبه افزایش یا کاهش درصدی"
         },
-        "trigonometry": { "title": "محاسبه گر مثلثی", "description": "محاسبات توابع مثلثاتی" }
+        "trigonometry": { "title": "محاسبه گر مثلثاتی", "description": "محاسبات توابع مثلثاتی" }
       },
 
       "technology": {
@@ -399,6 +399,7 @@
   "Calculators": {
     "engineering": {
       "physics": {
+        "placeholder": "عدد",
         "angularAcceleration": {
           "title": "شتاب زاویه‌ای",
           "units": {
@@ -481,6 +482,7 @@
       },
 
       "fluids": {
+        "placeholder": "عدد",
         "flow": {
           "title": "دبی حجمی",
           "units": {
@@ -565,6 +567,7 @@
       },
 
       "electricity": {
+        "placeholder": "عدد",
         "charge": {
           "title": "بار الکتریکی",
           "units": {
@@ -693,6 +696,7 @@
       },
 
       "magnetism": {
+        "placeholder": "عدد",
         "magnetomotiveForce": {
           "title": "نیروی مغناطیس‌بران",
           "units": {
@@ -732,6 +736,7 @@
       },
 
       "optics": {
+        "placeholder": "عدد",
         "luminance": {
           "title": "درخشندگی",
           "units": {
@@ -782,6 +787,7 @@
       },
 
       "thermal": {
+        "placeholder": "عدد",
         "temperatureInterval": {
           "title": "بازه دما",
           "units": {
@@ -866,6 +872,7 @@
       },
 
       "radiology": {
+        "placeholder": "عدد",
         "radiation": {
           "title": "دوز معادل پرتو",
           "units": {

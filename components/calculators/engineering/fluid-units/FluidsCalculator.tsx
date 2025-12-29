@@ -7,7 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { physicsUnitTypes } from "./physics.data"
+import { fluidsUnitTypes } from "./fluids.data"
 import { useMemo, useState } from "react"
 import { convertValue } from "@/lib/convertValue"
 import ResultDisplay from "@/components/calculatorPage/ResultDisplay"
@@ -15,22 +15,23 @@ import Formula from "@/components/calculatorPage/Formula"
 import SwapIcon from "@/components/ui/SwapIcon"
 import { useTranslations } from "next-intl"
 import { useLocale } from "next-intl"
+import FloatingLabelInput from "@/components/ui/FloatingLabelInput"
 
-const PhyisicsUnitCalculator = () => {
+const FluidsCalculator = () => {
   const locale = useLocale()
   const dir = locale === "fa" ? "rtl" : "ltr"
   const t = useTranslations("Calculators")
-  const [typeId, setTypeId] = useState(physicsUnitTypes[0].id)
-  const [fromUnit, setFromUnit] = useState(physicsUnitTypes[0].units[0].id)
-  const [toUnit, setToUnit] = useState(physicsUnitTypes[0].units[1].id)
-  const [value, setValue] = useState(1)
+  const [typeId, setTypeId] = useState(fluidsUnitTypes[0].id)
+  const [fromUnit, setFromUnit] = useState(fluidsUnitTypes[0].units[0].id)
+  const [toUnit, setToUnit] = useState(fluidsUnitTypes[0].units[1].id)
+  const [value, setValue] = useState<number | "">("")
 
-  const converter = useMemo(() => physicsUnitTypes.find((unit) => unit.id === typeId)!, [typeId])
+  const converter = useMemo(() => fluidsUnitTypes.find((unit) => unit.id === typeId)!, [typeId])
 
-  const result = useMemo(
-    () => convertValue(value, fromUnit, toUnit, converter),
-    [value, fromUnit, toUnit, converter]
-  )
+  const result = useMemo(() => {
+    if (value === "") return ""
+    return convertValue(value, fromUnit, toUnit, converter)
+  }, [value, fromUnit, toUnit, converter])
 
   // Handle swap button
   const handleSwap = () => {
@@ -45,7 +46,7 @@ const PhyisicsUnitCalculator = () => {
         dir={dir}
         value={typeId}
         onValueChange={(newTypeId) => {
-          const nextConverter = physicsUnitTypes.find((unit) => unit.id === newTypeId)!
+          const nextConverter = fluidsUnitTypes.find((unit) => unit.id === newTypeId)!
           setTypeId(newTypeId)
           setFromUnit(nextConverter.units[0].id)
           setToUnit(nextConverter.units[1].id)
@@ -55,7 +56,7 @@ const PhyisicsUnitCalculator = () => {
           <SelectValue />
         </SelectTrigger>
         <SelectContent className="bg-background text-secondary-foreground rounded-2xl text-sm font-semibold">
-          {physicsUnitTypes.map((unit) => (
+          {fluidsUnitTypes.map((unit) => (
             <SelectItem key={unit.id} value={unit.id}>
               {t(unit.labelKey)}
             </SelectItem>
@@ -64,18 +65,18 @@ const PhyisicsUnitCalculator = () => {
       </Select>
 
       {/* Inputs */}
-      <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        <input
-          type="number"
-          value={value}
-          onChange={(e) => setValue(Number(e.target.value))}
-          className="bg-background border-input rounded-full border px-3 py-2"
-        />
-
+      <FloatingLabelInput
+        type="number"
+        value={value}
+        label={t("engineering.fluids.placeholder")}
+        onChange={(e) => setValue(Number(e.target.value))}
+        className="mt-4 max-w-[225px]"
+      />
+      <div className="mt-2 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         <div className="col-span-2 flex items-center gap-1">
           {/* From Unit */}
           <Select dir={dir} value={fromUnit} onValueChange={setFromUnit}>
-            <SelectTrigger className="bg-background border-input text-secondary-foreground w-full min-w-0 flex-1 truncate rounded-full border px-3 py-2 text-sm font-bold">
+            <SelectTrigger className="bg-background border-input text-secondary-foreground w-full min-w-0 flex-1 truncate rounded-[20px] border px-3 text-sm font-bold">
               <SelectValue />
             </SelectTrigger>
             <SelectContent className="bg-background text-secondary-foreground rounded-2xl text-sm font-semibold">
@@ -96,7 +97,7 @@ const PhyisicsUnitCalculator = () => {
 
           {/* To Unit */}
           <Select dir={dir} value={toUnit} onValueChange={setToUnit}>
-            <SelectTrigger className="bg-background border-input text-secondary-foreground w-full min-w-0 flex-1 truncate rounded-full border px-3 py-2 text-sm font-bold">
+            <SelectTrigger className="bg-background border-input text-secondary-foreground w-full min-w-0 flex-1 truncate rounded-[20px] border px-3 py-2 text-sm font-bold">
               <SelectValue />
             </SelectTrigger>
             <SelectContent className="bg-background text-secondary-foreground rounded-2xl text-sm font-semibold">
@@ -117,4 +118,4 @@ const PhyisicsUnitCalculator = () => {
   )
 }
 
-export default PhyisicsUnitCalculator
+export default FluidsCalculator

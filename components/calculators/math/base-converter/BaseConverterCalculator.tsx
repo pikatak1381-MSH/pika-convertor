@@ -13,6 +13,7 @@ import { baseOptions, convertBase } from "./baseConverter.data"
 import { BaseSystem } from "./baseConverter.types"
 import ResultDisplay from "@/components/calculatorPage/ResultDisplay"
 import { useTranslations, useLocale } from "next-intl"
+import FloatingLabelInput from "@/components/ui/FloatingLabelInput"
 // import Formula from "@/components/calculatorPage/Formula"
 
 const tabVariants = {
@@ -94,12 +95,11 @@ const BaseConverterCalculator = () => {
         >
           {/* Input */}
           <div className="flex flex-col gap-2">
-            <input
+            <FloatingLabelInput
               type="text"
-              placeholder={`${t("math.baseConverter.enterValue")}`}
+              label={`${t("math.baseConverter.enterValue")}`}
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value.toUpperCase())}
-              className="bg-background border-input placeholder:text-input-secondary-placeholder focus:ring- rounded-full border px-4 py-3 placeholder:text-sm placeholder:font-bold focus:ring-2 focus:outline-none"
             />
           </div>
 

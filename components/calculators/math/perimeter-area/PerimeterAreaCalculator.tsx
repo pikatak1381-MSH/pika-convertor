@@ -14,6 +14,7 @@ import { CalculationType, ShapeId } from "./perimeterArea.types"
 import ResultDisplay from "@/components/calculatorPage/ResultDisplay"
 import Formula from "@/components/calculatorPage/Formula"
 import { useTranslations, useLocale } from "next-intl"
+import FloatingLabelInput from "@/components/ui/FloatingLabelInput"
 
 const tabVariants = {
   initial: { opacity: 0 },
@@ -133,13 +134,12 @@ const PerimeterAreaCalculator = () => {
           {/* Inputs */}
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             {getRelevantInputs().map((input, index) => (
-              <input
+              <FloatingLabelInput
                 key={input.id}
                 type="number"
-                placeholder={t(input.labelKey)}
+                label={t(input.labelKey)}
                 value={values[index] ?? ""}
                 onChange={(e) => updateValue(index, Number(e.target.value))}
-                className="bg-background border-input placeholder:text-input-secondary-placeholder rounded-full border px-3 py-2 placeholder:text-sm placeholder:font-bold"
               />
             ))}
           </div>
