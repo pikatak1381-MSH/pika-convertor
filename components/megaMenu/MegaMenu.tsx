@@ -148,9 +148,7 @@ const MegaMenu = forwardRef<HTMLDivElement, MegaMenuProps>(
                             className="h-5 w-5 object-contain"
                           />
                         </div>
-                        <span className="text-sm font-medium">
-                          {t(category.i18nKey)}
-                        </span>
+                        <span className="text-sm font-medium">{t(category.i18nKey)}</span>
                       </div>
                       <motion.svg
                         animate={{ rotate: isActive ? 180 : 0 }}
@@ -178,12 +176,9 @@ const MegaMenu = forwardRef<HTMLDivElement, MegaMenuProps>(
                           variants={subCategoriesContainerVariants}
                           className="overflow-hidden"
                         >
-                          <div className="grid grid-cols-1 gap-1 py-2 pl-4 xs:grid-cols-2">
+                          <div className="xs:grid-cols-2 grid grid-cols-1 gap-1 py-2 pl-4">
                             {categorySubItems.map((subCategory) => (
-                              <motion.div
-                                key={subCategory.id}
-                                variants={subCategoryItemVariants}
-                              >
+                              <motion.div key={subCategory.id} variants={subCategoryItemVariants}>
                                 <Link
                                   href={{
                                     pathname: "/[category]/[calculator]",
@@ -235,7 +230,7 @@ const MegaMenu = forwardRef<HTMLDivElement, MegaMenuProps>(
         exit="exit"
         variants={menuVariants}
         onMouseLeave={onMouseLeave}
-        className="bg-background text-foreground fixed top-19 right-0 left-0 z-50 h-[597px] border-t shadow-xl"
+        className="bg-background text-foreground fixed top-19 right-0 left-0 z-60 h-[597px] border-t shadow-xl"
       >
         <div className="container mx-auto h-full p-8">
           <div className="flex h-full w-full flex-col">
@@ -337,10 +332,7 @@ const MegaMenu = forwardRef<HTMLDivElement, MegaMenuProps>(
                         }}
                       >
                         {activeCategory.subCategories.map((subCategory) => (
-                          <motion.div
-                            key={subCategory.id}
-                            variants={subCategoryItemVariants}
-                          >
+                          <motion.div key={subCategory.id} variants={subCategoryItemVariants}>
                             <Link
                               href={{
                                 pathname: "/[category]/[calculator]",
