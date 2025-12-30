@@ -230,7 +230,7 @@ const MegaMenu = forwardRef<HTMLDivElement, MegaMenuProps>(
         exit="exit"
         variants={menuVariants}
         onMouseLeave={onMouseLeave}
-        className="bg-background text-foreground fixed top-19 right-0 left-0 z-60 h-[597px] border-t shadow-xl"
+        className="bg-background text-foreground fixed top-19 right-0 left-0 z-50 h-[597px] border-t shadow-xl"
       >
         <div className="container mx-auto h-full p-8">
           <div className="flex h-full w-full flex-col">
