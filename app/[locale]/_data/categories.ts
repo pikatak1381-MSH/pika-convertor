@@ -394,13 +394,13 @@ export const categories: Category[] = [
       {
         id: "bodyWater",
         i18nKey: "sub.health.bodyWater.title",
-        descriptionKey: "sub.time.bodyWater.description",
+        descriptionKey: "sub.health.bodyWater.description",
         icon: "/icons/categories/physics.svg",
       },
       {
         id: "protein",
         i18nKey: "sub.health.protein.title",
-        descriptionKey: "sub.time.protein.description",
+        descriptionKey: "sub.health.protein.description",
         icon: "/icons/categories/physics.svg",
       },
     ],
@@ -545,13 +545,13 @@ export const categories: Category[] = [
         icon: "/icons/categories/physics.svg",
       },
       {
-        id: "check-maturity",
+        id: "vat-tax",
         i18nKey: "sub.finance.vatTax.title",
         descriptionKey: "sub.finance.vatTax.description",
         icon: "/icons/categories/physics.svg",
       },
       {
-        id: "check-maturity",
+        id: "profit-margin",
         i18nKey: "sub.finance.profitMargin.title",
         descriptionKey: "sub.finance.profitMargin.description",
         icon: "/icons/categories/physics.svg",

@@ -1,0 +1,88 @@
+// Prisma schema for Pika Convertor Admin Panel
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../lib/generated/prisma"
+}
+
+
+datasource db {
+  provider = "postgresql"
+}
+
+
+// Admin users for the CMS
+model User {
+  id           String   @id @default(cuid())
+  username     String   @unique
+  passwordHash String
+  name         String?
+  role         UserRole @default(EDITOR)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // Relations
+  contents CalculatorContent[]
+}
+
+enum UserRole {
+  ADMIN
+  EDITOR
+}
+
+// SEO Content for calculator pages
+model CalculatorContent {
+  id           String @id @default(cuid())
+  calculatorId String // e.g., "percentage", "physics-units"
+  categoryId   String // e.g., "math", "engineering"
+  locale       String // "fa" or "en"
+
+  // Content fields
+  content         String  @db.Text // HTML content from WYSIWYG
+  metaTitle       String? @db.VarChar(70)
+  metaDescription String? @db.VarChar(160)
+
+  // SEO Fields
+  focusKeyword String? @db.VarChar(100) // Primary target keyword
+  canonicalUrl String? @db.VarChar(500) // Custom canonical URL
+
+  // Open Graph Meta Tags
+  ogTitle       String? @db.VarChar(95) // OG title (recommended max 95)
+  ogDescription String? @db.VarChar(200) // OG description (recommended max 200)
+  ogImage       String? @db.VarChar(500) // OG image URL
+
+  // Twitter Card Meta Tags
+  twitterTitle       String? @db.VarChar(70) // Twitter title
+  twitterDescription String? @db.VarChar(200) // Twitter description
+  twitterImage       String? @db.VarChar(500) // Twitter card image URL
+
+  // Schema.org Structured Data
+  schemaType   String? @db.VarChar(50) // e.g., "FAQPage", "HowTo", "WebApplication"
+  schemaData   String? @db.Text // Custom JSON-LD data
+
+  // Additional SEO
+  noIndex      Boolean @default(false) // Prevent indexing
+  noFollow     Boolean @default(false) // Prevent link following
+
+  // Metadata
+  status      ContentStatus @default(DRAFT)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  publishedAt DateTime?
+
+  // Relations
+  authorId String
+  author   User   @relation(fields: [authorId], references: [id])
+
+  // Unique constraint: one content per calculator per locale
+  @@unique([calculatorId, locale])
+  @@index([calculatorId])
+  @@index([locale])
+  @@index([status])
+}
+
+enum ContentStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
