@@ -1,7 +1,7 @@
 "use client"
 
 import { categories } from "@/app/[locale]/_data/categories"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 import {
   Select,
   SelectContent,
@@ -20,6 +20,8 @@ interface CalculatorSelectorProps {
 
 const CalculatorSelector = ({ value, onChange, disabled }: CalculatorSelectorProps) => {
   const t = useTranslations("CategoriesSection")
+  const locale = useLocale()
+  const dir = locale === "fa" ? "rtl" : "ltr"
 
   const handleChange = (combinedValue: string) => {
     const [categoryId, calculatorId] = combinedValue.split(":")
@@ -27,7 +29,7 @@ const CalculatorSelector = ({ value, onChange, disabled }: CalculatorSelectorPro
   }
 
   return (
-    <Select value={value} onValueChange={handleChange} disabled={disabled}>
+    <Select dir={dir} value={value} onValueChange={handleChange} disabled={disabled}>
       <SelectTrigger className="w-full">
         <SelectValue placeholder={t("selectCalculator")} />
       </SelectTrigger>

@@ -19,11 +19,11 @@ const AdminLayout = ({ children, user }: AdminLayoutProps) => {
   const dir = locale === "fa" ? "rtl" : "ltr"
 
   return (
-    <div className="flex min-h-screen bg-background" dir={dir}>
+    <div className="bg-background flex min-h-screen" dir={dir}>
       <AdminSidebar />
       <div className="flex flex-1 flex-col">
         <AdminHeader user={user} />
-        <main className="flex-1 p-6">{children}</main>
+        <main className="flex-1 p-4">{children}</main>
       </div>
     </div>
   )

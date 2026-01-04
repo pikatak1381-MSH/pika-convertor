@@ -1315,6 +1315,20 @@
         "noLinks": "اضافه کردن لینک‌های داخلی یا خارجی را در نظر بگیرید",
         "hasLinks": "محتوا شامل لینک است"
       }
+    },
+    "toolsManagement": "مدیریت ابزارها",
+    "edit": "ویرایش",
+    "tools": {
+      "allTools": "همه ابزارها",
+      "totalInSystem": "کل ابزارها در سیستم",
+      "unpublished": "بدون محتوا",
+      "seoProgress": "پیشرفت سئو",
+      "searchTools": "جستجوی ابزار...",
+      "filterByCategory": "فیلتر بر اساس دسته",
+      "allCategories": "همه دسته‌ها",
+      "showingTools": "{count} از {total} ابزار",
+      "noToolsFound": "هیچ ابزاری یافت نشد",
+      "addContent": "افزودن محتوا"
     }
   }
 }

@@ -5,6 +5,9 @@ import StarterKit from "@tiptap/starter-kit"
 import TextAlign from "@tiptap/extension-text-align"
 import Link from "@tiptap/extension-link"
 import Placeholder from "@tiptap/extension-placeholder"
+import Image from "@tiptap/extension-image"
+// TextStyle and Color both come from the same package
+import { TextStyle, Color } from "@tiptap/extension-text-style"
 import Toolbar from "./Toolbar"
 import { cn } from "@/lib/utils"
 
@@ -15,12 +18,7 @@ interface EditorProps {
   locale?: string
 }
 
-const RichTextEditor = ({
-  content,
-  onChange,
-  placeholder,
-  locale = "fa",
-}: EditorProps) => {
+const RichTextEditor = ({ content, onChange, placeholder, locale = "fa" }: EditorProps) => {
   const dir = locale === "fa" ? "rtl" : "ltr"
   const defaultAlignment = dir === "rtl" ? "right" : "left"
 
@@ -44,6 +42,17 @@ const RichTextEditor = ({
       }),
       Placeholder.configure({
         placeholder: placeholder || "شروع به نوشتن کنید...",
+      }),
+      Image.configure({
+        inline: false,
+        allowBase64: false,
+        HTMLAttributes: {
+          class: "max-w-full h-auto rounded-lg my-4",
+        },
+      }),
+      TextStyle,
+      Color.configure({
+        types: ["textStyle"],
       }),
     ],
     content,

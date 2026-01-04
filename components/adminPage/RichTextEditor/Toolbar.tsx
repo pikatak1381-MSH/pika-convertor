@@ -17,10 +17,27 @@ import {
   Unlink,
   Undo,
   Redo,
+  Minus,
+  ImagePlus,
+  Palette,
+  Loader2,
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import { useCallback, useState } from "react"
+import { useCallback, useState, useRef } from "react"
+
+// Predefined color options for the color picker
+const TEXT_COLORS = [
+  { name: "Default", value: "" },
+  { name: "Red", value: "#ef4444" },
+  { name: "Orange", value: "#f97316" },
+  { name: "Yellow", value: "#eab308" },
+  { name: "Green", value: "#22c55e" },
+  { name: "Blue", value: "#3b82f6" },
+  { name: "Purple", value: "#a855f7" },
+  { name: "Pink", value: "#ec4899" },
+  { name: "Gray", value: "#6b7280" },
+]
 
 interface ToolbarProps {
   editor: Editor | null
@@ -58,6 +75,73 @@ const Divider = () => <div className="bg-border mx-1 h-6 w-px" />
 const Toolbar = ({ editor, dir }: ToolbarProps) => {
   const [linkUrl, setLinkUrl] = useState("")
   const [showLinkInput, setShowLinkInput] = useState(false)
+  const [showColorPicker, setShowColorPicker] = useState(false)
+  const [isUploading, setIsUploading] = useState(false)
+  const fileInputRef = useRef<HTMLInputElement>(null)
+
+  /**
+   * Handles image file selection and upload
+   * Uploads to /api/admin/upload and inserts the returned URL into the editor
+   */
+  const handleImageUpload = useCallback(
+    async (event: React.ChangeEvent<HTMLInputElement>) => {
+      const file = event.target.files?.[0]
+      if (!file || !editor) return
+
+      setIsUploading(true)
+
+      try {
+        // Create form data with the image file
+        const formData = new FormData()
+        formData.append("image", file)
+
+        // Upload to the API endpoint
+        const response = await fetch("/api/admin/upload", {
+          method: "POST",
+          body: formData,
+        })
+
+        if (!response.ok) {
+          const error = await response.json()
+          throw new Error(error.error || "Upload failed")
+        }
+
+        const { url } = await response.json()
+
+        // Insert the image into the editor at current cursor position
+        editor.chain().focus().setImage({ src: url }).run()
+      } catch (error) {
+        console.error("Image upload failed:", error)
+        alert(error instanceof Error ? error.message : "Failed to upload image")
+      } finally {
+        setIsUploading(false)
+        // Reset file input so the same file can be selected again
+        if (fileInputRef.current) {
+          fileInputRef.current.value = ""
+        }
+      }
+    },
+    [editor]
+  )
+
+  /**
+   * Sets the text color for selected text
+   * Empty value removes the color (resets to default)
+   */
+  const setTextColor = useCallback(
+    (color: string) => {
+      if (!editor) return
+
+      if (color === "") {
+        // Remove color to reset to default
+        editor.chain().focus().unsetColor().run()
+      } else {
+        editor.chain().focus().setColor(color).run()
+      }
+      setShowColorPicker(false)
+    },
+    [editor]
+  )
 
   const setLink = useCallback(() => {
     if (!editor) return
@@ -204,6 +288,65 @@ const Toolbar = ({ editor, dir }: ToolbarProps) => {
       >
         <ListOrdered className="size-4" />
       </ToolbarButton>
+
+      <Divider />
+
+      {/* Line Separator - inserts a horizontal rule */}
+      <ToolbarButton
+        onClick={() => editor.chain().focus().setHorizontalRule().run()}
+        title="Line Separator"
+      >
+        <Minus className="size-4" />
+      </ToolbarButton>
+
+      {/* Image Upload */}
+      <ToolbarButton
+        onClick={() => fileInputRef.current?.click()}
+        disabled={isUploading}
+        title="Add Image"
+      >
+        {isUploading ? (
+          <Loader2 className="size-4 animate-spin" />
+        ) : (
+          <ImagePlus className="size-4" />
+        )}
+      </ToolbarButton>
+      {/* Hidden file input for image selection */}
+      <input
+        ref={fileInputRef}
+        type="file"
+        accept="image/jpeg,image/png,image/gif,image/webp"
+        onChange={handleImageUpload}
+        className="hidden"
+      />
+
+      {/* Color Picker */}
+      <div className="relative">
+        <ToolbarButton onClick={() => setShowColorPicker(!showColorPicker)} title="Text Color">
+          <Palette className="size-4" />
+        </ToolbarButton>
+
+        {/* Color picker dropdown */}
+        {showColorPicker && (
+          <div className="bg-background absolute top-full left-0 z-10 mt-1 grid grid-cols-1 gap-1 rounded-lg border p-2 shadow-lg">
+            {TEXT_COLORS.map((color) => (
+              <button
+                key={color.name}
+                type="button"
+                onClick={() => setTextColor(color.value)}
+                className={cn(
+                  "flex h-7 w-7 items-center justify-center rounded border transition-transform hover:scale-110",
+                  color.value === "" && "bg-background text-xs"
+                )}
+                style={{ backgroundColor: color.value || undefined }}
+                title={color.name}
+              >
+                {color.value === "" && "A"}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
 
       <Divider />
 

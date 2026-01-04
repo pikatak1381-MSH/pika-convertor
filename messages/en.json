@@ -304,6 +304,20 @@
         "noLinks": "Consider adding internal or external links",
         "hasLinks": "Content includes links"
       }
+    },
+    "toolsManagement": "Tools Management",
+    "edit": "Edit",
+    "tools": {
+      "allTools": "All Tools",
+      "totalInSystem": "Total tools in system",
+      "unpublished": "No Content",
+      "seoProgress": "SEO Progress",
+      "searchTools": "Search tools...",
+      "filterByCategory": "Filter by category",
+      "allCategories": "All categories",
+      "showingTools": "{count} of {total} tools",
+      "noToolsFound": "No tools found",
+      "addContent": "Add Content"
     }
   }
 }

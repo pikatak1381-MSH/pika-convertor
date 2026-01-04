@@ -34,7 +34,6 @@ interface ContentFormProps {
     content: string
     metaTitle: string | null
     metaDescription: string | null
-    // New SEO fields (optional for backwards compatibility before migration)
     focusKeyword?: string | null
     canonicalUrl?: string | null
     ogTitle?: string | null
@@ -50,6 +49,12 @@ interface ContentFormProps {
     status: "DRAFT" | "PUBLISHED" | "ARCHIVED"
   }
   isEditing?: boolean
+  // Default values for pre-populating form (from Tools Management page)
+  defaultValues?: {
+    calculatorId: string
+    categoryId: string
+    contentLocale: string
+  }
 }
 
 const SCHEMA_TYPES = [
@@ -60,20 +65,25 @@ const SCHEMA_TYPES = [
   { value: "SoftwareApplication", label: "Software Application" },
 ]
 
-const ContentForm = ({ initialData, isEditing = false }: ContentFormProps) => {
+const ContentForm = ({ initialData, isEditing = false, defaultValues }: ContentFormProps) => {
   const router = useRouter()
   const locale = useLocale()
   const t = useTranslations("Admin")
   const ts = useTranslations("Admin.seo")
   const dir = locale === "fa" ? "rtl" : "ltr"
 
+  // Determine initial values - prioritize initialData (editing), then defaultValues (from query params)
+  const initCalcId = initialData?.calculatorId || defaultValues?.calculatorId || ""
+  const initCatId = initialData?.categoryId || defaultValues?.categoryId || ""
+  const initLocale = initialData?.locale || defaultValues?.contentLocale || "fa"
+
   // Basic fields
   const [calculatorValue, setCalculatorValue] = useState(
-    initialData ? `${initialData.categoryId}:${initialData.calculatorId}` : ""
+    initCatId && initCalcId ? `${initCatId}:${initCalcId}` : ""
   )
-  const [categoryId, setCategoryId] = useState(initialData?.categoryId || "")
-  const [calculatorId, setCalculatorId] = useState(initialData?.calculatorId || "")
-  const [contentLocale, setContentLocale] = useState(initialData?.locale || "fa")
+  const [categoryId, setCategoryId] = useState(initCatId)
+  const [calculatorId, setCalculatorId] = useState(initCalcId)
+  const [contentLocale, setContentLocale] = useState(initLocale)
   const [content, setContent] = useState(initialData?.content || "")
   const [metaTitle, setMetaTitle] = useState(initialData?.metaTitle || "")
   const [metaDescription, setMetaDescription] = useState(initialData?.metaDescription || "")
@@ -195,25 +205,25 @@ const ContentForm = ({ initialData, isEditing = false }: ContentFormProps) => {
           </CardHeader>
           <CardContent>
             <Tabs dir={dir} value={activeTab} onValueChange={setActiveTab}>
-              <TabsList className="mb-6 grid w-full grid-cols-5">
-                <TabsTrigger value="content" className="gap-2">
-                  <FileText className="size-4" />
+              <TabsList className="mb-6 grid w-full grid-cols-5 gap-1">
+                <TabsTrigger value="content" className="gap-1">
+                  <FileText className="size-3.5" />
                   <span className="hidden sm:inline">{ts("tabContent")}</span>
                 </TabsTrigger>
-                <TabsTrigger value="seo" className="gap-2">
-                  <Search className="size-4" />
+                <TabsTrigger value="seo" className="gap-1">
+                  <Search className="size-3.5" />
                   <span className="hidden sm:inline">{ts("tabSeo")}</span>
                 </TabsTrigger>
-                <TabsTrigger value="social" className="gap-2">
-                  <Share2 className="size-4" />
+                <TabsTrigger value="social" className="gap-1">
+                  <Share2 className="size-3.5" />
                   <span className="hidden sm:inline">{ts("tabSocial")}</span>
                 </TabsTrigger>
-                <TabsTrigger value="schema" className="gap-2">
-                  <Code className="size-4" />
+                <TabsTrigger value="schema" className="gap-1">
+                  <Code className="size-3.5" />
                   <span className="hidden sm:inline">{ts("tabSchema")}</span>
                 </TabsTrigger>
-                <TabsTrigger value="advanced" className="gap-2">
-                  <Settings className="size-4" />
+                <TabsTrigger value="advanced" className="gap-1">
+                  <Settings className="size-3.5" />
                   <span className="hidden sm:inline">{ts("tabAdvanced")}</span>
                 </TabsTrigger>
               </TabsList>

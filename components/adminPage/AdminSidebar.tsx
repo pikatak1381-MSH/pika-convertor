@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
-import { LayoutDashboard, FileText, PlusCircle, Settings } from "lucide-react"
+import { LayoutDashboard, FileText, PlusCircle, Settings, Wrench } from "lucide-react"
 import { useTranslations, useLocale } from "next-intl"
 
 const AdminSidebar = () => {
@@ -17,6 +17,11 @@ const AdminSidebar = () => {
       href: `/${locale}/admin`,
       label: t("dashboard"),
       icon: LayoutDashboard,
+    },
+    {
+      href: `/${locale}/admin/tools`,
+      label: t("toolsManagement"),
+      icon: Wrench,
     },
     {
       href: `/${locale}/admin/content`,
