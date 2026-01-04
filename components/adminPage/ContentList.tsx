@@ -65,9 +65,7 @@ const ContentList = ({ contents, userRole }: ContentListProps) => {
 
   // Delete dialog state
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false)
-  const [contentToDelete, setContentToDelete] = useState<ContentItem | null>(
-    null
-  )
+  const [contentToDelete, setContentToDelete] = useState<ContentItem | null>(null)
   const [isDeleting, setIsDeleting] = useState(false)
 
   const getStatusBadge = (status: string) => {
@@ -88,14 +86,11 @@ const ContentList = ({ contents, userRole }: ContentListProps) => {
   }
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString(
-      locale === "fa" ? "fa-IR" : "en-US",
-      {
-        year: "numeric",
-        month: "short",
-        day: "numeric",
-      }
-    )
+    return new Date(dateString).toLocaleDateString(locale === "fa" ? "fa-IR" : "en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    })
   }
 
   const getCalculatorName = (calculatorId: string, categoryId: string) => {
@@ -107,13 +102,9 @@ const ContentList = ({ contents, userRole }: ContentListProps) => {
     // Search filter
     if (searchQuery) {
       const query = searchQuery.toLowerCase()
-      const matchesCalculator = content.calculatorId
-        .toLowerCase()
-        .includes(query)
+      const matchesCalculator = content.calculatorId.toLowerCase().includes(query)
       const matchesCategory = content.categoryId.toLowerCase().includes(query)
-      const matchesKeyword = content.focusKeyword
-        ?.toLowerCase()
-        .includes(query)
+      const matchesKeyword = content.focusKeyword?.toLowerCase().includes(query)
       if (!matchesCalculator && !matchesCategory && !matchesKeyword) {
         return false
       }
@@ -142,12 +133,9 @@ const ContentList = ({ contents, userRole }: ContentListProps) => {
 
     setIsDeleting(true)
     try {
-      const response = await fetch(
-        `/api/admin/content/${contentToDelete.id}`,
-        {
-          method: "DELETE",
-        }
-      )
+      const response = await fetch(`/api/admin/content/${contentToDelete.id}`, {
+        method: "DELETE",
+      })
 
       if (response.ok) {
         router.refresh()
@@ -165,12 +153,12 @@ const ContentList = ({ contents, userRole }: ContentListProps) => {
   }
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4" dir="rtl">
       {/* Filters */}
       <div className="flex flex-wrap items-center gap-4">
         {/* Search */}
-        <div className="relative flex-1 min-w-[200px]">
-          <Search className="absolute start-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
+        <div className="relative min-w-[200px] flex-1">
+          <Search className="text-muted-foreground absolute start-3 top-1/2 size-4 -translate-y-1/2" />
           <Input
             placeholder={t("search")}
             value={searchQuery}
@@ -207,54 +195,50 @@ const ContentList = ({ contents, userRole }: ContentListProps) => {
       </div>
 
       {/* Results count */}
-      <div className="text-sm text-muted-foreground">
+      <div className="text-muted-foreground text-sm">
         {filteredContents.length} / {contents.length} {t("content")}
       </div>
 
       {/* Table */}
       {filteredContents.length === 0 ? (
-        <div className="py-12 text-center text-muted-foreground">
-          {t("noContent")}
-        </div>
+        <div className="text-muted-foreground py-12 text-center">{t("noContent")}</div>
       ) : (
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>{t("table.calculator")}</TableHead>
-              <TableHead>{t("table.locale")}</TableHead>
-              <TableHead>{t("seo.focusKeyword")}</TableHead>
-              <TableHead>{t("table.status")}</TableHead>
-              <TableHead>{t("table.author")}</TableHead>
-              <TableHead>{t("table.updatedAt")}</TableHead>
-              <TableHead className="text-end">{t("table.actions")}</TableHead>
+              <TableHead className="text-center">{t("table.calculator")}</TableHead>
+              <TableHead className="text-center">{t("table.locale")}</TableHead>
+              <TableHead className="text-center">{t("seo.focusKeyword")}</TableHead>
+              <TableHead className="text-center">{t("table.status")}</TableHead>
+              <TableHead className="text-center">{t("table.author")}</TableHead>
+              <TableHead className="text-center">{t("table.updatedAt")}</TableHead>
+              <TableHead className="text-center">{t("table.actions")}</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {filteredContents.map((content) => (
               <TableRow key={content.id}>
-                <TableCell className="font-medium">
+                <TableCell className="text-center font-medium">
                   {getCalculatorName(content.calculatorId, content.categoryId)}
                 </TableCell>
-                <TableCell>
+                <TableCell className="text-center">
                   {content.locale === "fa" ? "فارسی" : "English"}
                 </TableCell>
-                <TableCell>
+                <TableCell className="text-center">
                   {content.focusKeyword ? (
                     <div className="flex items-center gap-1">
-                      <Target className="size-3 text-muted-foreground" />
-                      <span className="max-w-[120px] truncate text-sm">
-                        {content.focusKeyword}
-                      </span>
+                      <Target className="text-muted-foreground size-3" />
+                      <span className="max-w-[120px] truncate text-sm">{content.focusKeyword}</span>
                     </div>
                   ) : (
                     <span className="text-muted-foreground">-</span>
                   )}
                 </TableCell>
-                <TableCell>{getStatusBadge(content.status)}</TableCell>
-                <TableCell>
+                <TableCell className="text-center">{getStatusBadge(content.status)}</TableCell>
+                <TableCell className="text-center">
                   {content.author.name || content.author.username}
                 </TableCell>
-                <TableCell>{formatDate(content.updatedAt)}</TableCell>
+                <TableCell className="text-center">{formatDate(content.updatedAt)}</TableCell>
                 <TableCell className="text-end">
                   <div className="flex justify-end gap-2">
                     <Button variant="ghost" size="sm" asChild>
@@ -295,9 +279,7 @@ const ContentList = ({ contents, userRole }: ContentListProps) => {
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel disabled={isDeleting}>
-              {t("cancel")}
-            </AlertDialogCancel>
+            <AlertDialogCancel disabled={isDeleting}>{t("cancel")}</AlertDialogCancel>
             <AlertDialogAction
               onClick={handleDeleteConfirm}
               disabled={isDeleting}

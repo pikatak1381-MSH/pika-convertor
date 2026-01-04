@@ -38,12 +38,12 @@ const AdminSidebar = () => {
   return (
     <aside
       className={cn(
-        "sticky top-0 h-screen w-64 border-e bg-card",
-        dir === "rtl" && "border-l border-r-0"
+        "bg-card sticky top-0 h-screen w-64 border-e",
+        dir === "rtl" && "border-r-0 border-l"
       )}
       dir={dir}
     >
-      <div className="border-b p-4">
+      <div className="flex h-16 items-center justify-center border-b px-4">
         <h2 className="text-xl font-bold">{t("adminPanel")}</h2>
       </div>
 
